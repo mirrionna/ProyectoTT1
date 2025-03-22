@@ -63,6 +63,37 @@ Matrix& Matrix::operator - (Matrix &m) {
 	return *m_aux;
 }
 
+Matrix& Matrix::operator * (Matrix &m){
+	if (this->n_column != m.n_row) {
+		cout << "Matrix sub: error in n_row/n_column\n";
+        exit(EXIT_FAILURE);
+	}
+	Matrix *m_aux = new Matrix(this->n_row, m.n_column);
+		for(int i = 1; i <= this->n_row; i++) {
+        for(int j = 1; j <= m.n_column; j++) {
+			double mij=0;
+			for(int k=1; k<=this->n_column; k++){
+				mij+=(*this) (i,k) * m(k,j);
+			}
+			(*m_aux)(i,j) = mij;
+		}
+	}
+	
+	return *m_aux;
+}
+
+Matrix& Matrix::operator / (Matrix &m){
+	if (this->n_row != m.n_row) {
+		cout << "Matrix sub: error in n_row/n_column\n";
+        exit(EXIT_FAILURE);
+	}
+	//return this*inv(m);
+}
+
+Matrix& Matrix::operator = (Matrix &m){
+
+}
+
 ostream& operator << (ostream &o, Matrix &m) {
 	for (int i = 1; i <= m.n_row; i++) {
         for (int j = 1; j <= m.n_column; j++)
@@ -83,4 +114,37 @@ Matrix& zeros(const int n_row, const int n_column) {
 	}
 	
 	return (*m_aux);
+}
+
+Matrix& eye(const int n_row){
+	Matrix *m_aux = new Matrix(n_row, n_row);
+	
+	for(int i = 1; i <= n_row; i++) {
+		for(int j = 1; j <= n_row; j++) {
+			if(i==j){
+				(*m_aux)(i,j) = 1;
+			}
+			else{
+				(*m_aux)(i,j) = 0;
+			}
+		}
+	}
+	
+	return (*m_aux);
+}
+
+Matrix& transpose(Matrix &m){
+	Matrix *m_aux = new Matrix(m.n_column, m.n_row);
+	
+	for(int i = 1; i <= m.n_row; i++) {
+		for(int j = 1; j <= m.n_column; j++) {
+			(*m_aux)(j,i) = m(i,j);
+		}
+	}
+	
+	return (*m_aux);
+}
+
+Matrix& inv(Matrix &m){
+
 }
