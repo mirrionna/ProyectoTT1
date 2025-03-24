@@ -196,7 +196,36 @@ int m_inv_01() {
 	B(2,1) = 1; B(2,2) = 1; B(2,3) = 0;
 	B(3,1) = 0; B(3,2) = 0; B(3,3) = 1;
 	Matrix C = inv(A);
+    _assert(m_equals(B, C, 1e-10));
     
+    return 0;
+}
+
+int m_determinante_01() {
+    int f = 3;
+	Matrix A(f,f);
+	A(1,1) = 1; A(1,2) = -1; A(1,3) = 0;
+	A(2,1) = -1; A(2,2) = 2; A(2,3) = 0;
+	A(3,1) = 0; A(3,2) = 0; A(3,3) = 1;
+	double det=1;
+    
+	_assert(abs(det - determinante(A)) < 1e-10);
+    
+    return 0;
+}
+
+int m_submatriz_01() {
+    int f = 3;
+	Matrix A(f,f);
+	A(1,1) = 1; A(1,2) = -1; A(1,3) = 0;
+	A(2,1) = -1; A(2,2) = 2; A(2,3) = 0;
+	A(3,1) = 0; A(3,2) = 0; A(3,3) = 1;
+	
+	Matrix B(f-1,f-1);
+	B(1,1) = 1; B(1,2) = 0;
+	B(2,1) = 0; B(2,2) = 1;
+	
+	Matrix C = submatriz(A,2,2);
     _assert(m_equals(B, C, 1e-10));
     
     return 0;
@@ -213,7 +242,8 @@ int all_tests()
 	_verify(m_eye_01);
 	_verify(m_transpose_01);
 	_verify(m_inv_01);
-
+	_verify(m_determinante_01);
+	_verify(m_submatriz_01);
     return 0;
 }
 

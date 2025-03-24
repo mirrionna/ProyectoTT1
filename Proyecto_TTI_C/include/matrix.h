@@ -36,4 +36,7 @@ Matrix& zeros(const int n_row, const int n_column);
 Matrix& eye(const int n_row);
 Matrix& transpose(Matrix &m);
 Matrix& inv(Matrix &m);
+Matrix& submatriz(Matrix &m, int i, int j);
+double determinante(Matrix &m);
+void printMatrix(Matrix &m);
 #endif

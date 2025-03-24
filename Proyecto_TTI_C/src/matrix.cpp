@@ -153,30 +153,88 @@ Matrix& transpose(Matrix &m){
 }
 
 Matrix& inv(Matrix &m){
-	if (m.n_row!=3 || m.n_column!=3) {
+	if(m.n_row!=m.n_column){
 		cout << "Matrix sub: error in n_row/n_column\n";
         exit(EXIT_FAILURE);
 	}
-	double A = m(2,2)*m(3,3)-m(2,3)*m(3,2);
-	double B = -m(2,1)*m(3,3)+m(2,3)*m(3,1);
-	double C = m(2,1)*m(3,2)-m(2,2)*m(3,1);
-	double D = -m(1,2)*m(3,3)+m(1,3)*m(3,2);
-	double E = m(1,1)*m(3,3)-m(1,3)*m(3,1);
-	double F = -m(1,1)*m(3,2)+m(1,2)*m(3,1);
-	double G = m(1,2)*m(2,3)-m(1,3)*m(2,2);
-	double H = -m(1,1)*m(2,3)+m(1,3)*m(2,1);
-	double I = m(1,1)*m(2,2)-m(1,2)*m(2,1);
-	double det = m(1,1)*A+m(1,2)*B+m(1,3)*C;
-	if(abs(det)<1e-5){
+	double det=determinante(m);
+
+	if(abs(det)<1e-10){
 		cout << "Matrix sub: error in determinant\n";
         exit(EXIT_FAILURE);
 	}
-	double invdet=1.0/det;
-	Matrix *m_aux = new Matrix(m.n_column, m.n_row);
+	Matrix m_cofactor(m.n_row, m.n_column);
 	
-	(*m_aux)(1,1)=invdet*A;(*m_aux)(1,2)=invdet*D;(*m_aux)(1,3)=invdet*G;
-	(*m_aux)(2,1)=invdet*B;(*m_aux)(2,2)=invdet*E;(*m_aux)(2,3)=invdet*H;
-	(*m_aux)(3,1)=invdet*C;(*m_aux)(3,2)=invdet*F;(*m_aux)(3,3)=invdet*I;
+	for(int i = 1; i <= m_cofactor.n_row; i++) {
+		for(int j = 1; j <= m_cofactor.n_column; j++) {
+			double cij=determinante(submatriz(m,i,j));
+			double signo = ((i+j)%2 ==0)? 1:-1;
+			m_cofactor(i,j) = signo*cij;
+		}
+	}
+	Matrix conjugada = transpose(m_cofactor);
+
+	for(int i = 1; i <= conjugada.n_row; i++) {
+		for(int j = 1; j <= conjugada.n_column; j++) {
+			conjugada(i,j)/=det;
+		}
+	}
+	Matrix *m_aux=new Matrix(conjugada.n_row,conjugada.n_column);
+	
+	for(int i = 1; i <= conjugada.n_row; i++) {
+		for(int j = 1; j <= conjugada.n_column; j++) {
+			(*m_aux)(i,j)=conjugada(i,j);
+		}
+	}
 	
 	return (*m_aux);
+}
+
+double determinante(Matrix &m){
+	if (m.n_row!=m.n_column) {
+		cout << "Matrix sub: error in n_row/n_column\n";
+        exit(EXIT_FAILURE);cout << "Matrix sub: error in n_row/n_column\n";
+        exit(EXIT_FAILURE);
+	}
+	if(m.n_row==2){
+		return m(1,1)*m(2,2)-m(1,2)*m(2,1);
+	}
+	else{
+		double det=0;
+		int i=1;
+		for(int j=1;j<=m.n_row;j++){
+			double signo = ((i+j)%2 ==0)? 1:-1;
+			det+=signo*m(i,j)*determinante(submatriz(m,i,j));
+		}
+		return det;
+	}
+}
+
+Matrix& submatriz(Matrix &m, int i, int j){
+	if(i>m.n_row||j>m.n_column){
+		cout<<"Matrix sub: error in n_row/n_column\n";
+		exit(EXIT_FAILURE);
+	}
+	Matrix *m_aux = new Matrix(m.n_row-1, m.n_column-1);
+	for(int a=1;a<=m.n_row;a++){
+		if(a!=i){
+			for(int b=1;b<=m.n_column;b++){
+				if(b!=j){
+					double r=a;double c=b;
+					if(r>i) r--;if(c>j) c--;
+					(*m_aux)(r,c) = m(a,b);
+				}
+			}
+		}
+	}
+
+	return (*m_aux);
+}
+
+void printMatrix(Matrix &m){
+	for(int u=1;u<=m.n_row;u++){
+		for(int v=1;v<=m.n_column;v++){
+			cout<<"m("<<u<<","<<v<<")=> "<<m(u,v)<<"\n";
+		}
+	}
 }
