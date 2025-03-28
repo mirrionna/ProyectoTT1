@@ -101,6 +101,62 @@ Matrix& Matrix::operator = (Matrix &m){
 	return *m_aux;
 }
 
+Matrix& Matrix::operator + (double n) {
+
+	Matrix *m_aux = new Matrix(this->n_row, this->n_column);
+	
+    for(int i = 1; i <= this->n_row; i++) {
+        for(int j = 1; j <= this->n_column; j++) {
+			(*m_aux)(i,j) = (*this)(i,j) + n;
+		}
+	}
+	
+	return *m_aux;
+}
+
+Matrix& Matrix::operator - (double n) {
+
+	Matrix *m_aux = new Matrix(this->n_row, this->n_column);
+	
+    for(int i = 1; i <= this->n_row; i++) {
+        for(int j = 1; j <= this->n_column; j++) {
+			(*m_aux)(i,j) = (*this)(i,j) - n;
+		}
+	}
+	
+	return *m_aux;
+}
+
+Matrix& Matrix::operator * (double n) {
+
+	Matrix *m_aux = new Matrix(this->n_row, this->n_column);
+	
+    for(int i = 1; i <= this->n_row; i++) {
+        for(int j = 1; j <= this->n_column; j++) {
+			(*m_aux)(i,j) = (*this)(i,j) * n;
+		}
+	}
+	
+	return *m_aux;
+}
+
+Matrix& Matrix::operator / (double n) {
+	
+	if(abs(n)<1e-10){
+		cout << "Double error, cannot divide by zero\n";
+        exit(EXIT_FAILURE);
+	}
+	Matrix *m_aux = new Matrix(this->n_row, this->n_column);
+	
+    for(int i = 1; i <= this->n_row; i++) {
+        for(int j = 1; j <= this->n_column; j++) {
+			(*m_aux)(i,j) = (*this)(i,j) / n;
+		}
+	}
+	
+	return *m_aux;
+}
+
 ostream& operator << (ostream &o, Matrix &m) {
 	for (int i = 1; i <= m.n_row; i++) {
         for (int j = 1; j <= m.n_column; j++)

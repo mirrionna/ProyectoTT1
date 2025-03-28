@@ -24,6 +24,11 @@ public:
 	Matrix& operator / (Matrix &m); 
 	Matrix& operator = (Matrix &m);
 	
+	Matrix& operator + (double n);
+	Matrix& operator - (double n);
+	Matrix& operator *	(double n);
+	Matrix& operator / (double );
+	
 	// Non-member operators
 	friend ostream& operator << (ostream &o, Matrix &m);
 };
