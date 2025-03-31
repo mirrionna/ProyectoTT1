@@ -1,3 +1,16 @@
+// $Source$
+//----------------------------------------------------------------------
+// tests
+//----------------------------------------------------------------------
+// Proyecto TTI
+//
+/**@file test.cpp
+*	@brief Tests unitarios para los métodos del proyecto de TTI.
+*	
+*	@author Miguel Río Navarro
+*	@bug No known bugs.
+*/ 
+//----------------------------------------------------------------------
 #include "..\include\matrix.h"
 #include <cstdio>
 #include <cmath>

@@ -1,3 +1,16 @@
+// $Source$
+//----------------------------------------------------------------------
+// Matrix
+//----------------------------------------------------------------------
+// Proyecto TT1
+//
+/**@file matrix.cpp
+*	@brief Representación de una matriz.
+*	
+*	@author Miguel Río Navarro
+*	@bug No known bugs.
+*/ 
+//----------------------------------------------------------------------
 #include "..\include\matrix.h"
 
 Matrix::Matrix(const int n_row, const int n_column) {
@@ -285,12 +298,4 @@ Matrix& submatriz(Matrix &m, int i, int j){
 	}
 
 	return (*m_aux);
-}
-
-void printMatrix(Matrix &m){
-	for(int u=1;u<=m.n_row;u++){
-		for(int v=1;v<=m.n_column;v++){
-			cout<<"m("<<u<<","<<v<<")=> "<<m(u,v)<<"\n";
-		}
-	}
 }

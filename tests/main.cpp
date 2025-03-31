@@ -1,3 +1,16 @@
+// $Source$
+//----------------------------------------------------------------------
+// main
+//----------------------------------------------------------------------
+// Proyecto TTI
+//
+/**@file main.cpp
+*	@brief Archivo principal del proyecto de TTI.
+*	
+*	@author Miguel Río Navarro
+*	@bug No known bugs.
+*/ 
+//----------------------------------------------------------------------
 #include "..\include\matrix.h"
 #include <iostream>
 
