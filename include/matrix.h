@@ -106,7 +106,7 @@ public:
 	//----------------------------------------------------------------------
 	/**@brief Sobreescritura del operador suma para una matriz y un double.
 	*
-	*	@param [in] m Double que se quiere sumar.  
+	*	@param [in] n Double que se quiere sumar.  
 	*	@return Puntero a matriz resultado de sumar m a todos los elementos de la matriz this.
 	*/
 	//----------------------------------------------------------------------
@@ -116,7 +116,7 @@ public:
 	//----------------------------------------------------------------------
 	/**@brief Sobreescritura del operador resta para una matriz y un double.
 	*
-	*	@param [in] m Double que se quiere restar.  
+	*	@param [in] n Double que se quiere restar.  
 	*	@return Puntero a matriz resultado de restar m a todos los elementos de la matriz this.
 	*/
 	//----------------------------------------------------------------------
@@ -126,7 +126,7 @@ public:
 	//----------------------------------------------------------------------
 	/**@brief Sobreescritura del operador multiplicación para una matriz y un double.
 	*
-	*	@param [in] m Double por el que se quiere multiplicar.  
+	*	@param [in] n Double por el que se quiere multiplicar.  
 	*	@return Puntero a matriz resultado de multiplicar m por todos los elementos de la matriz this.
 	*/
 	//----------------------------------------------------------------------
@@ -136,7 +136,7 @@ public:
 	//----------------------------------------------------------------------
 	/**@brief Sobreescritura del operador cociente para una matriz y un double.
 	*
-	*	@param [in] m Double por el que se quiere dividir.  
+	*	@param [in] n Double por el que se quiere dividir.  
 	*	@return Puntero a matriz resultado de dividir todos los elementos de la matriz this por m.
 	*/
 	//----------------------------------------------------------------------
