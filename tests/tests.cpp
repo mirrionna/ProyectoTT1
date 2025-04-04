@@ -166,6 +166,18 @@ int m_zeros_01() {
     
     return 0;
 }
+int v_zeros_01() {
+    int c = 4;
+	
+	Matrix A(c);
+	A(1,1) = 0; A(1,2) = 0; A(1,3) = 0; A(1,4) = 0;
+	
+	Matrix B = zeros(4);
+    
+    _assert(m_equals(A, B, 1e-10));
+    
+    return 0;
+}
 int m_eye_01() {
     int f = 3;
 	
@@ -332,6 +344,43 @@ int m_divdouble_01() {
     return 0;
 }
 
+int v_norm_01(){
+	
+	Matrix v(3);
+	v(1)=0;v(2)=3;v(3)=4;
+	
+	_assert(abs(5 - norm(v)) < 1e-10);
+	
+	return 0;
+}
+
+int v_dot_01(){
+	
+	Matrix u(3);
+	Matrix v(3);
+	u(1)=0;u(2)=1;u(3)=2;
+	v(1)=1;v(2)=2;v(3)=3;
+	
+	_assert(abs(8 - dot(u,v)) < 1e-10);
+	
+	return 0;
+}
+
+int v_cross_01(){
+	
+	Matrix u(3);
+	Matrix v(3);
+	u(1)=0;u(2)=1;u(3)=2;
+	v(1)=1;v(2)=2;v(3)=3;
+	
+	Matrix R(3);
+	R(1)=-1;R(2)=2;R(3)=-1;
+	
+    _assert(m_equals(cross(u,v), R, 1e-10));
+	
+	return 0;
+}
+
 int all_tests()
 {
     _verify(m_sum_01);
@@ -340,6 +389,7 @@ int all_tests()
 	_verify(m_div_01);
 	_verify(m_asig_01);
     _verify(m_zeros_01);
+	_verify(v_zeros_01);
 	_verify(m_eye_01);
 	_verify(m_transpose_01);
 	_verify(m_inv_01);
@@ -349,6 +399,9 @@ int all_tests()
 	_verify(m_subdouble_01);
 	_verify(m_muldouble_01);
 	_verify(m_divdouble_01);
+	_verify(v_norm_01);
+	_verify(v_dot_01);
+	_verify(v_cross_01);
     return 0;
 }
 

@@ -38,6 +38,16 @@ public:
 	*/
 	//----------------------------------------------------------------------
     Matrix(const int n_row, const int n_column);
+	//----------------------------------------------------------------------
+	// Matrix(const int n)
+	//----------------------------------------------------------------------
+	/**@brief Constructor de una vector.
+	*
+	*	@param [in] n Número de elementos del vector.  
+	*	@return Vector creada con el numero de elementos querido.
+	*/
+	//----------------------------------------------------------------------
+    Matrix(const int n);
 	
 	// Member operators
 	//----------------------------------------------------------------------
@@ -47,10 +57,20 @@ public:
 	*
 	*	@param [in] row Entero que representa el número de la fila que se quiere acceder, entre 1 y n_row.  
 	*	@param [in] column Entero que representa el número de la columna que se quiere acceder, entre 1 y n_column.
-	*	@return Double que ocupa la fila y columna buscadas.
+	*	@return Vector de double que ocupa la fila y columna buscadas.
 	*/
 	//----------------------------------------------------------------------
 	double& operator () (const int row, const int column);
+	//----------------------------------------------------------------------
+	// double& operator () (const int n)
+	//----------------------------------------------------------------------
+	/**@brief Sobreescritura del operador () para acceder a los componentes de un vector.
+	*
+	*	@param [in] n Entero que representa el número de elemento de vector que se quiere acceder, entre 1 y su número de elementos.  
+	*	@return Punteor al Double que ocupa el elemento buscado.
+	*/
+	//----------------------------------------------------------------------
+	double& operator () (const int n);
 	//----------------------------------------------------------------------
 	// Matrix& operator + (Matrix &m)
 	//----------------------------------------------------------------------
@@ -182,6 +202,16 @@ ostream& operator << (ostream &o, Matrix &m);
 //----------------------------------------------------------------------
 Matrix& zeros(const int n_row, const int n_column);
 //----------------------------------------------------------------------
+// Matrix& zeros(const int n)
+//----------------------------------------------------------------------
+/**@brief Constructor de un vector relleno de ceros.
+*
+	@param [in] n Número de elementos del vector.
+*	@return Puntero a un vector de n elementos y en todos sus elementos valor cero.
+*/
+//----------------------------------------------------------------------
+Matrix& zeros(const int n);
+//----------------------------------------------------------------------
 // Matrix& eye(const int n_row)
 //----------------------------------------------------------------------
 /**@brief Constructor de una matriz identidad.
@@ -233,4 +263,36 @@ Matrix& submatriz(Matrix &m, int i, int j);
 */
 //----------------------------------------------------------------------
 double determinante(Matrix &m);
+//----------------------------------------------------------------------
+// double norm(Matrix &v);
+//----------------------------------------------------------------------
+/**@brief Norma de una vector.
+*
+*	@param [in] v Vector del que se quiere obtener la norma.
+*	@return Double que es la norma del vector v.
+*/
+//----------------------------------------------------------------------
+double norm(Matrix &v);
+//----------------------------------------------------------------------
+// double dot(Matrix &u,Matrix &v);
+//----------------------------------------------------------------------
+/**@brief Producto escalar de dos vectores.
+*
+*	@param [in] u Primer vector que se quiere multiplicar escalarmente.
+*	@param [in] v Segundo vector que se quiere multiplicar escalarmente.
+*	@return Double que es el resultado de u multiplicado escalarmente por v.
+*/
+//----------------------------------------------------------------------
+double dot(Matrix &u,Matrix &v);
+//----------------------------------------------------------------------
+// Matrix& cross(Matrix &u,Matrix &v);
+//----------------------------------------------------------------------
+/**@brief Producto vectorial de dos vectores.
+*
+*	@param [in] u Primer vector que se quiere multiplicar vectorialmente.
+*	@param [in] v Segundo vector que se quiere multiplicar vectorialmente.
+*	@return Vector resultado de realizar la operación u x v.
+*/
+//----------------------------------------------------------------------
+Matrix& cross(Matrix &u,Matrix &v);
 #endif

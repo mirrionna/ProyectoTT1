@@ -33,6 +33,26 @@ Matrix::Matrix(const int n_row, const int n_column) {
 	}
 }
 
+Matrix::Matrix(const int n) {
+    if (n <= 0) {
+		cout << "Vector create: error in n\n";
+        exit(EXIT_FAILURE);
+	}
+	
+	this->n_row = 1;
+	this->n_column = n;
+	this->data = (double **) malloc(this->n_row*sizeof(double *));
+	
+    if (this->data == NULL) {
+		cout << "Matrix create: error in data\n";
+        exit(EXIT_FAILURE);
+	}
+	
+	for(int i = 0; i < this->n_row; i++) {
+		this->data[i] = (double *) malloc(this->n_column*sizeof(double));
+	}
+}
+
 double& Matrix::operator () (const int row, const int column) {
 	if (row <= 0 || row > this->n_row || column <= 0 || column > this->n_column) {
 		cout << "Matrix get: error in row/column\n";
@@ -40,6 +60,15 @@ double& Matrix::operator () (const int row, const int column) {
 	}
 	
 	return this->data[row - 1][column - 1];
+}
+
+double& Matrix::operator () (const int n) {
+	if (n <= 0 || n > this->n_column) {
+		cout << "Vector get: error in element\n";
+        exit(EXIT_FAILURE);
+	}
+	
+	return this->data[0][n - 1];
 }
 
 Matrix& Matrix::operator + (Matrix &m) {
@@ -192,6 +221,16 @@ Matrix& zeros(const int n_row, const int n_column) {
 	return (*m_aux);
 }
 
+Matrix& zeros(const int n) {
+	Matrix *m_aux = new Matrix(1, n);
+	
+	for(int j = 1; j <= n; j++) {
+		(*m_aux)(1,j) = 0;
+	}
+	
+	return (*m_aux);
+}
+
 Matrix& eye(const int n_row){
 	Matrix *m_aux = new Matrix(n_row, n_row);
 	
@@ -298,4 +337,39 @@ Matrix& submatriz(Matrix &m, int i, int j){
 	}
 
 	return (*m_aux);
+}
+
+double norm(Matrix &v){
+	double norma=0;
+	for(int i=1;i<=v.n_column;i++){
+		norma+=pow(v(i),2);
+	}
+	return sqrt(norma);
+}
+
+
+double dot(Matrix &u,Matrix &v){
+	if(u.n_column!=v.n_column){
+		cout<<"Vector dot: error in num elements\n";
+		exit(EXIT_FAILURE);
+	}
+	double dotr=0;
+	for(int i=1;i<=u.n_column;i++){
+		dotr+=u(i)*v(i);
+	}
+	return dotr;
+}
+
+
+Matrix& cross(Matrix &u,Matrix &v){
+	if(u.n_column!=3 || v.n_column!=3){
+		cout<<"Vector cross: error in num elements\n";
+		exit(EXIT_FAILURE);
+	}
+	Matrix *m_aux=new Matrix(3);
+	(*m_aux)(1)=u(2)*v(3)-u(3)*v(2);
+	(*m_aux)(2)=u(3)*v(1)-u(1)*v(3);
+	(*m_aux)(3)=u(1)*v(2)-u(2)*v(1);
+	
+	return *m_aux;
 }
