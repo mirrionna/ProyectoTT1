@@ -160,7 +160,8 @@ public:
 	*	@return Puntero a matriz resultado de dividir todos los elementos de la matriz this por m.
 	*/
 	//----------------------------------------------------------------------
-	Matrix& operator / (double );
+	Matrix& operator / (double n);
+	
 	
 	// Non-member operators
 	//----------------------------------------------------------------------
@@ -295,4 +296,50 @@ double dot(Matrix &u,Matrix &v);
 */
 //----------------------------------------------------------------------
 Matrix& cross(Matrix &u,Matrix &v);
+//----------------------------------------------------------------------
+// Matrix& extract_row (int n)
+//----------------------------------------------------------------------
+/**@brief Extrae una fila de una matriz
+*
+*	@param [in] m Matriz de la que se quiere extraer la fila. 
+*	@param [in] n Entero que representa la fila que se quiere obtener.  
+*	@return Puntero al vector que corresponde a la fila n-ésima de la matriz.
+*/
+//----------------------------------------------------------------------
+Matrix& extract_row (Matrix &m,int n);
+//----------------------------------------------------------------------
+// Matrix& extract_column (int n)
+//----------------------------------------------------------------------
+/**@brief Extrae una columna de una matriz
+*
+*	@param [in] m Matriz de la que se quiere extraer la columna. 
+*	@param [in] n Entero que representa la columna que se quiere obtener.  
+*	@return Puntero al vector que corresponde a la columna n-ésima de la matriz.
+*/
+//----------------------------------------------------------------------
+Matrix& extract_column (Matrix &m,int n);	
+//----------------------------------------------------------------------
+// 	void asign_row (int n,Matrix &m)
+//----------------------------------------------------------------------
+/**@brief Asigna el valor de una fila de una matriz
+*
+*	@param [in] n Entero que representa la fila que se quiere asignar.  
+*	@param [in] m Matriz a la que se quiere asignar la fila
+*	@param [in] r Matriz con la fila que se quiere asignar
+*	@return Matriz copia de m y cambiando la fila n-ésima por r.
+*/
+//----------------------------------------------------------------------
+Matrix& assign_row (int n,Matrix &m, Matrix &r);	
+//----------------------------------------------------------------------
+// 	void asign_column (int n,Matrix &m)
+//----------------------------------------------------------------------
+/**@brief Asigna el valor de una columna de una matriz
+*
+*	@param [in] n Entero que representa la columna que se quiere asignar.  
+*	@param [in] m Matriz a la que se quiere asignar la columna
+*	@param [in] c Matriz con la columna que se quiere asignar
+*	@return Matriz copia de m y cambiando la columna n-ésima por c. 
+*/
+//----------------------------------------------------------------------
+Matrix& assign_column (int n,Matrix &m, Matrix &c);	
 #endif

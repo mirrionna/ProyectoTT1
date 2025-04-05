@@ -344,6 +344,96 @@ int m_divdouble_01() {
     return 0;
 }
 
+int m_extractrow_01(){
+	int f = 3;
+    int c = 4;
+	
+	Matrix A(f, c);
+	A(1,1) = 0; A(1,2) =  2; A(1,3) = 8; A(1,4) = 0;
+	A(2,1) = 1; A(2,2) = -1; A(2,3) = 0; A(2,4) = 0;
+	A(3,1) = 0; A(3,2) =  1; A(3,3) = 0; A(3,4) = 5;
+	
+	Matrix B(1, c);
+	B(1,1) = 0; B(1,2) =  2; B(1,3) = 8; B(1,4) = 0;
+	
+	Matrix R = extract_row(A,1);
+    
+    _assert(m_equals(B, R, 1e-10));
+    
+    return 0;
+}
+
+int m_extractcol_01(){
+	int f = 3;
+    int c = 4;
+	
+	Matrix A(f, c);
+	A(1,1) = 0; A(1,2) =  2; A(1,3) = 8; A(1,4) = 0;
+	A(2,1) = 1; A(2,2) = -1; A(2,3) = 0; A(2,4) = 0;
+	A(3,1) = 0; A(3,2) =  1; A(3,3) = 0; A(3,4) = 5;
+	
+	Matrix B(f, 1);
+	B(1,1) = 0;
+	B(2,1) = 1;
+	B(3,1) = 0;
+	
+	Matrix R = extract_column(A,1);
+    
+    _assert(m_equals(B, R, 1e-10));
+    
+    return 0;
+}
+
+int m_assignrow_01(){
+	int f = 3;
+    int c = 4;
+	
+	Matrix A(f, c);
+	A(1,1) = 0; A(1,2) =  2; A(1,3) = 8; A(1,4) = 0;
+	A(2,1) = 1; A(2,2) = -1; A(2,3) = 0; A(2,4) = 0;
+	A(3,1) = 0; A(3,2) =  1; A(3,3) = 0; A(3,4) = 5;
+	
+	Matrix B(1, c);
+	B(1,1) = 1; B(1,2) =  2; B(1,3) = 3; B(1,4) = 4;
+	
+	Matrix R = assign_row(1,A,B);
+	
+	Matrix C(f, c);
+	C(1,1) = 1; C(1,2) =  2; C(1,3) = 3; C(1,4) = 4;
+	C(2,1) = 1; C(2,2) = -1; C(2,3) = 0; C(2,4) = 0;
+	C(3,1) = 0; C(3,2) =  1; C(3,3) = 0; C(3,4) = 5;
+    
+    _assert(m_equals(C, R, 1e-10));
+    
+    return 0;
+}
+
+int m_assigncol_01(){
+	int f = 3;
+    int c = 4;
+	
+	Matrix A(f, c);
+	A(1,1) = 0; A(1,2) =  2; A(1,3) = 8; A(1,4) = 0;
+	A(2,1) = 1; A(2,2) = -1; A(2,3) = 0; A(2,4) = 0;
+	A(3,1) = 0; A(3,2) =  1; A(3,3) = 0; A(3,4) = 5;
+	
+	Matrix B(f, 1);
+	B(1,1) = 1;
+	B(2,1) = 2;
+	B(3,1) = 3;
+	
+	Matrix R = assign_column(1,A,B);
+    
+	Matrix C(f, c);
+	C(1,1) = 1; C(1,2) =  2; C(1,3) = 8; C(1,4) = 0;
+	C(2,1) = 2; C(2,2) = -1; C(2,3) = 0; C(2,4) = 0;
+	C(3,1) = 3; C(3,2) =  1; C(3,3) = 0; C(3,4) = 5;
+	
+    _assert(m_equals(C, R, 1e-10));
+    
+    return 0;
+}
+
 int v_norm_01(){
 	
 	Matrix v(3);
@@ -399,6 +489,10 @@ int all_tests()
 	_verify(m_subdouble_01);
 	_verify(m_muldouble_01);
 	_verify(m_divdouble_01);
+	_verify(m_extractrow_01);
+	_verify(m_extractcol_01);
+	_verify(m_assignrow_01);
+	_verify(m_assigncol_01);
 	_verify(v_norm_01);
 	_verify(v_dot_01);
 	_verify(v_cross_01);
