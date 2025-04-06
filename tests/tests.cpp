@@ -86,6 +86,7 @@ int m_sub_01() {
     
     return 0;
 }
+
 int m_mul_01() {
     int f = 3;
     int c = 4;
@@ -110,6 +111,7 @@ int m_mul_01() {
     
     return 0;
 }
+
 int m_div_01() {
     int f = 3;
     int c = 3;
@@ -135,6 +137,7 @@ int m_div_01() {
     
     return 0;
 }
+
 int m_asig_01() {
 	
 	int f = 3;
@@ -151,6 +154,7 @@ int m_asig_01() {
 	
     return 0;
 }
+
 int m_zeros_01() {
     int f = 3;
     int c = 4;
@@ -166,6 +170,7 @@ int m_zeros_01() {
     
     return 0;
 }
+
 int v_zeros_01() {
     int c = 4;
 	
@@ -178,6 +183,7 @@ int v_zeros_01() {
     
     return 0;
 }
+
 int m_eye_01() {
     int f = 3;
 	
@@ -192,6 +198,7 @@ int m_eye_01() {
     
     return 0;
 }
+
 int m_transpose_01() {
     int f = 3;
 	int c = 4;
@@ -210,6 +217,7 @@ int m_transpose_01() {
     
     return 0;
 }
+
 int m_inv_01() {
     int f = 3;
 	Matrix A(f,f);
@@ -344,6 +352,42 @@ int m_divdouble_01() {
     return 0;
 }
 
+int m_extractvec_01(){
+    int c = 4;
+	
+	Matrix A(c);
+	A(1) = 0; A(2) =  2; A(3) = 8; A(4) = 0;
+	
+	Matrix B(2);
+	B(1) =  2; B(2) = 8;
+	
+	Matrix R = extract_vector(A,2,3);
+    
+    _assert(m_equals(B, R, 1e-10));
+    
+    return 0;
+}
+
+int m_unionvec_01(){
+    int c = 4;
+	
+	Matrix A(c);
+	A(1) = 0; A(2) =  2; A(3) = 8; A(4) = 0;
+	
+	Matrix B(c+1);
+	B(1) = 1; B(2) =  2; B(3) = 3; B(4) = 4;B(5)=5;
+	
+	Matrix C(2*c+1);
+	C(1) = 0; C(2) =  2; C(3) = 8; C(4) = 0;
+	C(5) = 1; C(6) =  2; C(7) = 3; C(8) = 4;C(9)=5;
+
+	Matrix R = union_vector(A,B);
+    
+    _assert(m_equals(C, R, 1e-10));
+    
+    return 0;
+}
+
 int m_extractrow_01(){
 	int f = 3;
     int c = 4;
@@ -353,8 +397,8 @@ int m_extractrow_01(){
 	A(2,1) = 1; A(2,2) = -1; A(2,3) = 0; A(2,4) = 0;
 	A(3,1) = 0; A(3,2) =  1; A(3,3) = 0; A(3,4) = 5;
 	
-	Matrix B(1, c);
-	B(1,1) = 0; B(1,2) =  2; B(1,3) = 8; B(1,4) = 0;
+	Matrix B(c);
+	B(1) = 0; B(2) =  2; B(3) = 8; B(4) = 0;
 	
 	Matrix R = extract_row(A,1);
     
@@ -372,10 +416,8 @@ int m_extractcol_01(){
 	A(2,1) = 1; A(2,2) = -1; A(2,3) = 0; A(2,4) = 0;
 	A(3,1) = 0; A(3,2) =  1; A(3,3) = 0; A(3,4) = 5;
 	
-	Matrix B(f, 1);
-	B(1,1) = 0;
-	B(2,1) = 1;
-	B(3,1) = 0;
+	Matrix B(f);
+	B(1) = 0;B(2) = 1;B(3) = 0;
 	
 	Matrix R = extract_column(A,1);
     
@@ -393,8 +435,8 @@ int m_assignrow_01(){
 	A(2,1) = 1; A(2,2) = -1; A(2,3) = 0; A(2,4) = 0;
 	A(3,1) = 0; A(3,2) =  1; A(3,3) = 0; A(3,4) = 5;
 	
-	Matrix B(1, c);
-	B(1,1) = 1; B(1,2) =  2; B(1,3) = 3; B(1,4) = 4;
+	Matrix B(c);
+	B(1) = 1; B(2) =  2; B(3) = 3; B(4) = 4;
 	
 	Matrix R = assign_row(1,A,B);
 	
@@ -417,10 +459,8 @@ int m_assigncol_01(){
 	A(2,1) = 1; A(2,2) = -1; A(2,3) = 0; A(2,4) = 0;
 	A(3,1) = 0; A(3,2) =  1; A(3,3) = 0; A(3,4) = 5;
 	
-	Matrix B(f, 1);
-	B(1,1) = 1;
-	B(2,1) = 2;
-	B(3,1) = 3;
+	Matrix B(f);
+	B(1) = 1;B(2) = 2;B(3) = 3;
 	
 	Matrix R = assign_column(1,A,B);
     
@@ -489,6 +529,8 @@ int all_tests()
 	_verify(m_subdouble_01);
 	_verify(m_muldouble_01);
 	_verify(m_divdouble_01);
+	_verify(m_extractvec_01);
+	_verify(m_unionvec_01);
 	_verify(m_extractrow_01);
 	_verify(m_extractcol_01);
 	_verify(m_assignrow_01);

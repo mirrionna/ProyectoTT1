@@ -297,6 +297,29 @@ double dot(Matrix &u,Matrix &v);
 //----------------------------------------------------------------------
 Matrix& cross(Matrix &u,Matrix &v);
 //----------------------------------------------------------------------
+// Matrix& extract_vector (Matrix &m,int i, int j)
+//----------------------------------------------------------------------
+/**@brief Extrae un subvector de un vector
+*
+*	@param [in] m Vector del que se quiere obtener el subvector. 
+*	@param [in] i Índice entre 1 y el tamaño del vector a partir del cual se quiere el subvector.
+*	@param [in] j Índice entre 1 y el tamaño del vector del final del subvector.
+*	@return Puntero al subvector entre los índices i y j de m.
+*/
+//----------------------------------------------------------------------
+Matrix& extract_vector (Matrix &m,int i, int j);
+//----------------------------------------------------------------------
+// Matrix& union_vector (Matrix &m,int n)
+//----------------------------------------------------------------------
+/**@brief Une dos vectores
+*
+*	@param [in] m Matriz que se quiere concatenar. 
+*	@param [in] n Matriz que se quiere concatenar.  
+*	@return Vector union de las matrices m y n, en ese orden.
+*/
+//----------------------------------------------------------------------
+Matrix& union_vector (Matrix &m,Matrix &n);
+//----------------------------------------------------------------------
 // Matrix& extract_row (int n)
 //----------------------------------------------------------------------
 /**@brief Extrae una fila de una matriz
@@ -325,7 +348,7 @@ Matrix& extract_column (Matrix &m,int n);
 *
 *	@param [in] n Entero que representa la fila que se quiere asignar.  
 *	@param [in] m Matriz a la que se quiere asignar la fila
-*	@param [in] r Matriz con la fila que se quiere asignar
+*	@param [in] r Vector con la fila que se quiere asignar
 *	@return Matriz copia de m y cambiando la fila n-ésima por r.
 */
 //----------------------------------------------------------------------
@@ -337,7 +360,7 @@ Matrix& assign_row (int n,Matrix &m, Matrix &r);
 *
 *	@param [in] n Entero que representa la columna que se quiere asignar.  
 *	@param [in] m Matriz a la que se quiere asignar la columna
-*	@param [in] c Matriz con la columna que se quiere asignar
+*	@param [in] c Vector con la columna que se quiere asignar
 *	@return Matriz copia de m y cambiando la columna n-ésima por c. 
 */
 //----------------------------------------------------------------------

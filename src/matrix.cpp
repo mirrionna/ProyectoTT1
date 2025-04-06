@@ -374,14 +374,43 @@ Matrix& cross(Matrix &u,Matrix &v){
 	return *m_aux;
 }
 
+Matrix& extract_vector (Matrix &m,int i, int j){
+	if(i<=0 || j<i || i>m.n_column){
+		cout<<"Vector extract: error in indexes\n";
+		exit(EXIT_FAILURE);
+	}
+	Matrix *m_aux=new Matrix(j-i+1);
+	for(int k=i;k<=j;k++){
+		(*m_aux)(k-i+1)=m(k);
+	}
+	
+	return *m_aux;
+}
+
+Matrix& union_vector (Matrix &m,Matrix &n){
+	if(m.n_row!=1 || n.n_row!=1){
+		cout<<"Vector union: error in vector\n";
+		exit(EXIT_FAILURE);
+	}
+	Matrix *m_aux=new Matrix(m.n_column+n.n_column);
+	for(int i=1;i<=m.n_column;i++){
+		(*m_aux)(i)=m(i);
+	}
+	for(int j=m.n_column+1;j<=m.n_column+n.n_column;j++){
+		(*m_aux)(j)=n(j-m.n_column);
+	}
+	
+	return *m_aux;
+}
+
 Matrix& extract_row (Matrix &m,int n){
 	if(n<=0 || n>m.n_row){
 		cout << "Int error, bad row\n";
         exit(EXIT_FAILURE);
 	}
-	Matrix *m_aux = new Matrix(1, m.n_column);
+	Matrix *m_aux = new Matrix(m.n_column);
 	for(int i=1;i<=m.n_column;i++){
-		(*m_aux) (1,i)=m(n,i);
+		(*m_aux) (i)=m(n,i);
 	}
 	
 	return *m_aux;
@@ -392,9 +421,9 @@ Matrix& extract_column (Matrix &m,int n){
 		cout << "Int error, bad column\n";
         exit(EXIT_FAILURE);
 	}
-	Matrix *m_aux = new Matrix(m.n_row, 1);
+	Matrix *m_aux = new Matrix(m.n_row);
 	for(int i=1;i<=m.n_row;i++){
-		(*m_aux) (i,1)=m(i,n);
+		(*m_aux) (i)=m(i,n);
 	}
 	
 	return *m_aux;
@@ -420,12 +449,12 @@ Matrix& assign_column (int n,Matrix &m, Matrix &c){
 		cout << "Int error, bad column\n";
         exit(EXIT_FAILURE);
 	}
-	if(c.n_column!=1 || c.n_row!=m.n_row){
+	if(c.n_row!=1 || c.n_column!=m.n_row){
 		cout << "Vector error, bad vector\n";
         exit(EXIT_FAILURE);
 	}
 	for(int i=1;i<=m.n_row;i++){
-		m(i,n) = c(i,1);
+		m(i,n) = c(i);
 	}
 	return m;
 }
