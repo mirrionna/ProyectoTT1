@@ -133,14 +133,16 @@ Matrix& Matrix::operator / (Matrix &m){
 }
 
 Matrix& Matrix::operator = (Matrix &m){
-	Matrix *m_aux = new Matrix(m.n_row, m.n_column);
+	
+	this->n_row=m.n_row;
+	this->n_column=m.n_column;
 		for(int i = 1; i <= this->n_row; i++) {
         for(int j = 1; j <= m.n_column; j++) {
-			(*m_aux)(i,j) = m(i,j);
+			(*this)(i,j) = m(i,j);
 		}
 	}
 	
-	return *m_aux;
+	return *this;
 }
 
 Matrix& Matrix::operator + (double n) {

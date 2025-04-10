@@ -12,6 +12,17 @@
 */ 
 //----------------------------------------------------------------------
 #include "..\include\matrix.h"
+#include "..\include\R_x.hpp"
+#include "..\include\R_y.hpp"
+#include "..\include\R_z.hpp"
+#include "..\include\AccelPointMass.hpp"
+#include "..\include\Cheb3D.hpp"
+#include "..\include\EccAnom.hpp"
+#include "..\include\Frac.hpp"
+#include "..\include\MeanObliquity.hpp"
+#include "..\include\Mjday.hpp"
+#include "..\include\Mjday_TDB.hpp"
+#include "..\include\Position.hpp"
 #include <cstdio>
 #include <cmath>
 
@@ -511,6 +522,152 @@ int v_cross_01(){
 	return 0;
 }
 
+int r_x_01(){
+	
+	double angle=5;
+	Matrix A (3,3);
+	A(1,1)=1;A(1,2)=0;A(1,3)=0;
+	A(2,1)=0;A(2,2)=0.283662185463226;A(2,3)=-0.958924274663138;
+	A(3,1)=0;A(3,2)=0.958924274663138;A(3,3)=0.283662185463226;
+	
+	_assert(m_equals(A, R_x(angle), 1e-10));
+	
+	return 0;
+}
+
+int r_y_01(){
+	
+	double angle=5;
+	Matrix A (3,3);
+	A(1,1)=0.283662185463226;A(1,2)=0;A(1,3)=0.958924274663138;
+	A(2,1)=0;A(2,2)=1;A(2,3)=0;
+	A(3,1)=-0.958924274663138;A(3,2)=0;A(3,3)=0.283662185463226;
+	
+	_assert(m_equals(A, R_y(angle), 1e-10));
+
+	return 0;
+}
+
+int r_z_01(){
+	
+	double angle=5;
+	Matrix A (3,3);
+	A(1,1)=0.283662185463226;A(1,2)=-0.958924274663138;A(1,3)=0;
+	A(2,1)=0.958924274663138;A(2,2)=0.283662185463226;A(2,3)=0;
+	A(3,1)=0;A(3,2)=0;A(3,3)=1;
+	
+	_assert(m_equals(A, R_z(angle), 1e-10));
+
+	return 0;
+}
+
+int accelpointmass_01(){
+	
+	Matrix u(3);
+	Matrix v(3);
+	u(1)=0;u(2)=1;u(3)=2;
+	v(1)=4;v(2)=3;v(3)=2;
+	double GM = 2;
+	
+	Matrix R(3);
+	R(1)=0.0382164189132187;
+	R(2)=0.00630163440991609;
+	R(3)=-0.0256131500933865;
+	
+	Matrix B = AccelPointMass(u,v,GM);
+	_assert(m_equals(R,B, 1e-10));
+	
+	return 0;
+}
+
+int cheb3d_01(){
+	Matrix Cx(5);
+	Matrix Cy(5);
+	Matrix Cz(5);
+	Cx(1)=1;Cx(2)=2;Cx(3)=3;Cx(4)=4;Cx(5)=5;
+	Cy(1)=-1;Cy(2)=-2;Cy(3)=-3;Cy(4)=-4;Cy(5)=-5;
+	Cz(1)=0;Cz(2)=1;Cz(3)=2;Cz(4)=3;Cz(5)=4;
+	double t = 2;
+	double N = 5;
+	double Ta = 1;
+	double Tb = 3;
+	
+	Matrix R(3);
+	R(1)=3;R(2)=-3;R(3)=2;
+	Matrix A = Cheb3D(t,N,Ta,Tb,Cx,Cy,Cz);
+	_assert(m_equals(R,A, 1e-10));
+	
+	return 0;
+}
+
+int eccanom_01(){
+	
+	double M=2;
+	double e=0.16;
+	
+	_assert(abs(2.13518640114338 - EccAnom(M,e)) < 1e-10);
+	
+	return 0;
+}
+
+int frac_01(){
+	
+	double x=1.123456;
+	
+	_assert(abs(0.123456 - Frac(x)) < 1e-10);
+	
+	return 0;
+}
+
+int meanobliquity_01(){
+	
+	double Mjd_TT=13;
+		
+	_assert(abs(0.409412989421167 - MeanObliquity(Mjd_TT)) < 1e-10);
+	
+	return 0;
+}
+
+int mjday_01(){
+	
+	_assert(abs(52890.2291666665 - Mjday(2003,9,8,5,30,0)) < 1e-10);
+	
+	return 0;
+}
+
+int mjday_02(){
+	
+	_assert(abs(52890 - Mjday(2003,9,8)) < 1e-10);
+	
+	return 0;
+}
+
+int mjday_tdb_01(){
+	
+	_assert(abs(58340.4456185067 - Mjday_TDB(58340.445618518)) < 1e-10);
+	
+	return 0;
+}
+
+int position_01(){
+	double lat = 42.232583;
+	double lon = -2.473639;
+	double h = 841;
+	
+	Matrix R(3);
+	R(1)=892407.685713797;
+	R(2)=4934471.15708111;
+	R(3)=-3929617.98430755;
+	
+	Matrix B = Position(lat,lon,h);
+	
+	_assert(m_equals(R,B, 1e-8));
+	
+	cout<<"REVISAR POSITION, fallo de precision\n";
+
+	return 0;
+}
+
 int all_tests()
 {
     _verify(m_sum_01);
@@ -538,6 +695,19 @@ int all_tests()
 	_verify(v_norm_01);
 	_verify(v_dot_01);
 	_verify(v_cross_01);
+	
+	_verify(r_x_01);
+	_verify(r_y_01);
+	_verify(r_z_01);
+	_verify(accelpointmass_01);
+	_verify(cheb3d_01);
+	_verify(eccanom_01);
+	_verify(frac_01);
+	_verify(meanobliquity_01);
+	_verify(mjday_01);
+	_verify(mjday_02);
+	_verify(mjday_tdb_01);
+	_verify(position_01);
     return 0;
 }
 
