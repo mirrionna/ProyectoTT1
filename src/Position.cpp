@@ -13,10 +13,14 @@
 //----------------------------------------------------------------------
 #include "..\include\matrix.h"
 #include "..\include\Position.hpp"
+#include "..\include\SAT_Const.hpp"
 
 Matrix& Position (double lon, double lat, double h){
-	double R_equ = 6.378136300000000e+06;
-	double f     = 0.003352810664747;
+	
+	SAT_Const *s_const = new SAT_Const();
+	
+	double R_equ = s_const->R_Earth;
+	double f     = s_const->f_Earth;
 
 	double e2     = f*(2.0-f);   // Square of eccentricity
 	double CosLat = cos(lat);    // (Co)sine of geodetic latitude

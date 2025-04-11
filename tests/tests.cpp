@@ -23,14 +23,43 @@
 #include "..\include\Mjday.hpp"
 #include "..\include\Mjday_TDB.hpp"
 #include "..\include\Position.hpp"
+#include "..\include\sign_.hpp"
+#include "..\include\timediff.hpp"
 #include <cstdio>
 #include <cmath>
-
+#include <tuple>
 int tests_run = 0;
+
+using namespace std;
 
 #define FAIL() printf("\nfailure in %s() line %d\n", __func__, __LINE__)
 #define _assert(test) do { if (!(test)) { FAIL(); return 1; } } while(0)
 #define _verify(test) do { int r=test(); tests_run++; if(r) return r; } while(0)
+
+int tuple_equals(tuple<double,double,double,double,double> A, tuple<double,double,double,double,double> B, double p) {
+	if(fabs(get<0>(A)-get<0>(B)) > p) {
+		printf("%2.20lf %2.20lf\n",get<0>(A),get<0>(B));
+		return 0;
+	}
+	if(fabs(get<1>(A)-get<1>(B)) > p) {
+		printf("%2.20lf %2.20lf\n",get<1>(A),get<1>(B));
+		return 0;
+	}
+	if(fabs(get<2>(A)-get<2>(B)) > p) {
+		printf("%2.20lf %2.20lf\n",get<2>(A),get<2>(B));
+		return 0;
+	}
+	if(fabs(get<3>(A)-get<3>(B)) > p) {
+		printf("%2.20lf %2.20lf\n",get<3>(A),get<3>(B));
+		return 0;
+	}
+	if(fabs(get<4>(A)-get<4>(B)) > p) {
+		printf("%2.20lf %2.20lf\n",get<4>(A),get<4>(B));
+		return 0;
+	}
+	
+	return 1;
+}
 
 int m_equals(Matrix A, Matrix B, double p) {
 	if (A.n_row != B.n_row || A.n_column != B.n_column)
@@ -668,6 +697,22 @@ int position_01(){
 	return 0;
 }
 
+int sign_01(){
+	_assert(abs(-3-sign_(3,-1))<1e-10);
+	return 0;
+}
+
+int timediff_01(){
+	double t1 = 4.5;
+	double t2 = 4.0;
+	tuple<double,double,double,double,double> A = timediff(t1,t2);
+	
+	tuple<double,double,double,double,double> B = make_tuple(0.5,15,19.5,36.184,-15);
+	
+	_assert(tuple_equals(A,B,1e-10));
+	return 0;
+}
+
 int all_tests()
 {
     _verify(m_sum_01);
@@ -708,6 +753,7 @@ int all_tests()
 	_verify(mjday_02);
 	_verify(mjday_tdb_01);
 	_verify(position_01);
+	_verify(timediff_01);
     return 0;
 }
 
