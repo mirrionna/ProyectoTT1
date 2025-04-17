@@ -21,10 +21,34 @@
 
 using namespace std;
 
+//----------------------------------------------------------------------
+/** @class Matrix
+ *  @brief Clase que contiene una representación de una matriz.
+ */
+//----------------------------------------------------------------------
 class Matrix {
 public:
-    int n_row, n_column;
-	double **data;
+	//----------------------------------------------------------------------
+	// int n_row
+	//----------------------------------------------------------------------
+	/** @brief Número de filas de la matriz. */
+	int n_row;
+
+	//----------------------------------------------------------------------
+	// int n_column
+	//----------------------------------------------------------------------
+	/** @brief Número de columnas de la matriz. */
+	int n_column;
+
+	//----------------------------------------------------------------------
+	// double** data
+	//----------------------------------------------------------------------
+	/** 
+	 * @brief Puntero doble a los datos de la matriz.
+	 * 
+	 * Cada elemento apunta a una fila que contiene elementos de tipo double.
+	 */
+	double** data;
 
     // Parameterized constructor
 	//----------------------------------------------------------------------
