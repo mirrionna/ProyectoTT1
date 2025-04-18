@@ -4,7 +4,7 @@
 //----------------------------------------------------------------------
 // Proyecto TTI
 //
-/**@file test.cpp
+/**@file tests.cpp
 *	@brief Tests unitarios para los métodos del proyecto de TTI.
 *	
 *	@author Miguel Río Navarro
