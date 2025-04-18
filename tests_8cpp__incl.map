@@ -1,0 +1,37 @@
+<map id="/github/workspace/tests/tests.cpp" name="/github/workspace/tests/tests.cpp">
+<area shape="rect" id="Node000001" title="Tests unitarios para los métodos del proyecto de TTI." alt="" coords="1322,5,1482,46"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,94,127,120"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1321,31,1117,36,827,47,490,67,143,96,142,91,489,61,827,42,1117,31,1321,26"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="150,94,272,120"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="1322,32,885,50,591,69,288,96,288,91,591,64,885,45,1321,27"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="297,94,419,120"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="1321,33,943,53,693,72,435,96,434,91,692,66,943,48,1321,28"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="444,94,566,120"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="1322,34,1002,56,795,74,582,96,581,91,794,69,1002,51,1321,29"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="590,94,785,120"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="1322,39,801,96,800,90,1321,33"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="809,94,955,120"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="1322,42,971,95,970,90,1321,37"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="980,94,1136,120"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="1322,48,1126,93,1125,87,1321,43"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="1160,94,1286,120"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="1358,49,1266,90,1264,85,1356,44"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="1311,94,1493,120"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="1405,46,1405,78,1399,78,1399,46"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="1518,94,1652,120"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="1449,44,1544,85,1542,90,1447,49"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="1676,94,1843,120"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="1483,42,1690,87,1689,93,1482,47"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="1867,94,2014,120"/>
+<area shape="poly" id="edge12_Node000001_Node000013" title=" " alt="" coords="1483,36,1852,90,1851,95,1482,41"/>
+<area shape="rect" id="Node000014" title=" " alt="" coords="2039,94,2170,120"/>
+<area shape="poly" id="edge13_Node000001_Node000014" title=" " alt="" coords="1483,32,1721,56,2024,91,2024,96,1720,62,1482,37"/>
+<area shape="rect" id="Node000015" title=" " alt="" coords="2195,94,2337,120"/>
+<area shape="poly" id="edge14_Node000001_Node000015" title=" " alt="" coords="1483,30,1784,53,2180,91,2179,96,1784,59,1482,35"/>
+<area shape="rect" id="Node000016" title=" " alt="" coords="2362,94,2418,120"/>
+<area shape="poly" id="edge15_Node000001_Node000016" title=" " alt="" coords="1483,25,1640,28,1853,38,2096,58,2222,73,2347,91,2346,97,2222,78,2096,63,1852,43,1640,33,1482,30"/>
+<area shape="rect" id="Node000017" title=" " alt="" coords="2443,94,2500,120"/>
+<area shape="poly" id="edge16_Node000001_Node000017" title=" " alt="" coords="1483,24,1652,26,1885,36,2153,56,2291,71,2428,91,2427,97,2291,77,2153,61,1885,41,1652,32,1483,29"/>
+<area shape="rect" id="Node000018" title=" " alt="" coords="2524,94,2573,120"/>
+<area shape="poly" id="edge17_Node000001_Node000018" title=" " alt="" coords="1483,27,1994,47,2286,66,2410,78,2509,91,2509,97,2410,83,2285,71,1993,52,1482,32"/>
+</map>
