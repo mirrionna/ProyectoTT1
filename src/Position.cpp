@@ -17,10 +17,9 @@
 
 Matrix& Position (double lon, double lat, double h){
 	
-	SAT_Const *s_const = new SAT_Const();
 	
-	double R_equ = s_const->R_Earth;
-	double f     = s_const->f_Earth;
+	double R_equ = SAT_Const::R_Earth;
+	double f     = SAT_Const::f_Earth;
 
 	double e2     = f*(2.0-f);   // Square of eccentricity
 	double CosLat = cos(lat);    // (Co)sine of geodetic latitude

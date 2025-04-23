@@ -49,7 +49,15 @@ public:
 	 * Cada elemento apunta a una fila que contiene elementos de tipo double.
 	 */
 	double** data;
-
+	//----------------------------------------------------------------------
+	// Matrix()
+	//----------------------------------------------------------------------
+	/**@brief Constructor de una matriz vacía.
+	*
+	*	@return Matriz vacía.
+	*/
+	//----------------------------------------------------------------------
+    Matrix();
     // Parameterized constructor
 	//----------------------------------------------------------------------
 	// Matrix(const int n_row, const int n_column)

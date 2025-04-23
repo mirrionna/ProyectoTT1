@@ -24,163 +24,154 @@ class SAT_Const {
 public:
 
 	//--------------
-	// double pi2
+	// static constexpr double pi2
 	//--------------
 	/** @brief Constante matemática 2π. */
-	double pi2;
+	static constexpr double pi2 = M_PI*2;                // 2pi
 
 	//--------------
-	// double Rad
+	// static constexpr double Rad
 	//--------------
 	/** @brief Radianes por grado. Factor de conversión de grados a radianes. */
-	double Rad;
+	static constexpr double Rad = M_PI/180;              // Radians per degree
 
 	//--------------
-	// double Deg
+	// static constexpr double Deg
 	//--------------
 	/** @brief Grados por radian. Factor de conversión de radianes a grados. */
-	double Deg;
+	static constexpr double Deg = 180/M_PI;              // Degrees per radian
 
 	//--------------
-	// double Arcs
+	// static constexpr double Arcs
 	//--------------
 	/** @brief Segundos de arco por radian. */
-	double Arcs;
+	static constexpr double Arcs = 3600*180/M_PI;         // Arcseconds per radian
 
 	//--------------
-	// double MJD_J2000
+	// static constexpr double MJD_J2000
 	//--------------
 	/** @brief Fecha Juliana modificada para la época J2000.0. */
-	double MJD_J2000;
+	static constexpr double MJD_J2000 = 51544.5;             // Modified Julian Date of J2000
 
 	//--------------
-	// double T_B1950
+	// static constexpr double T_B1950
 	//--------------
 	/** @brief Diferencia en siglos julianos desde J2000.0 hasta la época B1950. */
-	double T_B1950;
+	static constexpr double T_B1950 = -0.500002108;        // Epoch B1950
 
 	//--------------
-	// double c_light
+	// static constexpr double c_light
 	//--------------
 	/** @brief Velocidad de la luz en el vacío [m/s]; DE430. */
-	double c_light;
+	static constexpr double c_light = 299792458.000000000; // Speed of light  [m/s]; DE430
 
 	//--------------
-	// double AU
+	// static constexpr double AU
 	//--------------
 	/** @brief Unidad astronómica [m]; DE430. */
-	double AU;
+	static constexpr double AU = 149597870700.000000; // Astronomical unit [m]; DE430
 
 	//--------------
-	// double R_Earth
+	// static constexpr double R_Earth
 	//--------------
 	/** @brief Radio ecuatorial medio de la Tierra [m]; DE430. */
-	double R_Earth;
+	static constexpr double R_Earth = 6378.1363e3;      // Earth's radius [m]; DE430
 
 	//--------------
-	// double f_Earth
+	// static constexpr double f_Earth
 	//--------------
 	/** @brief Aplanamiento de la Tierra; WGS-84. */
-	double f_Earth;
+	static constexpr double f_Earth = 1/298.257223563;  // Flattening; WGS-84
 
 	//--------------
-	// double R_Sun
+	// static constexpr double R_Sun
 	//--------------
 	/** @brief Radio del Sol [m]; DE430. */
-	double R_Sun;
+	static constexpr double R_Sun = 696000e3;         // Sun's radius [m]; DE430
 
 	//--------------
-	// double R_Moon
+	// static constexpr double R_Moon
 	//--------------
 	/** @brief Radio de la Luna [m]; DE430. */
-	double R_Moon;
+	static constexpr double R_Moon = 1738e3;           // Moon's radius [m]; DE430
 
 	//--------------
-	// double omega_Earth
+	// static constexpr double omega_Earth
 	//--------------
 	/** @brief Velocidad angular de rotación de la Tierra [rad/s]; WGS-84. */
-	double omega_Earth;
+	static constexpr double omega_Earth = 15.04106717866910/3600*Rad;   // [rad/s]; WGS-84
 
 	//--------------
-	// double GM_Earth
+	// static constexpr double GM_Earth
 	//--------------
 	/** @brief Parámetro gravitacional de la Tierra (GM) [m³/s²]; DE430. */
-	double GM_Earth;
+	static constexpr double GM_Earth = 398600.435436e9;                  // [m^3/s^2]; DE430
 
 	//--------------
-	// double GM_Sun
+	// static constexpr double GM_Sun
 	//--------------
 	/** @brief Parámetro gravitacional del Sol (GM) [m³/s²]; DE430. */
-	double GM_Sun;
+	static constexpr double GM_Sun =132712440041.939400e9;            // [m^3/s^2]; DE430
 
 	//--------------
-	// double GM_Moon
+	// static constexpr double GM_Moon
 	//--------------
 	/** @brief Parámetro gravitacional de la Luna (GM) [m³/s²]; DE430. */
-	double GM_Moon;
+	static constexpr double GM_Moon = GM_Earth/81.30056907419062; // [m^3/s^2]; DE430
 
 	//--------------
-	// double GM_Mercury
+	// static constexpr double GM_Mercury
 	//--------------
 	/** @brief Parámetro gravitacional de Mercurio (GM) [m³/s²]; DE430. */
-	double GM_Mercury;
+	static constexpr double GM_Mercury = 22031.780000e9;                   // [m^3/s^2]; DE430
 
 	//--------------
-	// double GM_Venus
+	// static constexpr double GM_Venus
 	//--------------
 	/** @brief Parámetro gravitacional de Venus (GM) [m³/s²]; DE430. */
-	double GM_Venus;
+	static constexpr double GM_Venus = 324858.592000e9;                  // [m^3/s^2]; DE430
 
 	//--------------
-	// double GM_Mars
+	// static constexpr double GM_Mars
 	//--------------
 	/** @brief Parámetro gravitacional de Marte (GM) [m³/s²]; DE430. */
-	double GM_Mars;
+	static constexpr double GM_Mars =42828.375214e9;                   // [m^3/s^2]; DE430
 
 	//--------------
-	// double GM_Jupiter
+	// static constexpr double GM_Jupiter
 	//--------------
 	/** @brief Parámetro gravitacional de Júpiter (GM) [m³/s²]; DE430. */
-	double GM_Jupiter;
+	static constexpr double GM_Jupiter= 126712764.800000e9;               // [m^3/s^2]; DE430
 
 	//--------------
-	// double GM_Saturn
+	// static constexpr double GM_Saturn
 	//--------------
 	/** @brief Parámetro gravitacional de Saturno (GM) [m³/s²]; DE430. */
-	double GM_Saturn;
+	static constexpr double GM_Saturn = 37940585.200000e9;                // [m^3/s^2]; DE430
 
 	//--------------
-	// double GM_Uranus
+	// static constexpr double GM_Uranus
 	//--------------
 	/** @brief Parámetro gravitacional de Urano (GM) [m³/s²]; DE430. */
-	double GM_Uranus;
+	static constexpr double GM_Uranus =5794548.600000e9;                 // [m^3/s^2]; DE430
 
 	//--------------
-	// double GM_Neptune
+	// static constexpr double GM_Neptune
 	//--------------
 	/** @brief Parámetro gravitacional de Neptuno (GM) [m³/s²]; DE430. */
-	double GM_Neptune;
+	static constexpr double GM_Neptune =6836527.100580e9;                 // [m^3/s^2]; DE430
 
 	//--------------
-	// double GM_Pluto
+	// static constexpr double GM_Pluto
 	//--------------
 	/** @brief Parámetro gravitacional de Plutón (GM) [m³/s²]; DE430. */
-	double GM_Pluto;
+	static constexpr double GM_Pluto = 977.0000000000009e9;              // [m^3/s^2]; DE430
 
 	//--------------
-	// double P_Sol
+	// static constexpr double P_Sol
 	//--------------
 	/** @brief Presión de radiación solar a 1 UA [N/m²]; IERS 96. */
-	double P_Sol;
+	static constexpr double P_Sol =1367/c_light; // [N/m^2] (~1367 W/m^2); IERS 96
 
-    // Parameterized constructor
-	//----------------------------------------------------------------------
-	// SAT_Const()
-	//----------------------------------------------------------------------
-	/**@brief Constructor de la clase SAT_Const.
-	*	@return SAT_Const con todas las constantes dentro como atributos.
-	*/
-	//----------------------------------------------------------------------
-    SAT_Const();
 };
 #endif

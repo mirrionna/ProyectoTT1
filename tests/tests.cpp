@@ -25,6 +25,12 @@
 #include "..\include\Position.hpp"
 #include "..\include\sign_.hpp"
 #include "..\include\timediff.hpp"
+#include "..\include\AzElPa.hpp"
+#include "..\include\Legendre.hpp"
+#include "..\include\TimeUpdate.hpp"
+
+#include "..\include\global.hpp"
+
 #include <cstdio>
 #include <cmath>
 #include <tuple>
@@ -668,8 +674,6 @@ int position_01(){
 	
 	_assert(m_equals(R,B, 1e-8));
 	
-	cout<<"REVISAR POSITION, fallo de precision\n";
-
 	return 0;
 }
 
@@ -696,8 +700,71 @@ int timediff_01(){
 	return 0;
 }
 
+int azelpa_01(){
+	Matrix s(3);
+	s(1)=1;s(2)=2;s(3)=3;
+	
+	tuple<double,double,Matrix,Matrix> A = AzElPa(s);
+	Matrix B1(3);
+	Matrix B2(3);
+	B1(1)=0.4;B1(2)=-0.2;B1(3)=0;
+	B2(1)=-0.095831484749991;B2(2)=-0.191662969499982;B2(3)=0.159719141249985;
+	tuple<double,double,Matrix,Matrix> B = make_tuple(0.463647609000806,0.930274014115472,B1,B2);
+	
+	double p = 1e-10;
+	_assert(fabs(get<0>(A)-get<0>(B)) < p);
+	_assert(fabs(get<1>(A)-get<1>(B)) < p);
+	_assert(m_equals(get<2>(A),get<2>(B), 1e-8));
+	_assert(m_equals(get<3>(A),get<3>(B), 1e-8));
+
+	
+	return 0;
+	
+}
+
+int legendre_01(){
+	
+	tuple<Matrix,Matrix> A = Legendre(2,2,1);
+	Matrix B1(3,3);
+	Matrix B2(3,3);
+	B1(1,1)=1;B1(1,2)=0;B1(1,3)=0;
+	B1(2,1)=1.4574704987823;B1(2,2)=0.935831045210238;B1(2,3)=0;
+	B1(3,1)=1.25691645573063;B1(3,2)=1.76084689542256;B1(3,3)=0.565313394670859;
+	
+	B2(1,1)=0;B2(1,2)=0;B2(1,3)=0;
+	B2(2,1)=0.935831045210238;B2(2,2)=-1.4574704987823;B2(2,3)=0;
+	B2(3,1)=3.0498762872218;B2(3,2)=-1.61172976752398;B2(3,3)=-1.76084689542256;
+	tuple<Matrix,Matrix> B = make_tuple(B1,B2);
+	double p = 1e-10;
+	_assert(m_equals(get<0>(A),get<0>(B), 1e-10));
+	_assert(m_equals(get<1>(A),get<1>(B), 1e-10));
+
+	
+	return 0;
+	
+}
+
+int timeupdate_01(){
+	Matrix B(2,2);
+	B(1,1)=13;B(1,2)=13;
+	B(2,1)=13;B(2,2)=13;
+	Matrix P(2,2);Matrix Phi(2,2);
+	P(1,1)=1;P(1,2)=2;
+	P(2,1)=1;P(2,2)=2;
+	Phi(1,1)=2;Phi(1,2)=1;
+	Phi(2,1)=2;Phi(2,2)=1;
+	
+	Matrix A = TimeUpdate(P,Phi,1);
+	
+	_assert(m_equals(A,B, 1e-10));
+
+	return 0;
+	
+}
+
 int all_tests()
 {
+	//eop19620101(1);
     _verify(m_sum_01);
     _verify(m_sub_01);
 	_verify(m_mul_01);
@@ -738,6 +805,11 @@ int all_tests()
 	_verify(position_01);
 	_verify(sign_01);
 	_verify(timediff_01);
+	_verify(azelpa_01);
+	_verify(legendre_01);
+	_verify(timeupdate_01);
+
+
     return 0;
 }
 
