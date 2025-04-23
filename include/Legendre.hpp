@@ -16,6 +16,7 @@
 
 #include <cmath>
 #include <tuple>
+#include "..\include\matrix.h"
 //----------------------------------------------------------------------
 //  tuple<Matrix,Matrix> Legendre (int n, int m, double fi);	
 //----------------------------------------------------------------------

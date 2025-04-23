@@ -11,7 +11,6 @@
 *	@bug No known bugs.
 */ 
 //----------------------------------------------------------------------
-#include "..\include\matrix.h"
 #include "..\include\R_y.hpp"
 
 Matrix& R_y (double angle){

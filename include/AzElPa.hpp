@@ -16,7 +16,7 @@
 
 #include <cmath>
 #include <tuple>
-
+#include "..\include\matrix.h"
 //----------------------------------------------------------------------
 //  tuple<double,double,Matrix,Matrix> AzElPa (Matrix &s);
 //----------------------------------------------------------------------

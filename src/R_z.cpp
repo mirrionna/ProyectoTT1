@@ -11,7 +11,6 @@
 *	@bug No known bugs.
 */ 
 //----------------------------------------------------------------------
-#include "..\include\matrix.h"
 #include "..\include\R_z.hpp"
 
 Matrix& R_z (double angle){

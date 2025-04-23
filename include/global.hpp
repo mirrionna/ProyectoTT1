@@ -5,7 +5,7 @@
 // Proyecto TTI
 //
 /**@file global.hpp
-*	@brief Este archivo de cabecera contiene una implementación de la función global.
+*	@brief Este archivo de cabecera contiene una implementación para leer ficheros.
 *	
 *	@author Miguel Río Navarro
 *	@bug No known bugs.
@@ -17,7 +17,7 @@
 #include <cmath>
 #include "..\include\matrix.h"
 
-extern Matrix eopdata;
+extern Matrix* eopdata;
 
 //----------------------------------------------------------------------
 //  void eop19620101(int c);

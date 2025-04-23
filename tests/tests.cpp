@@ -28,6 +28,9 @@
 #include "..\include\AzElPa.hpp"
 #include "..\include\Legendre.hpp"
 #include "..\include\TimeUpdate.hpp"
+#include "..\include\NutAngles.hpp"
+#include "..\include\IERS.hpp"
+
 
 #include "..\include\global.hpp"
 
@@ -762,9 +765,64 @@ int timeupdate_01(){
 	
 }
 
+int timeupdate_02(){
+	Matrix B(2,2);
+	B(1,1)=12;B(1,2)=12;
+	B(2,1)=12;B(2,2)=12;
+	Matrix P(2,2);Matrix Phi(2,2);
+	P(1,1)=1;P(1,2)=2;
+	P(2,1)=1;P(2,2)=2;
+	Phi(1,1)=2;Phi(1,2)=1;
+	Phi(2,1)=2;Phi(2,2)=1;
+	
+	Matrix A = TimeUpdate(P,Phi);
+	
+	_assert(m_equals(A,B, 1e-10));
+
+	return 0;
+	
+}
+
+int nutangles_01(){
+	
+	tuple<double,double> A = NutAngles(2003);
+	tuple<double,double> B = make_tuple(5.86599460508007e-05,-3.02393562601737e-05);
+	
+	double p = 1e-10;
+	_assert(fabs(get<0>(A)-get<0>(B)) < p);
+	_assert(fabs(get<1>(A)-get<1>(B)) < p);
+
+	
+	return 0;
+	
+}
+
+int iers_01(){
+	
+	double Mjd_UTC=49746.1163541665;
+	
+	tuple<double,double,double,double,double,double,double,double,double> A = IERS(*eopdata,Mjd_UTC,'l');
+	
+	tuple<double,double,double,double,double,double,double,double,double> B = make_tuple(-5.5937872420407e-07,2.33559834147197e-06,0.325747632958709,0.00272698971874332,-1.16882953161744e-07,-2.4783506198648e-08,-8.43027359626024e-10,-1.56811369105037e-09,29);
+	
+	double p = 1e-10;
+	_assert(fabs(get<0>(A)-get<0>(B)) < p);
+	_assert(fabs(get<1>(A)-get<1>(B)) < p);
+	_assert(fabs(get<2>(A)-get<2>(B)) < p);
+	_assert(fabs(get<3>(A)-get<3>(B)) < p);
+	_assert(fabs(get<4>(A)-get<4>(B)) < p);
+	_assert(fabs(get<5>(A)-get<5>(B)) < p);
+	_assert(fabs(get<6>(A)-get<6>(B)) < p);
+	_assert(fabs(get<7>(A)-get<7>(B)) < p);
+	_assert(fabs(get<8>(A)-get<8>(B)) < p);
+	return 0;
+	
+}
+
+
 int all_tests()
 {
-	//eop19620101(1);
+	eop19620101(21413);
     _verify(m_sum_01);
     _verify(m_sub_01);
 	_verify(m_mul_01);
@@ -808,7 +866,9 @@ int all_tests()
 	_verify(azelpa_01);
 	_verify(legendre_01);
 	_verify(timeupdate_01);
-
+	_verify(timeupdate_02);
+	_verify(nutangles_01);
+	_verify(iers_01);
 
     return 0;
 }

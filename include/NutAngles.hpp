@@ -1,32 +1,31 @@
 // $Header$
 //----------------------------------------------------------------------
-// Position
+// NutAngles
 //----------------------------------------------------------------------
 // Proyecto TTI
 //
-/**@file Position.hpp
-*	@brief Este archivo de cabecera contiene una implementación de la función Position.
+/**@file NutAngles.hpp
+*	@brief Este archivo de cabecera contiene una implementación de la función NutAngles.
 *	
 *	@author Miguel Río Navarro
 *	@bug No known bugs.
 */ 
 //----------------------------------------------------------------------
-#ifndef _Position_
-#define _Position_
+#ifndef _NutAngles_
+#define _NutAngles_
 
 #include <cmath>
+#include <tuple>
 #include "..\include\matrix.h"
 #include "..\include\SAT_Const.hpp"
 //----------------------------------------------------------------------
-//  Matrix& Position (Matrix& r, Matrix& s, double GM)
+//  tuple<double,double> NutAngles (double Mjd_TT)
 //----------------------------------------------------------------------
-/**@brief Calcula el vector posición a partir de las coordenadas geodésicas.
+/**@brief Calcula la nutación en longitud y oblicuidad.
 *
-*	@param [in] lon Longitud en radianes.  
-*	@param [in] lat Latitud en radianes.  
-*	@param [in] h Altura en metros.  
-*	@return Vector posición en metros. 
+*	@param [in] Mjd_TT Fecha juliana modificada, en tiempo terrestre.  
+*	@return Tupla con la nutación en longitud y oblicuidad. 
 */
 //----------------------------------------------------------------------
-Matrix& Position (double lon, double lat, double h);	
+tuple<double,double> NutAngles (double Mjd_TT);
 #endif

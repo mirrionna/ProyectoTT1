@@ -12,7 +12,6 @@
 */ 
 //----------------------------------------------------------------------
 #include "..\include\MeanObliquity.hpp"
-#include "..\include\SAT_Const.hpp"
 
 
 double MeanObliquity(double Mjd_TT){

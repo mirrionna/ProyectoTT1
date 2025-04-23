@@ -11,9 +11,8 @@
 *	@bug No known bugs.
 */ 
 //----------------------------------------------------------------------
-#include "..\include\matrix.h"
 #include "..\include\Position.hpp"
-#include "..\include\SAT_Const.hpp"
+
 
 Matrix& Position (double lon, double lat, double h){
 	

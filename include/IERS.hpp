@@ -15,6 +15,9 @@
 #define _IERS_
 
 #include <cmath>
+#include <tuple>
+#include "..\include\matrix.h"
+#include "..\include\SAT_Const.hpp"
 //----------------------------------------------------------------------
 //  tuple<double,double,double,double,double,double,double,double,double> IERS(Matrix &eop,double Mjd_UTC,char interp);
 //----------------------------------------------------------------------

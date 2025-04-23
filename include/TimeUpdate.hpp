@@ -15,6 +15,7 @@
 #define _TimeUpdate_
 
 #include <cmath>
+#include "..\include\matrix.h"
 //----------------------------------------------------------------------
 //  Matrix& TimeUpdate (Matrix& r, Matrix& s, double GM)
 //----------------------------------------------------------------------

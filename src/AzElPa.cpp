@@ -11,7 +11,6 @@
 *	@bug No known bugs.
 */ 
 //----------------------------------------------------------------------
-#include "..\include\matrix.h"
 #include "..\include\AzElPa.hpp"
 
 tuple<double,double,Matrix,Matrix> AzElPa (Matrix &s){

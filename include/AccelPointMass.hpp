@@ -15,6 +15,7 @@
 #define _AccelPointMass_
 
 #include <cmath>
+#include "..\include\matrix.h"
 //----------------------------------------------------------------------
 //  Matrix& AccelPointMass (Matrix& r, Matrix& s, double GM)
 //----------------------------------------------------------------------

@@ -11,7 +11,6 @@
 *	@bug No known bugs.
 */ 
 //----------------------------------------------------------------------
-#include "..\include\matrix.h"
 #include "..\include\Legendre.hpp"
 
 tuple<Matrix,Matrix> Legendre (int n, int m, double fi){

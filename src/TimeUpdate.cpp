@@ -11,7 +11,6 @@
 *	@bug No known bugs.
 */ 
 //----------------------------------------------------------------------
-#include "..\include\matrix.h"
 #include "..\include\TimeUpdate.hpp"
 
 Matrix& TimeUpdate (Matrix &P, Matrix &Phi, double Qdt){

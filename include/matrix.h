@@ -352,7 +352,7 @@ Matrix& extract_vector (Matrix &m,int i, int j);
 //----------------------------------------------------------------------
 Matrix& union_vector (Matrix &m,Matrix &n);
 //----------------------------------------------------------------------
-// Matrix& extract_row (int n)
+// Matrix& extract_row (Matrix &m,int n);
 //----------------------------------------------------------------------
 /**@brief Extrae una fila de una matriz
 *
@@ -363,7 +363,7 @@ Matrix& union_vector (Matrix &m,Matrix &n);
 //----------------------------------------------------------------------
 Matrix& extract_row (Matrix &m,int n);
 //----------------------------------------------------------------------
-// Matrix& extract_column (int n)
+// Matrix& extract_column (Matrix &m,int n);
 //----------------------------------------------------------------------
 /**@brief Extrae una columna de una matriz
 *

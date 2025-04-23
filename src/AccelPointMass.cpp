@@ -11,7 +11,6 @@
 *	@bug No known bugs.
 */ 
 //----------------------------------------------------------------------
-#include "..\include\matrix.h"
 #include "..\include\AccelPointMass.hpp"
 
 Matrix& AccelPointMass (Matrix &r, Matrix &s, double GM){
