@@ -15,6 +15,7 @@
 #define _EccAnom_
 #include <iostream>
 #include <cmath>
+#include <numbers>
 
 using namespace std;
 //----------------------------------------------------------------------

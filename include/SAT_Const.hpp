@@ -14,6 +14,7 @@
 #ifndef _SAT_Const_
 #define _SAT_Const_
 #include <cmath>
+#include <numbers>
 
 //----------------------------------------------------------------------
 /** @class SAT_Const
@@ -27,25 +28,25 @@ public:
 	// static constexpr double pi2
 	//--------------
 	/** @brief Constante matemática 2π. */
-	static constexpr double pi2 = M_PI*2;                // 2pi
+	static constexpr double pi2 = std::numbers::pi*2;                // 2pi
 
 	//--------------
 	// static constexpr double Rad
 	//--------------
 	/** @brief Radianes por grado. Factor de conversión de grados a radianes. */
-	static constexpr double Rad = M_PI/180;              // Radians per degree
+	static constexpr double Rad = std::numbers::pi/180;              // Radians per degree
 
 	//--------------
 	// static constexpr double Deg
 	//--------------
 	/** @brief Grados por radian. Factor de conversión de radianes a grados. */
-	static constexpr double Deg = 180/M_PI;              // Degrees per radian
+	static constexpr double Deg = 180/std::numbers::pi;              // Degrees per radian
 
 	//--------------
 	// static constexpr double Arcs
 	//--------------
 	/** @brief Segundos de arco por radian. */
-	static constexpr double Arcs = 3600*180/M_PI;         // Arcseconds per radian
+	static constexpr double Arcs = 3600*180/std::numbers::pi;         // Arcseconds per radian
 
 	//--------------
 	// static constexpr double MJD_J2000

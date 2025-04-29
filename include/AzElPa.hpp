@@ -15,6 +15,7 @@
 #define _AzElPa_
 
 #include <cmath>
+#include <numbers>
 #include <tuple>
 #include "..\include\matrix.h"
 //----------------------------------------------------------------------

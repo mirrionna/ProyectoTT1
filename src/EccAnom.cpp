@@ -17,13 +17,13 @@ double EccAnom (double M, double e){
 	int i = 1;
 
 	// Starting value
-	M = fmod(M,2.0*M_PI);
+	M = fmod(M,2.0*std::numbers::pi);
 	double E = 0;
 	if (e<0.8){
 		E = M;
 	}
 	else{
-		E = M_PI;
+		E = std::numbers::pi;
 	}
 
 	double f = E - e*sin(E) - M;
