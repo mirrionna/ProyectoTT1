@@ -19,7 +19,7 @@
 #include <tuple>
 #include "..\include\matrix.h"
 //----------------------------------------------------------------------
-//  tuple<double,double,Matrix,Matrix> AzElPa (Matrix &s);
+//  tuple<double,double,Matrix&,Matrix&> AzElPa (Matrix &s);
 //----------------------------------------------------------------------
 /**@brief Calcula el acimut, la elevación y las parciales de las coordenadas locales tangentes.
 *
@@ -27,5 +27,5 @@
 *	@return Tupla con el acimut, la elevación y las parciales. 
 */
 //----------------------------------------------------------------------
-tuple<double,double,Matrix,Matrix> AzElPa (Matrix &s);	
+tuple<double,double,Matrix&,Matrix&> AzElPa (Matrix &s);	
 #endif

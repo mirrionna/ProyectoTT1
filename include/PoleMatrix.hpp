@@ -1,32 +1,33 @@
-	// $Header$
+// $Header$
 //----------------------------------------------------------------------
-// Legendre
+// PoleMatrix
 //----------------------------------------------------------------------
 // Proyecto TTI
 //
-/**@file Legendre.hpp
-*	@brief Este archivo de cabecera contiene una implementación de la función Legendre.
+/**@file PoleMatrix.hpp
+*	@brief Este archivo de cabecera contiene una implementación de la función PoleMatrix.
 *	
 *	@author Miguel Río Navarro
 *	@bug No known bugs.
 */ 
 //----------------------------------------------------------------------
-#ifndef _Legendre_
-#define _Legendre_
+#ifndef _PoleMatrix_
+#define _PoleMatrix_
 
 #include <cmath>
-#include <tuple>
 #include "..\include\matrix.h"
+#include "..\include\R_x.hpp"
+#include "..\include\R_y.hpp"
+
 //----------------------------------------------------------------------
-//  tuple<Matrix&,Matrix&> Legendre (int n, int m, double fi);	
+//  Matrix& PoleMatrix (double xp, double yp)
 //----------------------------------------------------------------------
-/**@brief Calcula la aceleración perturbacional debido a un punto de masas.
+/**@brief Transforma de seudo Earth-fixed a Earth-fixed coordenadas.
 *
-*	@param [in] n Grado del polinomio. 
-*	@param [in] m Orden del polinomio.
-*	@param [in] fi Ángulo en radianes.  
-*	@return Matriz con la aceleración pertubacional. 
+*	@param [in] xp Coordenadas x.  
+*	@param [in] yp Coordenadas y.  
+*	@return Matriz con la transformación de seudo Earth-fixed a Earth-fixed coordenadas. 
 */
 //----------------------------------------------------------------------
-tuple<Matrix&,Matrix&> Legendre (int n, int m, double fi);	
+Matrix& PoleMatrix (double xp, double yp);	
 #endif

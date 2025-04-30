@@ -349,6 +349,7 @@ Matrix& submatriz(Matrix &m, int i, int j){
 
 double norm(Matrix &v){
 	double norma=0;
+	cout<<"N"<<v.n_column<<"\n";
 	for(int i=1;i<=v.n_column;i++){
 		norma+=pow(v(i),2);
 	}

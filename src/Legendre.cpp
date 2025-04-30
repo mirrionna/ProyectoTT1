@@ -13,9 +13,9 @@
 //----------------------------------------------------------------------
 #include "..\include\Legendre.hpp"
 
-tuple<Matrix,Matrix> Legendre (int n, int m, double fi){
-	Matrix pnm = zeros(n+1,m+1);
-	Matrix dpnm = zeros(n+1,m+1);
+tuple<Matrix&,Matrix&> Legendre (int n, int m, double fi){
+	Matrix &pnm = zeros(n+1,m+1);
+	Matrix &dpnm = zeros(n+1,m+1);
 
 	pnm(1,1)=1;
 	dpnm(1,1)=0;
@@ -61,5 +61,5 @@ tuple<Matrix,Matrix> Legendre (int n, int m, double fi){
 			break;
 		}
 	}
-	return std::make_tuple(pnm,dpnm);
+	return std::tie(pnm,dpnm);
 }
