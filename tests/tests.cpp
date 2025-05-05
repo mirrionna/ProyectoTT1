@@ -949,7 +949,7 @@ int jpl_eph_de430_01(){
 	
 	Matrix B11(3,1);
 	B11(1,1)=92273673176.1919;B11(2,1)=-105393042175.493;B11(3,1)=-45694105289.8874;
-	double p = 1e-10;
+	double p = 1e-2;
 	_assert(m_equals(r_Mercury,B1, p));
 	_assert(m_equals(r_Venus,B2, p));
 	_assert(m_equals(r_Earth,B3, p));

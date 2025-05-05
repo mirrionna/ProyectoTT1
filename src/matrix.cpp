@@ -142,9 +142,11 @@ Matrix& Matrix::operator = (Matrix &m){
 	
 	this->n_row=m.n_row;
 	this->n_column=m.n_column;
-		for(int i = 1; i <= this->n_row; i++) {
-        for(int j = 1; j <= m.n_column; j++) {
-			(*this)(i,j) = m(i,j);
+	this->data = (double **) malloc(m.n_row*sizeof(double *));
+		for(int i = 0; i < this->n_row; i++) {
+		this->data[i] = (double *) malloc(m.n_column*sizeof(double));
+        for(int j = 0; j < m.n_column; j++) {
+			this->data[i][j]=m.data[i][j];
 		}
 	}
 	

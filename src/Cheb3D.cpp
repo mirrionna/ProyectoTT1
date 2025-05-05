@@ -22,11 +22,12 @@ Matrix& Cheb3D (double t,int N, double Ta, double Tb, Matrix &Cx, Matrix &Cy, Ma
 		
 	// Clenshaw algorithm
 	double tau = (2*t-Ta-Tb)/(Tb-Ta);  
-
+	
 	Matrix f1 = zeros(3);
 	Matrix f2 = zeros(3);
+	Matrix old_f1 = zeros(3);
 	for(int i=N;i>=2;i--){
-		Matrix old_f1 = f1;
+		old_f1 = f1;
 		Matrix aux(3);
 		aux(1)=Cx(i);aux(2)=Cy(i);aux(3)=Cz(i);
 		f1 = f1*2*tau-f2+aux;

@@ -52,7 +52,12 @@ tuple<Matrix&,Matrix&,Matrix&,Matrix&,Matrix&,Matrix&,Matrix&,Matrix&,Matrix&,Ma
 		j=1;
 		Mjd0 = t1+16*j;
 	}
-	Matrix& r_Earth = Cheb3D(Mjd_TDB, 13, Mjd0, Mjd0+16, extract_vector(Cx_Earth,13*j+1,13*j+13),extract_vector(Cy_Earth,13*j+1,13*j+13), extract_vector(Cz_Earth,13*j+1,13*j+13))*1e3;
+
+	Matrix& Cx_Earth_sub = extract_vector(Cx_Earth,13*j+1,13*j+13);
+	Matrix& Cy_Earth_sub = extract_vector(Cy_Earth,13*j+1,13*j+13);
+	Matrix& Cz_Earth_sub = extract_vector(Cz_Earth,13*j+1,13*j+13);
+	Matrix& r_Earth = Cheb3D(Mjd_TDB, 13, Mjd0, Mjd0+16,Cx_Earth_sub,Cy_Earth_sub,Cz_Earth_sub)*1e3;
+
 	temp(1)=441;temp(2)=454;temp(3)=467;temp(4)=480;
 	Matrix& Cx_Moon = extract_vector(PCtemp,temp(1),temp(2)-1);
 	Matrix& Cy_Moon = extract_vector(PCtemp,temp(2),temp(3)-1);
