@@ -5,7 +5,7 @@
 // Proyecto TT1
 //
 /**@file IERS.cpp
-*	@brief Cálculo de la aceleración pertubacional de un satélite debido a un punto de masas.
+*	@brief Cálculo de los tiempos IERS y los datos de movimiento polar.
 *	
 *	@author Miguel Río Navarro
 *	@bug No known bugs.

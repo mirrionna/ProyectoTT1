@@ -34,6 +34,10 @@
 #include "..\include\PoleMatrix.hpp"
 #include "..\include\PrecMatrix.hpp"
 #include "..\include\AccelHarmonic.hpp"
+#include "..\include\EqnEquinox.hpp"
+#include "..\include\LTC.hpp"
+#include "..\include\gmst.hpp"
+#include "..\include\JPL_Eph_DE430.hpp"
 
 #include "..\include\global.hpp"
 
@@ -714,7 +718,7 @@ int azelpa_01(){
 	Matrix B2(3);
 	B1(1)=0.4;B1(2)=-0.2;B1(3)=0;
 	B2(1)=-0.095831484749991;B2(2)=-0.191662969499982;B2(3)=0.159719141249985;
-	
+
 	double p = 1e-10;
 	_assert(fabs(A1-0.463647609000806) < p);
 	_assert(fabs(A2-0.930274014115472) < p);
@@ -866,19 +870,108 @@ int accelharmonic_01(){
 	A(3,1)=7;A(3,2)=8;A(3,3)=9;
 	
 	Matrix B(3,1);
-	B(1,1)=1;B(2,1)=2;B(3,1)=3;
-	Matrix ah = AccelHarmonic(B,A,5,5);
+	B(1,1)=10000;B(2,1)=20000;B(3,1)=30000;
+	Matrix ah = AccelHarmonic(B,A,1,2);
 	Matrix C(3,1);
-	C(1,1)=-2.7836021190663e+21;C(2,1)=-3.41814003294187e+21;C(3,1)=-4.05267794681744e+21;
+	C(1,1)=-8643.47675428564;C(2,1)=-10330.0088039024;C(3,1)=-12016.5408535191;
     _assert(m_equals(C, ah, 1e-10));
 	
 	return 0;
+}
+
+int eqnequinox_01(){
+		
+	double p = 1e-10;
+	_assert(fabs(EqnEquinox(2003)-5.38122631093785e-05) < p);
+
+	
+	return 0;
+	
+}
+
+int LTC_01(){
+	Matrix A1=LTC(42.232583,-2.473639);
+	
+	Matrix B1(3,3);
+	B1(1,1)=0.984036858261639;B1(1,2)=-0.177964776241149;B1(1,3)=0;
+	B1(2,1)=-0.110227950763158;B1(2,2)=-0.609493455124053;B1(2,3)=-0.785090776300103;
+	B1(3,1)=0.139718504333238;B1(3,2)=0.772558260960545;B1(3,3)=-0.61938071730439;
+
+	_assert(m_equals(A1,B1, 1e-10));
+
+	
+	return 0;
+	
+}
+
+int gmst_01(){
+	
+	double p = 1e-10;
+	_assert(fabs(gmst(2003)-4.01447257055521) < p);
+
+	
+	return 0;
+	
+}
+
+int jpl_eph_de430_01(){
+	
+	auto [r_Mercury,r_Venus,r_Earth,r_Mars,r_Jupiter,r_Saturn,r_Uranus,r_Neptune,r_Pluto,r_Moon,r_Sun] = JPL_Eph_DE430(49746.1);
+	Matrix B1(3,1);
+	B1(1,1)=83810666211.6714;B1(2,1)=-65300253562.273;B1(3,1)=-23400591423.1512;
+	
+	Matrix B2(3,1);
+	B2(1,1)=-15254871090.737;B2(2,1)=-110119619839.499;B2(3,1)=-41014557782.1451;
+	
+	Matrix B3(3,1);
+	B3(1,1)=-92446370466.6615;B3(2,1)=106412761987.887;B3(3,1)=46137876551.2218;
+	
+	Matrix B4(3,1);
+	B4(1,1)=-88286755974.9184;B4(2,1)=46961779170.9088;B4(3,1)=29069662998.0302;
+	
+	Matrix B5(3,1);
+	B5(1,1)=-298422178337.688;B5(2,1)=-754510732235.042;B5(3,1)=-314415669431.536;
+	
+	Matrix B6(3,1);
+	B6(1,1)=1482007182963.1;B6(2,1)=-453899645892.782;B6(3,1)=-249413567763.422;
+	
+	Matrix B7(3,1);
+	B7(1,1)=1412337137361.43;B7(2,1)=-2511375518242.91;B7(3,1)=-1118117451413.37;
+	
+	Matrix B8(3,1);
+	B8(1,1)=1871221039794.16;B8(2,1)=-3928996288702.76;B8(3,1)=-1655028957852.41;
+	
+	Matrix B9(3,1);
+	B9(1,1)=-2171444383702.46;B9(2,1)=-3915447988031.43;B9(3,1)=-552721549757.353;
+	
+	Matrix B10(3,1);
+	B10(1,1)=88301268.8063318;B10(2,1)=-336822619.971717;B10(3,1)=-114792187.645337;
+	
+	Matrix B11(3,1);
+	B11(1,1)=92273673176.1919;B11(2,1)=-105393042175.493;B11(3,1)=-45694105289.8874;
+	double p = 1e-10;
+	_assert(m_equals(r_Mercury,B1, p));
+	_assert(m_equals(r_Venus,B2, p));
+	_assert(m_equals(r_Earth,B3, p));
+	_assert(m_equals(r_Mars,B4, p));
+	_assert(m_equals(r_Jupiter,B5, p));
+	_assert(m_equals(r_Saturn,B6, p));
+	_assert(m_equals(r_Uranus,B7, p));
+	_assert(m_equals(r_Neptune,B8, p));
+	_assert(m_equals(r_Pluto,B9, p));
+	_assert(m_equals(r_Moon,B10, p));
+	_assert(m_equals(r_Sun,B11, p));
+
+	
+	return 0;
+	
 }
 
 int all_tests()
 {
 	eop19620101(21413);
 	GGM03S();
+	DE430Coeff();
     _verify(m_sum_01);
     _verify(m_sub_01);
 	_verify(m_mul_01);
@@ -919,8 +1012,8 @@ int all_tests()
 	_verify(position_01);
 	_verify(sign_01);
 	_verify(timediff_01);
-	//_verify(azelpa_01);
-	//_verify(legendre_01);
+	_verify(azelpa_01);
+	_verify(legendre_01);
 	_verify(timeupdate_01);
 	_verify(timeupdate_02);
 	_verify(nutangles_01);
@@ -930,6 +1023,10 @@ int all_tests()
 	_verify(polematrix_01);
 	_verify(precmatrix_01);
 	_verify(accelharmonic_01);
+	_verify(eqnequinox_01);
+	_verify(LTC_01);
+	_verify(gmst_01);
+	_verify(jpl_eph_de430_01);
     return 0;
 }
 

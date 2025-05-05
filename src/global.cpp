@@ -5,7 +5,7 @@
 // Proyecto TT1
 //
 /**@file global.cpp
-*	@brief Carga de un fichero de texto.
+*	@brief Carga de varios ficheros de texto.
 *	
 *	@author Miguel Río Navarro
 *	@bug No known bugs.
@@ -13,7 +13,7 @@
 //----------------------------------------------------------------------
 #include "..\include\global.hpp"
 
-Matrix* eopdata = nullptr; 
+Matrix *eopdata; 
 
 void eop19620101(int c){
 
@@ -37,14 +37,13 @@ void eop19620101(int c){
 	fclose(fid);
 }
 
-Matrix* Cnm = nullptr; 
-Matrix* Snm = nullptr; 
+Matrix *Cnm; 
+Matrix *Snm; 
 
 void GGM03S(){
-
+	
 	Cnm = new Matrix(zeros(181, 181));
 	Snm = new Matrix(zeros(181, 181));
-	// read Earth orientation parameters
 	FILE *fid = fopen("../data/GGM03S.txt","r");
 
 	if(fid== NULL) {
@@ -55,8 +54,27 @@ void GGM03S(){
 	for (int n = 0; n <= 180; n++) {
 		for(int m=0;m<=n;m++){
 				fscanf(fid, "%lf %lf %lf %lf %lf %lf",
-				   &(aux), &(aux), &(Cnm->operator()(n+1,m+1)),
-				   &(Snm->operator()(n+1,m+1)), &(aux), &(aux));
+				   &aux, &aux, &(Cnm->operator()(n+1,m+1)),
+				   &(Snm->operator()(n+1,m+1)), &aux, &aux);
+			}
+		}
+	fclose(fid);
+}
+
+Matrix *PC;
+void DE430Coeff(){
+	
+	PC = new Matrix(zeros(2285, 1020));
+	FILE *fid = fopen("../data/DE430Coeff.txt","r");
+
+	if(fid== NULL) {
+		printf("Fail open DE430Coeff.txt file\n");
+		exit(EXIT_FAILURE);
+	}
+	double aux;
+	for (int n = 1; n <= 2285; n++) {
+		for(int m=1;m<=1020;m++){
+				fscanf(fid, "%lf ",&((*PC)(n, m)));
 			}
 		}
 	fclose(fid);

@@ -17,27 +17,35 @@
 #include <cmath>
 #include "..\include\matrix.h"
 
-extern Matrix* eopdata;
+extern Matrix *eopdata;
+extern Matrix *Cnm;
+extern Matrix *Snm;
+extern Matrix *PC;
 
 //----------------------------------------------------------------------
 //  void eop19620101(int c);
 //----------------------------------------------------------------------
-/**@brief Carga un fichero de datos.
+/**@brief Carga el fichero de datos eop19620101.txt en la matriz eopdata.
 *
 *	@param [in] c Número de datos a cargar
 */
 //----------------------------------------------------------------------
 void eop19620101(int c);
 
-extern Matrix* Cnm;
-extern Matrix* Snm;
-
 //----------------------------------------------------------------------
 //  void GGM03S();
 //----------------------------------------------------------------------
-/**@brief Carga un fichero de datos.
+/**@brief Carga el fichero de datos GGM03S.txt en las matrices Cnm y Snm.
 *
 */
 //----------------------------------------------------------------------
 void GGM03S();
+//----------------------------------------------------------------------
+//  void GGM03S();
+//----------------------------------------------------------------------
+/**@brief Carga el fichero de datos DE430Coeff.txt en la matriz PC.
+*
+*/
+//----------------------------------------------------------------------
+void DE430Coeff();
 #endif

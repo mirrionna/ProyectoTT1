@@ -5,7 +5,7 @@
 // Proyecto TT1
 //
 /**@file NutMatrix.cpp
-*	@brief Cálculo de la aceleración pertubacional de un satélite debido a un punto de masas.
+*	@brief Cálculo de la transformación de la media al ecuador verdadero y equinoccio.
 *	
 *	@author Miguel Río Navarro
 *	@bug No known bugs.

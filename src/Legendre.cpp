@@ -14,8 +14,8 @@
 #include "..\include\Legendre.hpp"
 
 tuple<Matrix&,Matrix&> Legendre (int n, int m, double fi){
-	Matrix &pnm = zeros(n+1,m+1);
-	Matrix &dpnm = zeros(n+1,m+1);
+	Matrix& pnm = zeros(n+1,m+1);
+	Matrix& dpnm = zeros(n+1,m+1);
 
 	pnm(1,1)=1;
 	dpnm(1,1)=0;

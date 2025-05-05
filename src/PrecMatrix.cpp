@@ -5,7 +5,7 @@
 // Proyecto TT1
 //
 /**@file PrecMatrix.cpp
-*	@brief Cálculo de la aceleración pertubacional de un satélite debido a un punto de masas.
+*	@brief Cálculo de la transformación de precesión de coordenadas ecuatoriales.
 *	
 *	@author Miguel Río Navarro
 *	@bug No known bugs.
