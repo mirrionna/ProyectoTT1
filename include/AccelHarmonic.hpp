@@ -20,7 +20,7 @@
 #include "..\include\global.hpp"
 #include "..\include\Legendre.hpp"
 //----------------------------------------------------------------------
-//  double AccelHarmonic (Matrix &r, Matrix &E, int n_max, int m_max)
+//  Matrix& AccelHarmonic (Matrix &r, Matrix &E, int n_max, int m_max)
 //----------------------------------------------------------------------
 /**@brief Calcula aceleración debido al campo gravitatorio del centro de masas.
 *

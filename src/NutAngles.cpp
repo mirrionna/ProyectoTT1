@@ -13,6 +13,15 @@
 //----------------------------------------------------------------------
 #include "..\include\NutAngles.hpp"
 
+double modnutangles(double a,double b){
+	double r=fmod(a,b);
+	if(r<0){
+		r+=b;
+	}
+	return r;
+}
+
+
 tuple<double,double> NutAngles (double Mjd_TT){
 	double T  = (Mjd_TT-SAT_Const::MJD_J2000)/36525;
 	double T2 = T*T;
@@ -985,11 +994,11 @@ tuple<double,double> NutAngles (double Mjd_TT){
 	//   D   mean longitude elongation of the Moon from the Sun 
 	//   Om  mean longitude of the ascending node
 
-	double l  = fmod (  485866.733 + (1325.0*rev +  715922.633)*T + 31.310*T2 + 0.064*T3, rev );
-	double lp = fmod ( 1287099.804 + (  99.0*rev + 1292581.224)*T -  0.577*T2 - 0.012*T3, rev );
-	double F  = fmod (  335778.877 + (1342.0*rev +  295263.137)*T - 13.257*T2 + 0.011*T3, rev );
-	double D  = fmod ( 1072261.307 + (1236.0*rev + 1105601.328)*T -  6.891*T2 + 0.019*T3, rev );
-	double Om = fmod (  450160.280 - (   5.0*rev +  482890.539)*T +  7.455*T2 + 0.008*T3, rev );
+	double l  = modnutangles (  485866.733 + (1325.0*rev +  715922.633)*T + 31.310*T2 + 0.064*T3, rev );
+	double lp = modnutangles ( 1287099.804 + (  99.0*rev + 1292581.224)*T -  0.577*T2 - 0.012*T3, rev );
+	double F  = modnutangles (  335778.877 + (1342.0*rev +  295263.137)*T - 13.257*T2 + 0.011*T3, rev );
+	double D  = modnutangles ( 1072261.307 + (1236.0*rev + 1105601.328)*T -  6.891*T2 + 0.019*T3, rev );
+	double Om = modnutangles (  450160.280 - (   5.0*rev +  482890.539)*T +  7.455*T2 + 0.008*T3, rev );
 
 	// Nutation in longitude and obliquity [rad]
 

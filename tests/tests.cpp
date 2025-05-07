@@ -38,12 +38,20 @@
 #include "..\include\LTC.hpp"
 #include "..\include\gmst.hpp"
 #include "..\include\JPL_Eph_DE430.hpp"
+#include "..\include\Geodetic.hpp"
+#include "..\include\angl.hpp"
+#include "..\include\elements.hpp"
+#include "..\include\unit.hpp"
+#include "..\include\gibbs.hpp"
+#include "..\include\hgibbs.hpp"
+#include "..\include\anglesg.hpp"
 
 #include "..\include\global.hpp"
 
 #include <cstdio>
 #include <cmath>
 #include <tuple>
+#include <string>
 int tests_run = 0;
 
 using namespace std;
@@ -967,6 +975,138 @@ int jpl_eph_de430_01(){
 	
 }
 
+int geodetic_01(){
+	
+	Matrix r(3);
+	r(1)=100000;r(2)=10000;r(3)=200000;
+	
+	auto [A1,A2,A3] = Geodetic(r);
+	double p = 1e-5;
+	_assert(fabs(A1-0.099668652491162) < p);
+	_assert(fabs(A2-1.17346835589897) < p);
+	_assert(fabs(A3+6136649.99543401) < 1e-3);
+	return 0;
+	
+}
+
+int angl_01(){
+	
+	Matrix u(3);
+	u(1)=1;u(2)=2;u(3)=3;
+	
+	Matrix v(3);
+	v(1)=3;v(2)=2;v(3)=1;
+	
+	double theta = angl(u,v);
+	double p = 1e-10;
+	_assert(fabs(theta-0.775193373310361) < p);
+	return 0;
+	
+}
+
+int elements_01(){
+	
+	Matrix y(6);
+	y(1)=1;y(2)=2;y(3)=3;y(4)=4;y(5)=5;y(6)=6;
+	
+	auto [A1,A2,A3,A4,A5,A6,A7] = elements(y);
+	
+	double p = 1e-10;
+	_assert(fabs(A1-1.35474011564823e-13) < p);
+	_assert(fabs(A2-1.87082869338765) < p);
+	_assert(fabs(A3-0.999999999999964) < p);
+	_assert(fabs(A4-1.99133066207886) < p);
+	_assert(fabs(A5-3.6052402625906) < p);
+	_assert(fabs(A6-5.21086941752228) < p);
+	_assert(fabs(A7-3.14159030993265) < p);
+	return 0;
+	
+}
+
+int unit_01(){
+	Matrix A(3);
+	A(1)=1;A(2)=2;A(3)=3;
+	
+	Matrix B(3);
+	B(1)=0.267261241912424;B(2)=0.534522483824849;B(3)=0.801783725737273;
+	Matrix C = unit(A);
+
+    _assert(m_equals(C, B, 1e-10));
+	
+	return 0;
+}
+
+int gibbs_01(){
+	
+	Matrix r1(3);
+	Matrix r2(3);
+	Matrix r3(3);
+	r1(1)=5720303.71012986;r1(2)=3152426.6965331;r1(3)=3750056.80416402;
+	r2(1)=6221397.62857869;r2(2)=2867713.77965738;r2(3)=3006155.98509949;
+	r3(1)=6699811.80976796;r3(2)=2569867.80763881;r3(3)=2154940.29542389;
+	
+	auto [v2, theta,theta1,copa, error] = gibbs(r1,r2,r3);
+	Matrix B1(3);
+	B1(1)=4645.04725161805;B1(2)=-2752.21591588211;B1(3)=-7507.99940987023;
+	
+	double p = 1e-10;
+	_assert(m_equals(v2,B1, 1e-10));
+	_assert(fabs(theta-0.125269502872995) < p);
+	_assert(fabs(theta1-0.136454013492469) < p);
+	_assert(fabs(copa-0.00509723347775616) < p);
+	_assert(error.compare("ok")==0);
+	return 0;
+	
+}
+
+int hgibbs_01(){
+	
+	Matrix r1(3);
+	Matrix r2(3);
+	Matrix r3(3);
+	r1(1)=5720303.71012986;r1(2)=3152426.6965331;r1(3)=3750056.80416402;
+	r2(1)=6221397.62857869;r2(2)=2867713.77965738;r2(3)=3006155.98509949;
+	r3(1)=6699811.80976796;r3(2)=2569867.80763881;r3(3)=2154940.29542389;
+	
+	auto [v2, theta,theta1,copa, error] = hgibbs(r1,r2,r3,41245,41246,41247);
+	Matrix B1(3);
+	B1(1)=7293.91989172759;B1(2)=-3645.40701546474;B1(3)=-10497.4139772076;
+	
+	double p = 1e-10;
+	_assert(m_equals(v2,B1, 1e-10));
+	_assert(fabs(theta-0.125269502872995) < p);
+	_assert(fabs(theta1-0.136454013492469) < p);
+	_assert(fabs(copa-0.00509723347775616) < p);
+	_assert(error.compare("angl > 1ø")==0);
+	return 0;
+	
+}
+
+int anglesg_01(){
+	
+	Matrix Rs(3,1);
+	Rs(1,1)=-5512567.84003607;
+	Rs(2,1)=-2196994.44666933;
+	Rs(3,1)=2330804.96614689;
+	auto [A1,A2] = anglesg(1.1,1.4,2.0,0.3,0.5,0.6,49746.1,49746.1,49746.1,Rs,Rs,Rs);
+	Matrix B1(3,1);
+	Matrix B2(3,1);
+	B1(1,1)=6221397.62857869;
+	B1(2,1)=2867713.77965738;
+	B1(3,1)=3006155.98509949;
+	
+	B2(1,1)=4645.04725161806;
+	B2(2,1)=-2752.21591588204;
+	B2(3,1)=-7507.99940987031;
+	double p = 1e-10;
+	_assert(m_equals(A1,B1, 1e-10));
+	_assert(m_equals(A2,B2, 1e-10));
+
+	
+	return 0;
+	
+}
+
 int all_tests()
 {
 	eop19620101(21413);
@@ -1027,6 +1167,15 @@ int all_tests()
 	_verify(LTC_01);
 	_verify(gmst_01);
 	_verify(jpl_eph_de430_01);
+	
+	_verify(geodetic_01);
+	_verify(angl_01);
+	_verify(elements_01);
+	_verify(unit_01);
+	_verify(gibbs_01);
+	_verify(hgibbs_01);
+	//_verify(anglesg_01);
+
     return 0;
 }
 

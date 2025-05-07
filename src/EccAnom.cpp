@@ -12,12 +12,22 @@
 */ 
 //----------------------------------------------------------------------
 #include "..\include\EccAnom.hpp"
+
+double modeccanom(double a,double b){
+	double r=fmod(a,b);
+	if(r<0){
+		r+=b;
+	}
+	return r;
+}
+
+
 double EccAnom (double M, double e){
 	int maxit = 15;
 	int i = 1;
 
 	// Starting value
-	M = fmod(M,2.0*std::numbers::pi);
+	M = modeccanom(M,2.0*std::numbers::pi);
 	double E = 0;
 	if (e<0.8){
 		E = M;
