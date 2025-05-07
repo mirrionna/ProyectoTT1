@@ -79,3 +79,5 @@ void DE430Coeff(){
 		}
 	fclose(fid);
 }
+
+Param AuxParam;

@@ -275,6 +275,11 @@ Matrix& inv(Matrix &m){
 		cout << "Matrix sub: error in n_row/n_column\n";
         exit(EXIT_FAILURE);
 	}
+	if(m.n_row==1){
+		Matrix *m_aux=new Matrix(1,1);
+		(*m_aux)(1,1) = 1/m(1,1);
+		return (*m_aux);
+	}
 	double det=determinante(m);
 
 	if(abs(det)<1e-10){
@@ -357,7 +362,6 @@ double norm(Matrix &v){
 	return sqrt(norma);
 }
 
-
 double dot(Matrix &u,Matrix &v){
 	if(u.n_column!=v.n_column){
 		cout<<"Vector dot: error in num elements\n";
@@ -369,7 +373,6 @@ double dot(Matrix &u,Matrix &v){
 	}
 	return dotr;
 }
-
 
 Matrix& cross(Matrix &u,Matrix &v){
 	if(u.n_column!=3 || v.n_column!=3){
