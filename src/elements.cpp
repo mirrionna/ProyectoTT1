@@ -23,10 +23,8 @@ double modelements(double a,double b){
 
 tuple<double,double,double,double,double,double,double> elements (Matrix& y){
 	double pi2 = SAT_Const::pi2;
- 
 	Matrix& r = extract_vector(y,1,3);                                        // Position
 	Matrix& v = extract_vector(y,4,6);                                       // Velocity
- 
 	Matrix& h = cross(r,v);                                    // Areal velocity
 	double magh = norm(h);
 	double p = magh*magh/SAT_Const::GM_Earth;

@@ -23,13 +23,13 @@ Matrix& G_AccelHarmonic (Matrix &r, Matrix &U, int n_max, int m_max){
 	for(int i=1;i<=3;i++){
 		// Set offset in i-th component of the position vector
 		dr = zeros(3,1);
-		dr(i) = d;
+		dr(i,1) = d;
 		// Acceleration difference
 		Matrix& da = AccelHarmonic ( r+dr/2,U, n_max, m_max ) - AccelHarmonic ( r-dr/2,U, n_max, m_max );
 		// Derivative with respect to i-th axis
 		Matrix& aux = da/d;
 		for(int j=1;j<=3;j++){
-			G(j,i) = aux(j,i);
+			G(j,i) = aux(j,1);
 		}    
 	}
 	

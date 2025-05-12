@@ -54,4 +54,9 @@ void GGM03S();
 */
 //----------------------------------------------------------------------
 void DE430Coeff();
+/**@brief Carga los datos del struct AuxParam de tipo Param.
+*
+*/
+//----------------------------------------------------------------------
+void cargarAuxParam();
 #endif

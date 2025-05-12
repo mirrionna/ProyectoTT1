@@ -113,7 +113,7 @@ Matrix& Matrix::operator - (Matrix &m) {
 
 Matrix& Matrix::operator * (Matrix &m){
 	if (this->n_column != m.n_row) {
-		cout << "Matrix sub: error in n_row/n_column\n";
+		cout << "Matrix prod: error in n_row/n_column\n";
         exit(EXIT_FAILURE);
 	}
 	Matrix *m_aux = new Matrix(this->n_row, m.n_column);
@@ -132,7 +132,7 @@ Matrix& Matrix::operator * (Matrix &m){
 
 Matrix& Matrix::operator / (Matrix &m){
 	if (this->n_row != m.n_row) {
-		cout << "Matrix sub: error in n_row/n_column\n";
+		cout << "Matrix div: error in n_row/n_column\n";
         exit(EXIT_FAILURE);
 	}
 	return (*this)*inv(m);
@@ -215,7 +215,7 @@ ostream& operator << (ostream &o, Matrix &m) {
 			printf("%5.20lf ", m(i,j));
         o << "\n";
     }
-	
+	o << "\n";
     return o;
 }
 
@@ -272,7 +272,7 @@ Matrix& transpose(Matrix &m){
 
 Matrix& inv(Matrix &m){
 	if(m.n_row!=m.n_column){
-		cout << "Matrix sub: error in n_row/n_column\n";
+		cout << "Matrix inv: error in n_row/n_column\n";
         exit(EXIT_FAILURE);
 	}
 	if(m.n_row==1){
@@ -283,7 +283,7 @@ Matrix& inv(Matrix &m){
 	double det=determinante(m);
 
 	if(abs(det)<1e-10){
-		cout << "Matrix sub: error in determinant\n";
+		cout << "Matrix inv: error in determinant\n";
         exit(EXIT_FAILURE);
 	}
 	Matrix m_cofactor(m.n_row, m.n_column);
@@ -315,8 +315,7 @@ Matrix& inv(Matrix &m){
 
 double determinante(Matrix &m){
 	if (m.n_row!=m.n_column) {
-		cout << "Matrix sub: error in n_row/n_column\n";
-        exit(EXIT_FAILURE);cout << "Matrix sub: error in n_row/n_column\n";
+		cout << "Matrix det: error in n_row/n_column\n";
         exit(EXIT_FAILURE);
 	}
 	if(m.n_row==2){
@@ -335,7 +334,7 @@ double determinante(Matrix &m){
 
 Matrix& submatriz(Matrix &m, int i, int j){
 	if(i>m.n_row||j>m.n_column){
-		cout<<"Matrix sub: error in n_row/n_column\n";
+		cout<<"Matrix submatrix: error in n_row/n_column\n";
 		exit(EXIT_FAILURE);
 	}
 	Matrix *m_aux = new Matrix(m.n_row-1, m.n_column-1);
@@ -365,6 +364,8 @@ double norm(Matrix &v){
 double dot(Matrix &u,Matrix &v){
 	if(u.n_column!=v.n_column){
 		cout<<"Vector dot: error in num elements\n";
+		cout<<u;
+		cout<<v;
 		exit(EXIT_FAILURE);
 	}
 	double dotr=0;
@@ -377,6 +378,10 @@ double dot(Matrix &u,Matrix &v){
 Matrix& cross(Matrix &u,Matrix &v){
 	if(u.n_column!=3 || v.n_column!=3){
 		cout<<"Vector cross: error in num elements\n";
+		cout<<u;
+		cout<<v;
+		cout<<u.n_column;
+		cout<<v.n_column;
 		exit(EXIT_FAILURE);
 	}
 	Matrix *m_aux=new Matrix(3);
@@ -390,6 +395,9 @@ Matrix& cross(Matrix &u,Matrix &v){
 Matrix& extract_vector (Matrix &m,int i, int j){
 	if(i<=0 || j<i || i>m.n_column){
 		cout<<"Vector extract: error in indexes\n";
+		cout<<m;
+		cout<<"I: "<<i<<"\n";
+		cout<<"J: "<<j<<"\n";
 		exit(EXIT_FAILURE);
 	}
 	Matrix *m_aux=new Matrix(j-i+1);
@@ -403,6 +411,8 @@ Matrix& extract_vector (Matrix &m,int i, int j){
 Matrix& union_vector (Matrix &m,Matrix &n){
 	if(m.n_row!=1 || n.n_row!=1){
 		cout<<"Vector union: error in vector\n";
+		cout<<m;
+		cout<<n;
 		exit(EXIT_FAILURE);
 	}
 	Matrix *m_aux=new Matrix(m.n_column+n.n_column);

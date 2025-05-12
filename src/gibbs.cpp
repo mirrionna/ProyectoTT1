@@ -26,7 +26,6 @@ tuple<Matrix&,double,double,double,string> gibbs (Matrix &r1,Matrix &r2,Matrix &
 	for (int i=1;i<=3;i++){
 		v2(i)= 0.0;
 	}
-
 	Matrix& p = cross( r2,r3 );
 	Matrix& q = cross( r3,r1 );
 	Matrix& w = cross( r1,r2 );
