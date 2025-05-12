@@ -16,9 +16,6 @@
 
 #include <cmath>
 #include "..\include\matrix.h"
-#include "..\include\SAT_Const.hpp"
-#include "..\include\Mjday.hpp"
-#include <cstring>
 
 typedef struct{
 	double Mjd_UTC,Mjd_TT;
@@ -30,7 +27,6 @@ extern Matrix *eopdata;
 extern Matrix *Cnm;
 extern Matrix *Snm;
 extern Matrix *PC;
-extern Matrix *obs;
 
 //----------------------------------------------------------------------
 //  void eop19620101(int c);
@@ -63,5 +59,4 @@ void DE430Coeff();
 */
 //----------------------------------------------------------------------
 void cargarAuxParam();
-void GEOS3(int f);
 #endif
