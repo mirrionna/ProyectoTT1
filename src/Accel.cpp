@@ -14,6 +14,7 @@
 #include "..\include\Accel.hpp"
 
 Matrix& Accel (double x, Matrix& Y){
+	Y = transpose(Y);
 	auto [x_pole,y_pole,UT1_UTC,LOD,dpsi,deps,dx_pole,dy_pole,TAI_UTC] = IERS(*eopdata,AuxParam.Mjd_UTC + x/86400,'l');
 	auto [UT1_TAI,UTC_GPS,UT1_GPS,TT_UTC,GPS_UTC] = timediff(UT1_UTC,TAI_UTC);
 	double Mjd_UT1 = AuxParam.Mjd_UTC + x/86400 + UT1_UTC/86400;
@@ -53,5 +54,5 @@ Matrix& Accel (double x, Matrix& Y){
 	}
 
 	Matrix& dY = union_vector(extract_vector(transpose(Y),4,6),transpose(a));
-	return transpose(dY);
+	return dY;
 }
