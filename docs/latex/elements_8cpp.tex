@@ -1,0 +1,50 @@
+\doxysection{C\+:/\+Users/\+Usuario/\+Documents/\+Git\+Hub/\+Proyecto\+TT1/src/elements.cpp File Reference}
+\hypertarget{elements_8cpp}{}\label{elements_8cpp}\index{C:/Users/Usuario/Documents/GitHub/ProyectoTT1/src/elements.cpp@{C:/Users/Usuario/Documents/GitHub/ProyectoTT1/src/elements.cpp}}
+
+
+Cálculo del semilatus rectum, el semieje mayor, la excentricidad, la inclinación, la longitud del nodo ascendente, el argumento del periastro y la anomalía media a partir del vector estado.  
+
+
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}elements.\+hpp"{}}\newline
+Include dependency graph for elements.\+cpp\+:
+% FIG 0
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{elements_8cpp_a886f4550cc781ec76a3a0915e93818bb}\label{elements_8cpp_a886f4550cc781ec76a3a0915e93818bb} 
+double {\bfseries modelements} (double a, double b)
+\item 
+tuple$<$ double, double, double, double, double, double, double $>$ \mbox{\hyperlink{elements_8cpp_a5dd6d5680c9b5aafae7e21082e0ab75a}{elements}} (\mbox{\hyperlink{class_matrix}{Matrix}} \&y)
+\begin{DoxyCompactList}\small\item\em Calcula el semilatus rectum, el semieje mayor, la excentricidad, la inclinación, la longitud del nodo ascendente, el argumento del periastro y la anomalía media a partir del vector estado. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Cálculo del semilatus rectum, el semieje mayor, la excentricidad, la inclinación, la longitud del nodo ascendente, el argumento del periastro y la anomalía media a partir del vector estado. 
+
+\begin{DoxyAuthor}{Author}
+Miguel Río Navarro 
+\end{DoxyAuthor}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000051}{Bug}}]No known bugs. \end{DoxyRefDesc}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{elements_8cpp_a5dd6d5680c9b5aafae7e21082e0ab75a}\index{elements.cpp@{elements.cpp}!elements@{elements}}
+\index{elements@{elements}!elements.cpp@{elements.cpp}}
+\doxysubsubsection{\texorpdfstring{elements()}{elements()}}
+{\footnotesize\ttfamily \label{elements_8cpp_a5dd6d5680c9b5aafae7e21082e0ab75a} 
+tuple$<$ double, double, double, double, double, double, double $>$ elements (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_matrix}{Matrix}} \&}]{y}{}\end{DoxyParamCaption})}
+
+
+
+Calcula el semilatus rectum, el semieje mayor, la excentricidad, la inclinación, la longitud del nodo ascendente, el argumento del periastro y la anomalía media a partir del vector estado. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em y} & Vector estado (x,y,z,vx,vy,vz). ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Tupla con el semilatus rectum en metros, el semieje mayor, la execentricidad, la inclinación en radianes, la longitud del nodo ascendente en radianes, el argumento del periastro en radianes y la anomalía media en radianes. 
+\end{DoxyReturn}

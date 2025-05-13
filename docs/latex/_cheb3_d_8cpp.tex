@@ -1,0 +1,65 @@
+\doxysection{C\+:/\+Users/\+Usuario/\+Documents/\+Git\+Hub/\+Proyecto\+TT1/src/\+Cheb3D.cpp File Reference}
+\hypertarget{_cheb3_d_8cpp}{}\label{_cheb3_d_8cpp}\index{C:/Users/Usuario/Documents/GitHub/ProyectoTT1/src/Cheb3D.cpp@{C:/Users/Usuario/Documents/GitHub/ProyectoTT1/src/Cheb3D.cpp}}
+
+
+Cálculo de una aproximación de chebyshev de un vector tridimensional.  
+
+
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}\+Cheb3\+D.\+hpp"{}}\newline
+Include dependency graph for Cheb3\+D.\+cpp\+:
+% FIG 0
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_matrix}{Matrix}} \& \mbox{\hyperlink{_cheb3_d_8cpp_a05a110559834c211c7a7eeac28dd8246}{Cheb3D}} (double t, int N, double Ta, double Tb, \mbox{\hyperlink{class_matrix}{Matrix}} \&Cx, \mbox{\hyperlink{class_matrix}{Matrix}} \&Cy, \mbox{\hyperlink{class_matrix}{Matrix}} \&Cz)
+\begin{DoxyCompactList}\small\item\em Calcula una aproximación de chebyshev de un vector tridimensional. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Cálculo de una aproximación de chebyshev de un vector tridimensional. 
+
+\begin{DoxyAuthor}{Author}
+Miguel Río Navarro 
+\end{DoxyAuthor}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000049}{Bug}}]No known bugs. \end{DoxyRefDesc}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_cheb3_d_8cpp_a05a110559834c211c7a7eeac28dd8246}\index{Cheb3D.cpp@{Cheb3D.cpp}!Cheb3D@{Cheb3D}}
+\index{Cheb3D@{Cheb3D}!Cheb3D.cpp@{Cheb3D.cpp}}
+\doxysubsubsection{\texorpdfstring{Cheb3D()}{Cheb3D()}}
+{\footnotesize\ttfamily \label{_cheb3_d_8cpp_a05a110559834c211c7a7eeac28dd8246} 
+\mbox{\hyperlink{class_matrix}{Matrix}} \& Cheb3D (\begin{DoxyParamCaption}\item[{double}]{t}{, }\item[{int}]{N}{, }\item[{double}]{Ta}{, }\item[{double}]{Tb}{, }\item[{\mbox{\hyperlink{class_matrix}{Matrix}} \&}]{Cx}{, }\item[{\mbox{\hyperlink{class_matrix}{Matrix}} \&}]{Cy}{, }\item[{\mbox{\hyperlink{class_matrix}{Matrix}} \&}]{Cz}{}\end{DoxyParamCaption})}
+
+
+
+Calcula una aproximación de chebyshev de un vector tridimensional. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em t} & Tiempo. ~\newline
+ \\
+\hline
+\mbox{\texttt{ in}}  & {\em N} & Entero con el número de coeficientes. ~\newline
+ \\
+\hline
+\mbox{\texttt{ in}}  & {\em Ta} & Double con el inicio del intervalo. ~\newline
+ \\
+\hline
+\mbox{\texttt{ in}}  & {\em Tb} & Double con el fin del intervalo. ~\newline
+ \\
+\hline
+\mbox{\texttt{ in}}  & {\em Cx} & Vector con el coeficiente del polinomio de Chebyshev en la coordenada x. ~\newline
+ \\
+\hline
+\mbox{\texttt{ in}}  & {\em Cy} & Vector con el coeficiente del polinomio de Chebyshev en la coordenada y. ~\newline
+ \\
+\hline
+\mbox{\texttt{ in}}  & {\em Cz} & Vector con el coeficiente del polinomio de Chebyshev en la coordenada z. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector tridimensional con la aproximación de chebyshev. 
+\end{DoxyReturn}

@@ -1,0 +1,56 @@
+\doxysection{C\+:/\+Users/\+Usuario/\+Documents/\+Git\+Hub/\+Proyecto\+TT1/include/\+Accel\+Point\+Mass.hpp File Reference}
+\hypertarget{_accel_point_mass_8hpp}{}\label{_accel_point_mass_8hpp}\index{C:/Users/Usuario/Documents/GitHub/ProyectoTT1/include/AccelPointMass.hpp@{C:/Users/Usuario/Documents/GitHub/ProyectoTT1/include/AccelPointMass.hpp}}
+
+
+Este archivo de cabecera contiene una implementación de la función Accel\+Point\+Mass.  
+
+
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}matrix.\+h"{}}\newline
+Include dependency graph for Accel\+Point\+Mass.\+hpp\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_matrix}{Matrix}} \& \mbox{\hyperlink{_accel_point_mass_8hpp_a72b636f377c135454d41655c935c0eb3}{Accel\+Point\+Mass}} (\mbox{\hyperlink{class_matrix}{Matrix}} \&r, \mbox{\hyperlink{class_matrix}{Matrix}} \&s, double GM)
+\begin{DoxyCompactList}\small\item\em Calcula la aceleración perturbacional debido a un punto de masas. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Este archivo de cabecera contiene una implementación de la función Accel\+Point\+Mass. 
+
+\begin{DoxyAuthor}{Author}
+Miguel Río Navarro 
+\end{DoxyAuthor}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000003}{Bug}}]No known bugs. \end{DoxyRefDesc}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_accel_point_mass_8hpp_a72b636f377c135454d41655c935c0eb3}\index{AccelPointMass.hpp@{AccelPointMass.hpp}!AccelPointMass@{AccelPointMass}}
+\index{AccelPointMass@{AccelPointMass}!AccelPointMass.hpp@{AccelPointMass.hpp}}
+\doxysubsubsection{\texorpdfstring{AccelPointMass()}{AccelPointMass()}}
+{\footnotesize\ttfamily \label{_accel_point_mass_8hpp_a72b636f377c135454d41655c935c0eb3} 
+\mbox{\hyperlink{class_matrix}{Matrix}} \& Accel\+Point\+Mass (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_matrix}{Matrix}} \&}]{r}{, }\item[{\mbox{\hyperlink{class_matrix}{Matrix}} \&}]{s}{, }\item[{double}]{GM}{}\end{DoxyParamCaption})}
+
+
+
+Calcula la aceleración perturbacional debido a un punto de masas. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em r} & Vector de posición del satélite. ~\newline
+ \\
+\hline
+\mbox{\texttt{ in}}  & {\em s} & Vector de posición del punto de masas. ~\newline
+ \\
+\hline
+\mbox{\texttt{ in}}  & {\em GM} & Coeficiente gravitacional del punto de masas. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Matriz con la aceleración pertubacional. 
+\end{DoxyReturn}

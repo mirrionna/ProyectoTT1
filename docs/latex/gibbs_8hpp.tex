@@ -1,0 +1,61 @@
+\doxysection{C\+:/\+Users/\+Usuario/\+Documents/\+Git\+Hub/\+Proyecto\+TT1/include/gibbs.hpp File Reference}
+\hypertarget{gibbs_8hpp}{}\label{gibbs_8hpp}\index{C:/Users/Usuario/Documents/GitHub/ProyectoTT1/include/gibbs.hpp@{C:/Users/Usuario/Documents/GitHub/ProyectoTT1/include/gibbs.hpp}}
+
+
+Este archivo de cabecera contiene una implementación de la función gibbs.  
+
+
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$tuple$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}matrix.\+h"{}}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}\+SAT\+\_\+\+Const.\+hpp"{}}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}angl.\+hpp"{}}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}unit.\+hpp"{}}\newline
+Include dependency graph for gibbs.\+hpp\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+tuple$<$ \mbox{\hyperlink{class_matrix}{Matrix}} \&, double, double, double, string $>$ \mbox{\hyperlink{gibbs_8hpp_aad5cdb6b10f9baf6ef1f3c36185da8e0}{gibbs}} (\mbox{\hyperlink{class_matrix}{Matrix}} \&r1, \mbox{\hyperlink{class_matrix}{Matrix}} \&r2, \mbox{\hyperlink{class_matrix}{Matrix}} \&r3)
+\begin{DoxyCompactList}\small\item\em Calcula el vector de velocidad ijk, los ángulos entre vectores y una flag que indica el éxito a partir de 3 vectores de posición. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Este archivo de cabecera contiene una implementación de la función gibbs. 
+
+\begin{DoxyAuthor}{Author}
+Miguel Río Navarro 
+\end{DoxyAuthor}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000016}{Bug}}]No known bugs. \end{DoxyRefDesc}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{gibbs_8hpp_aad5cdb6b10f9baf6ef1f3c36185da8e0}\index{gibbs.hpp@{gibbs.hpp}!gibbs@{gibbs}}
+\index{gibbs@{gibbs}!gibbs.hpp@{gibbs.hpp}}
+\doxysubsubsection{\texorpdfstring{gibbs()}{gibbs()}}
+{\footnotesize\ttfamily \label{gibbs_8hpp_aad5cdb6b10f9baf6ef1f3c36185da8e0} 
+tuple$<$ \mbox{\hyperlink{class_matrix}{Matrix}} \&, double, double, double, string $>$ gibbs (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_matrix}{Matrix}} \&}]{r1}{, }\item[{\mbox{\hyperlink{class_matrix}{Matrix}} \&}]{r2}{, }\item[{\mbox{\hyperlink{class_matrix}{Matrix}} \&}]{r3}{}\end{DoxyParamCaption})}
+
+
+
+Calcula el vector de velocidad ijk, los ángulos entre vectores y una flag que indica el éxito a partir de 3 vectores de posición. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em r1} & Vector de posición 1. ~\newline
+ \\
+\hline
+\mbox{\texttt{ in}}  & {\em r2} & Vector de posición 2. ~\newline
+ \\
+\hline
+\mbox{\texttt{ in}}  & {\em r3} & Vector de posición 3. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Tupla con el vector de velocidad ijk en m/s, los ángulos entre vectores en radianes y una flag indicando el éxito. 
+\end{DoxyReturn}

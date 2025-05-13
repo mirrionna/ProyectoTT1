@@ -1,0 +1,60 @@
+\doxysection{C\+:/\+Users/\+Usuario/\+Documents/\+Git\+Hub/\+Proyecto\+TT1/include/\+G\+\_\+\+Accel\+Harmonic.hpp File Reference}
+\hypertarget{_g___accel_harmonic_8hpp}{}\label{_g___accel_harmonic_8hpp}\index{C:/Users/Usuario/Documents/GitHub/ProyectoTT1/include/G\_AccelHarmonic.hpp@{C:/Users/Usuario/Documents/GitHub/ProyectoTT1/include/G\_AccelHarmonic.hpp}}
+
+
+Este archivo de cabecera contiene una implementación de la función G\+\_\+\+Accel\+Harmonic.  
+
+
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$tuple$>$}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}matrix.\+h"{}}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}\+Accel\+Harmonic.\+hpp"{}}\newline
+Include dependency graph for G\+\_\+\+Accel\+Harmonic.\+hpp\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_matrix}{Matrix}} \& \mbox{\hyperlink{_g___accel_harmonic_8hpp_a8c1900d3aa2aceb61387b84a92e17818}{G\+\_\+\+Accel\+Harmonic}} (\mbox{\hyperlink{class_matrix}{Matrix}} \&r, \mbox{\hyperlink{class_matrix}{Matrix}} \&U, int n\+\_\+max, int m\+\_\+max)
+\begin{DoxyCompactList}\small\item\em Calcula el gradiente del campo gravitacional armónico de la Tierra. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Este archivo de cabecera contiene una implementación de la función G\+\_\+\+Accel\+Harmonic. 
+
+\begin{DoxyAuthor}{Author}
+Miguel Río Navarro 
+\end{DoxyAuthor}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000012}{Bug}}]No known bugs. \end{DoxyRefDesc}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_g___accel_harmonic_8hpp_a8c1900d3aa2aceb61387b84a92e17818}\index{G\_AccelHarmonic.hpp@{G\_AccelHarmonic.hpp}!G\_AccelHarmonic@{G\_AccelHarmonic}}
+\index{G\_AccelHarmonic@{G\_AccelHarmonic}!G\_AccelHarmonic.hpp@{G\_AccelHarmonic.hpp}}
+\doxysubsubsection{\texorpdfstring{G\_AccelHarmonic()}{G\_AccelHarmonic()}}
+{\footnotesize\ttfamily \label{_g___accel_harmonic_8hpp_a8c1900d3aa2aceb61387b84a92e17818} 
+\mbox{\hyperlink{class_matrix}{Matrix}} \& G\+\_\+\+Accel\+Harmonic (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_matrix}{Matrix}} \&}]{r}{, }\item[{\mbox{\hyperlink{class_matrix}{Matrix}} \&}]{U}{, }\item[{int}]{n\+\_\+max}{, }\item[{int}]{m\+\_\+max}{}\end{DoxyParamCaption})}
+
+
+
+Calcula el gradiente del campo gravitacional armónico de la Tierra. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em r} & Vector de posición del satélite en un sistema inerte. ~\newline
+ \\
+\hline
+\mbox{\texttt{ in}}  & {\em U} & Matriz de transformación a un sistema fijo. ~\newline
+ \\
+\hline
+\mbox{\texttt{ in}}  & {\em n\+\_\+max} & Grado máximo. ~\newline
+ \\
+\hline
+\mbox{\texttt{ in}}  & {\em m\+\_\+max} & Máximo orden. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector gradiente. 
+\end{DoxyReturn}

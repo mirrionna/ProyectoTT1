@@ -1,0 +1,50 @@
+\doxysection{C\+:/\+Users/\+Usuario/\+Documents/\+Git\+Hub/\+Proyecto\+TT1/src/\+Var\+Eqn.cpp File Reference}
+\hypertarget{_var_eqn_8cpp}{}\label{_var_eqn_8cpp}\index{C:/Users/Usuario/Documents/GitHub/ProyectoTT1/src/VarEqn.cpp@{C:/Users/Usuario/Documents/GitHub/ProyectoTT1/src/VarEqn.cpp}}
+
+
+Cálculo de las ecuaciones variacionales.  
+
+
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}\+Var\+Eqn.\+hpp"{}}\newline
+Include dependency graph for Var\+Eqn.\+cpp\+:
+% FIG 0
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_matrix}{Matrix}} \& \mbox{\hyperlink{_var_eqn_8cpp_a6e153d0ae05034cb5b346189ebb847d3}{Var\+Eqn}} (double x, \mbox{\hyperlink{class_matrix}{Matrix}} \&y\+Phi)
+\begin{DoxyCompactList}\small\item\em Calcula las ecuaciones variacionales. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Cálculo de las ecuaciones variacionales. 
+
+\begin{DoxyAuthor}{Author}
+Miguel Río Navarro 
+\end{DoxyAuthor}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000083}{Bug}}]No known bugs. \end{DoxyRefDesc}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_var_eqn_8cpp_a6e153d0ae05034cb5b346189ebb847d3}\index{VarEqn.cpp@{VarEqn.cpp}!VarEqn@{VarEqn}}
+\index{VarEqn@{VarEqn}!VarEqn.cpp@{VarEqn.cpp}}
+\doxysubsubsection{\texorpdfstring{VarEqn()}{VarEqn()}}
+{\footnotesize\ttfamily \label{_var_eqn_8cpp_a6e153d0ae05034cb5b346189ebb847d3} 
+\mbox{\hyperlink{class_matrix}{Matrix}} \& Var\+Eqn (\begin{DoxyParamCaption}\item[{double}]{x}{, }\item[{\mbox{\hyperlink{class_matrix}{Matrix}} \&}]{y\+Phi}{}\end{DoxyParamCaption})}
+
+
+
+Calcula las ecuaciones variacionales. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em x} & Tiempo desde epoch en segundos. ~\newline
+ \\
+\hline
+\mbox{\texttt{ in}}  & {\em y\+Phi} & Vector de dimensión 42 con el vector estado (y) y el estado de la matriz de transición (Phi) en el orden de almacenamiento. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Derivada de y\+Phi. 
+\end{DoxyReturn}

@@ -1,0 +1,52 @@
+\doxysection{C\+:/\+Users/\+Usuario/\+Documents/\+Git\+Hub/\+Proyecto\+TT1/include/\+Az\+El\+Pa.hpp File Reference}
+\hypertarget{_az_el_pa_8hpp}{}\label{_az_el_pa_8hpp}\index{C:/Users/Usuario/Documents/GitHub/ProyectoTT1/include/AzElPa.hpp@{C:/Users/Usuario/Documents/GitHub/ProyectoTT1/include/AzElPa.hpp}}
+
+
+Este archivo de cabecera contiene una implementación de la función Az\+El\+Pa.  
+
+
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$numbers$>$}\newline
+{\ttfamily \#include $<$tuple$>$}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}matrix.\+h"{}}\newline
+Include dependency graph for Az\+El\+Pa.\+hpp\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+tuple$<$ double, double, \mbox{\hyperlink{class_matrix}{Matrix}} \&, \mbox{\hyperlink{class_matrix}{Matrix}} \& $>$ \mbox{\hyperlink{_az_el_pa_8hpp_ae89a6c135135b96ec7057c45dced4159}{Az\+El\+Pa}} (\mbox{\hyperlink{class_matrix}{Matrix}} \&s)
+\begin{DoxyCompactList}\small\item\em Calcula el acimut, la elevación y las parciales de las coordenadas locales tangentes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Este archivo de cabecera contiene una implementación de la función Az\+El\+Pa. 
+
+\begin{DoxyAuthor}{Author}
+Miguel Río Navarro 
+\end{DoxyAuthor}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000006}{Bug}}]No known bugs. \end{DoxyRefDesc}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_az_el_pa_8hpp_ae89a6c135135b96ec7057c45dced4159}\index{AzElPa.hpp@{AzElPa.hpp}!AzElPa@{AzElPa}}
+\index{AzElPa@{AzElPa}!AzElPa.hpp@{AzElPa.hpp}}
+\doxysubsubsection{\texorpdfstring{AzElPa()}{AzElPa()}}
+{\footnotesize\ttfamily \label{_az_el_pa_8hpp_ae89a6c135135b96ec7057c45dced4159} 
+tuple$<$ double, double, \mbox{\hyperlink{class_matrix}{Matrix}} \&, \mbox{\hyperlink{class_matrix}{Matrix}} \& $>$ Az\+El\+Pa (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_matrix}{Matrix}} \&}]{s}{}\end{DoxyParamCaption})}
+
+
+
+Calcula el acimut, la elevación y las parciales de las coordenadas locales tangentes. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em s} & Coordenadas locales tangentes. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Tupla con el acimut, la elevación y las parciales. 
+\end{DoxyReturn}

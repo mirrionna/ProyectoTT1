@@ -1,0 +1,50 @@
+\doxysection{C\+:/\+Users/\+Usuario/\+Documents/\+Git\+Hub/\+Proyecto\+TT1/src/\+Accel.cpp File Reference}
+\hypertarget{_accel_8cpp}{}\label{_accel_8cpp}\index{C:/Users/Usuario/Documents/GitHub/ProyectoTT1/src/Accel.cpp@{C:/Users/Usuario/Documents/GitHub/ProyectoTT1/src/Accel.cpp}}
+
+
+Cálculo de la aceleración de un satélite orbitando la Tierra debido al campo gravitacional armónico de la Tierra, las perturbaciones gravitacionales del Sol y la Luna, la presión de la radiación solar y la resistencia atmosférica.  
+
+
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}\+Accel.\+hpp"{}}\newline
+Include dependency graph for Accel.\+cpp\+:
+% FIG 0
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_matrix}{Matrix}} \& \mbox{\hyperlink{_accel_8cpp_a28040ec3672b4e1805218ad1cd43bfa0}{Accel}} (double x, \mbox{\hyperlink{class_matrix}{Matrix}} \&Y)
+\begin{DoxyCompactList}\small\item\em Calcula la aceleración de un satélite orbitando la Tierra debido al campo gravitacional armónico de la Tierra, las perturbaciones gravitacionales del Sol y la Luna, la presión de la radiación solar y la resistencia atmosférica. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Cálculo de la aceleración de un satélite orbitando la Tierra debido al campo gravitacional armónico de la Tierra, las perturbaciones gravitacionales del Sol y la Luna, la presión de la radiación solar y la resistencia atmosférica. 
+
+\begin{DoxyAuthor}{Author}
+Miguel Río Navarro 
+\end{DoxyAuthor}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000043}{Bug}}]No known bugs. \end{DoxyRefDesc}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_accel_8cpp_a28040ec3672b4e1805218ad1cd43bfa0}\index{Accel.cpp@{Accel.cpp}!Accel@{Accel}}
+\index{Accel@{Accel}!Accel.cpp@{Accel.cpp}}
+\doxysubsubsection{\texorpdfstring{Accel()}{Accel()}}
+{\footnotesize\ttfamily \label{_accel_8cpp_a28040ec3672b4e1805218ad1cd43bfa0} 
+\mbox{\hyperlink{class_matrix}{Matrix}} \& Accel (\begin{DoxyParamCaption}\item[{double}]{x}{, }\item[{\mbox{\hyperlink{class_matrix}{Matrix}} \&}]{Y}{}\end{DoxyParamCaption})}
+
+
+
+Calcula la aceleración de un satélite orbitando la Tierra debido al campo gravitacional armónico de la Tierra, las perturbaciones gravitacionales del Sol y la Luna, la presión de la radiación solar y la resistencia atmosférica. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em x} & Tiempo terrestre. ~\newline
+ \\
+\hline
+\mbox{\texttt{ in}}  & {\em Y} & Vector de estado del satélite en el sistema ICRF/\+EME2000. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Matriz con la aceleración pertubacional. 
+\end{DoxyReturn}

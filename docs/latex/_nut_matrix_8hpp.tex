@@ -1,0 +1,54 @@
+\doxysection{C\+:/\+Users/\+Usuario/\+Documents/\+Git\+Hub/\+Proyecto\+TT1/include/\+Nut\+Matrix.hpp File Reference}
+\hypertarget{_nut_matrix_8hpp}{}\label{_nut_matrix_8hpp}\index{C:/Users/Usuario/Documents/GitHub/ProyectoTT1/include/NutMatrix.hpp@{C:/Users/Usuario/Documents/GitHub/ProyectoTT1/include/NutMatrix.hpp}}
+
+
+Este archivo de cabecera contiene una implementación de la función Nut\+Matrix.  
+
+
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}matrix.\+h"{}}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}\+Mean\+Obliquity.\+hpp"{}}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}\+Nut\+Angles.\+hpp"{}}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}\+R\+\_\+x.\+hpp"{}}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}\+R\+\_\+z.\+hpp"{}}\newline
+Include dependency graph for Nut\+Matrix.\+hpp\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_matrix}{Matrix}} \& \mbox{\hyperlink{_nut_matrix_8hpp_ac7fb7e48f2d2d4fd63ac42e17e44ff23}{Nut\+Matrix}} (double Mjd\+\_\+\+TT)
+\begin{DoxyCompactList}\small\item\em Transforma de la media al ecuador verdadero y equinoccio. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Este archivo de cabecera contiene una implementación de la función Nut\+Matrix. 
+
+\begin{DoxyAuthor}{Author}
+Miguel Río Navarro 
+\end{DoxyAuthor}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000030}{Bug}}]No known bugs. \end{DoxyRefDesc}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_nut_matrix_8hpp_ac7fb7e48f2d2d4fd63ac42e17e44ff23}\index{NutMatrix.hpp@{NutMatrix.hpp}!NutMatrix@{NutMatrix}}
+\index{NutMatrix@{NutMatrix}!NutMatrix.hpp@{NutMatrix.hpp}}
+\doxysubsubsection{\texorpdfstring{NutMatrix()}{NutMatrix()}}
+{\footnotesize\ttfamily \label{_nut_matrix_8hpp_ac7fb7e48f2d2d4fd63ac42e17e44ff23} 
+\mbox{\hyperlink{class_matrix}{Matrix}} \& Nut\+Matrix (\begin{DoxyParamCaption}\item[{double}]{Mjd\+\_\+\+TT}{}\end{DoxyParamCaption})}
+
+
+
+Transforma de la media al ecuador verdadero y equinoccio. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em Mjd\+\_\+\+TT} & Tiempo juliano modificado (en tiempo terrestre). ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Matriz con la transformación de la media al ecuador verdadero y equinoccio. 
+\end{DoxyReturn}

@@ -1,0 +1,57 @@
+\doxysection{C\+:/\+Users/\+Usuario/\+Documents/\+Git\+Hub/\+Proyecto\+TT1/include/\+Position.hpp File Reference}
+\hypertarget{_position_8hpp}{}\label{_position_8hpp}\index{C:/Users/Usuario/Documents/GitHub/ProyectoTT1/include/Position.hpp@{C:/Users/Usuario/Documents/GitHub/ProyectoTT1/include/Position.hpp}}
+
+
+Este archivo de cabecera contiene una implementación de la función Position.  
+
+
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}matrix.\+h"{}}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}\+SAT\+\_\+\+Const.\+hpp"{}}\newline
+Include dependency graph for Position.\+hpp\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_matrix}{Matrix}} \& \mbox{\hyperlink{_position_8hpp_ad3ff3004edb305ae3aed0230373b848e}{Position}} (double lon, double lat, double h)
+\begin{DoxyCompactList}\small\item\em Calcula el vector posición a partir de las coordenadas geodésicas. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Este archivo de cabecera contiene una implementación de la función Position. 
+
+\begin{DoxyAuthor}{Author}
+Miguel Río Navarro 
+\end{DoxyAuthor}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000032}{Bug}}]No known bugs. \end{DoxyRefDesc}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_position_8hpp_ad3ff3004edb305ae3aed0230373b848e}\index{Position.hpp@{Position.hpp}!Position@{Position}}
+\index{Position@{Position}!Position.hpp@{Position.hpp}}
+\doxysubsubsection{\texorpdfstring{Position()}{Position()}}
+{\footnotesize\ttfamily \label{_position_8hpp_ad3ff3004edb305ae3aed0230373b848e} 
+\mbox{\hyperlink{class_matrix}{Matrix}} \& Position (\begin{DoxyParamCaption}\item[{double}]{lon}{, }\item[{double}]{lat}{, }\item[{double}]{h}{}\end{DoxyParamCaption})}
+
+
+
+Calcula el vector posición a partir de las coordenadas geodésicas. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em lon} & Longitud en radianes. ~\newline
+ \\
+\hline
+\mbox{\texttt{ in}}  & {\em lat} & Latitud en radianes. ~\newline
+ \\
+\hline
+\mbox{\texttt{ in}}  & {\em h} & Altura en metros. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector posición en metros. 
+\end{DoxyReturn}

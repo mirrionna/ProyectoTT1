@@ -1,0 +1,95 @@
+\doxysection{C\+:/\+Users/\+Usuario/\+Documents/\+Git\+Hub/\+Proyecto\+TT1/include/anglesg.hpp File Reference}
+\hypertarget{anglesg_8hpp}{}\label{anglesg_8hpp}\index{C:/Users/Usuario/Documents/GitHub/ProyectoTT1/include/anglesg.hpp@{C:/Users/Usuario/Documents/GitHub/ProyectoTT1/include/anglesg.hpp}}
+
+
+Este archivo de cabecera contiene una implementación de la función anglesg.  
+
+
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$tuple$>$}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}matrix.\+h"{}}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}global.\+hpp"{}}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}\+Geodetic.\+hpp"{}}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}\+LTC.\+hpp"{}}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}\+IERS.\+hpp"{}}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}timediff.\+hpp"{}}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}\+Prec\+Matrix.\+hpp"{}}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}\+Nut\+Matrix.\+hpp"{}}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}\+Pole\+Matrix.\+hpp"{}}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}\+GHAMatrix.\+hpp"{}}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}gibbs.\+hpp"{}}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}hgibbs.\+hpp"{}}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}elements.\+hpp"{}}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}angl.\+hpp"{}}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}rpoly.\+h"{}}\newline
+Include dependency graph for anglesg.\+hpp\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+tuple$<$ \mbox{\hyperlink{class_matrix}{Matrix}} \&, \mbox{\hyperlink{class_matrix}{Matrix}} \& $>$ \mbox{\hyperlink{anglesg_8hpp_aa28e5c4934a42b8bf68c5e674cf7a7ef}{anglesg}} (double az1, double az2, double az3, double el1, double el2, double el3, double Mjd1, double Mjd2, double Mjd3, \mbox{\hyperlink{class_matrix}{Matrix}} \&Rs1, \mbox{\hyperlink{class_matrix}{Matrix}} \&Rs2, \mbox{\hyperlink{class_matrix}{Matrix}} \&Rs3)
+\begin{DoxyCompactList}\small\item\em Soluciona el problema de la determinación orbital usando tres avistamientos ópticos. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Este archivo de cabecera contiene una implementación de la función anglesg. 
+
+\begin{DoxyAuthor}{Author}
+Miguel Río Navarro 
+\end{DoxyAuthor}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000005}{Bug}}]No known bugs. \end{DoxyRefDesc}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{anglesg_8hpp_aa28e5c4934a42b8bf68c5e674cf7a7ef}\index{anglesg.hpp@{anglesg.hpp}!anglesg@{anglesg}}
+\index{anglesg@{anglesg}!anglesg.hpp@{anglesg.hpp}}
+\doxysubsubsection{\texorpdfstring{anglesg()}{anglesg()}}
+{\footnotesize\ttfamily \label{anglesg_8hpp_aa28e5c4934a42b8bf68c5e674cf7a7ef} 
+tuple$<$ \mbox{\hyperlink{class_matrix}{Matrix}} \&, \mbox{\hyperlink{class_matrix}{Matrix}} \& $>$ anglesg (\begin{DoxyParamCaption}\item[{double}]{az1}{, }\item[{double}]{az2}{, }\item[{double}]{az3}{, }\item[{double}]{el1}{, }\item[{double}]{el2}{, }\item[{double}]{el3}{, }\item[{double}]{Mjd1}{, }\item[{double}]{Mjd2}{, }\item[{double}]{Mjd3}{, }\item[{\mbox{\hyperlink{class_matrix}{Matrix}} \&}]{Rs1}{, }\item[{\mbox{\hyperlink{class_matrix}{Matrix}} \&}]{Rs2}{, }\item[{\mbox{\hyperlink{class_matrix}{Matrix}} \&}]{Rs3}{}\end{DoxyParamCaption})}
+
+
+
+Soluciona el problema de la determinación orbital usando tres avistamientos ópticos. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em az1} & Acimut en el primer tiempo en radianes. ~\newline
+ \\
+\hline
+\mbox{\texttt{ in}}  & {\em az2} & Acimut en el segundo tiempo en radianes. ~\newline
+ \\
+\hline
+\mbox{\texttt{ in}}  & {\em az3} & Acimut en el tercer tiempo en radianes. ~\newline
+ \\
+\hline
+\mbox{\texttt{ in}}  & {\em el1} & Elevación en el primer tiempo en radianes. ~\newline
+ \\
+\hline
+\mbox{\texttt{ in}}  & {\em el2} & Elevación en el segundo tiempo en radianes. ~\newline
+ \\
+\hline
+\mbox{\texttt{ in}}  & {\em el3} & Elevación en el tercer tiempo en radianes. \\
+\hline
+\mbox{\texttt{ in}}  & {\em Mjd1} & Fecha juliana del primer tiempo. ~\newline
+ \\
+\hline
+\mbox{\texttt{ in}}  & {\em Mjd2} & Fecha juliana del segundo tiempo. ~\newline
+ \\
+\hline
+\mbox{\texttt{ in}}  & {\em Mjd3} & Fecha juliana del tercer tiempo. \\
+\hline
+\mbox{\texttt{ in}}  & {\em Rs1} & Posición en metros del primer tiempo. ~\newline
+ \\
+\hline
+\mbox{\texttt{ in}}  & {\em Rs2} & Posición en metros del segundo tiempo. ~\newline
+ \\
+\hline
+\mbox{\texttt{ in}}  & {\em Rs3} & Posición en metros del tercer tiempo. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Tupla con el vector de posición en t2 en metros y el vector velocidad en t2 en metros por segundo. 
+\end{DoxyReturn}

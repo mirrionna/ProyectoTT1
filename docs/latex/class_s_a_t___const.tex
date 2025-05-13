@@ -1,0 +1,97 @@
+\doxysection{SAT\+\_\+\+Const Class Reference}
+\hypertarget{class_s_a_t___const}{}\label{class_s_a_t___const}\index{SAT\_Const@{SAT\_Const}}
+
+
+Clase que contiene constantes astronómicas y físicas utilizadas en cálculos satelitales.  
+
+
+
+
+{\ttfamily \#include $<$SAT\+\_\+\+Const.\+hpp$>$}
+
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_s_a_t___const_ae88391288a338825da360fc81c8ae37b}\label{class_s_a_t___const_ae88391288a338825da360fc81c8ae37b} 
+static constexpr double {\bfseries pi2} = std\+::numbers\+::pi\texorpdfstring{$\ast$}{*}2
+\begin{DoxyCompactList}\small\item\em Constante matemática 2π. \end{DoxyCompactList}\item 
+\Hypertarget{class_s_a_t___const_a3c6284e159dbe30142273ae4f348def4}\label{class_s_a_t___const_a3c6284e159dbe30142273ae4f348def4} 
+static constexpr double {\bfseries Rad} = std\+::numbers\+::pi/180
+\begin{DoxyCompactList}\small\item\em Radianes por grado. Factor de conversión de grados a radianes. \end{DoxyCompactList}\item 
+\Hypertarget{class_s_a_t___const_ad43c09b12455be18123901b3a72b7a46}\label{class_s_a_t___const_ad43c09b12455be18123901b3a72b7a46} 
+static constexpr double {\bfseries Deg} = 180/std\+::numbers\+::pi
+\begin{DoxyCompactList}\small\item\em Grados por radian. Factor de conversión de radianes a grados. \end{DoxyCompactList}\item 
+\Hypertarget{class_s_a_t___const_ab1ed979d87bc2346714a311ea2df57b8}\label{class_s_a_t___const_ab1ed979d87bc2346714a311ea2df57b8} 
+static constexpr double {\bfseries Arcs} = 3600\texorpdfstring{$\ast$}{*}180/std\+::numbers\+::pi
+\begin{DoxyCompactList}\small\item\em Segundos de arco por radian. \end{DoxyCompactList}\item 
+\Hypertarget{class_s_a_t___const_a18fd4e9c1730f97159f7a55399a17037}\label{class_s_a_t___const_a18fd4e9c1730f97159f7a55399a17037} 
+static constexpr double {\bfseries MJD\+\_\+\+J2000} = 51544.\+5
+\begin{DoxyCompactList}\small\item\em Fecha Juliana modificada para la época J2000.\+0. \end{DoxyCompactList}\item 
+\Hypertarget{class_s_a_t___const_a1182fdbca401b73dba513a3624eeb52d}\label{class_s_a_t___const_a1182fdbca401b73dba513a3624eeb52d} 
+static constexpr double {\bfseries T\+\_\+\+B1950} = -\/0.\+500002108
+\begin{DoxyCompactList}\small\item\em Diferencia en siglos julianos desde J2000.\+0 hasta la época B1950. \end{DoxyCompactList}\item 
+\Hypertarget{class_s_a_t___const_a7d170caff901e99ed15ed03c094f8a62}\label{class_s_a_t___const_a7d170caff901e99ed15ed03c094f8a62} 
+static constexpr double {\bfseries c\+\_\+light} = 299792458.\+000000000
+\begin{DoxyCompactList}\small\item\em Velocidad de la luz en el vacío \mbox{[}m/s\mbox{]}; DE430. \end{DoxyCompactList}\item 
+\Hypertarget{class_s_a_t___const_aee6a4be01083958f4b9ad812d5f415e9}\label{class_s_a_t___const_aee6a4be01083958f4b9ad812d5f415e9} 
+static constexpr double {\bfseries AU} = 149597870700.\+000000
+\begin{DoxyCompactList}\small\item\em Unidad astronómica \mbox{[}m\mbox{]}; DE430. \end{DoxyCompactList}\item 
+\Hypertarget{class_s_a_t___const_ab7d1d522df38a668b524b76d7c0b8250}\label{class_s_a_t___const_ab7d1d522df38a668b524b76d7c0b8250} 
+static constexpr double {\bfseries R\+\_\+\+Earth} = 6378.\+1363e3
+\begin{DoxyCompactList}\small\item\em Radio ecuatorial medio de la Tierra \mbox{[}m\mbox{]}; DE430. \end{DoxyCompactList}\item 
+\Hypertarget{class_s_a_t___const_a603a121ac7495d6c51cbaee4514ac544}\label{class_s_a_t___const_a603a121ac7495d6c51cbaee4514ac544} 
+static constexpr double {\bfseries f\+\_\+\+Earth} = 1/298.\+257223563
+\begin{DoxyCompactList}\small\item\em Aplanamiento de la Tierra; WGS-\/84. \end{DoxyCompactList}\item 
+\Hypertarget{class_s_a_t___const_a29738c7dc581a976f3cee7282c6b4546}\label{class_s_a_t___const_a29738c7dc581a976f3cee7282c6b4546} 
+static constexpr double {\bfseries R\+\_\+\+Sun} = 696000e3
+\begin{DoxyCompactList}\small\item\em Radio del Sol \mbox{[}m\mbox{]}; DE430. \end{DoxyCompactList}\item 
+\Hypertarget{class_s_a_t___const_aa89edc7bd2817657f4edf1b91181d34f}\label{class_s_a_t___const_aa89edc7bd2817657f4edf1b91181d34f} 
+static constexpr double {\bfseries R\+\_\+\+Moon} = 1738e3
+\begin{DoxyCompactList}\small\item\em Radio de la Luna \mbox{[}m\mbox{]}; DE430. \end{DoxyCompactList}\item 
+\Hypertarget{class_s_a_t___const_a0a2e03e37c2f4f9cdd84d7d64bd3b105}\label{class_s_a_t___const_a0a2e03e37c2f4f9cdd84d7d64bd3b105} 
+static constexpr double {\bfseries omega\+\_\+\+Earth} = 15.\+04106717866910/3600\texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_s_a_t___const_a3c6284e159dbe30142273ae4f348def4}{Rad}}
+\begin{DoxyCompactList}\small\item\em Velocidad angular de rotación de la Tierra \mbox{[}rad/s\mbox{]}; WGS-\/84. \end{DoxyCompactList}\item 
+\Hypertarget{class_s_a_t___const_a96bb15261b19eefe8c15bd2df0569989}\label{class_s_a_t___const_a96bb15261b19eefe8c15bd2df0569989} 
+static constexpr double {\bfseries GM\+\_\+\+Earth} = 398600.\+435436e9
+\begin{DoxyCompactList}\small\item\em Parámetro gravitacional de la Tierra (GM) \mbox{[}m³/s²\mbox{]}; DE430. \end{DoxyCompactList}\item 
+\Hypertarget{class_s_a_t___const_a1d05377871ac47d851d7552bc9d2a9cc}\label{class_s_a_t___const_a1d05377871ac47d851d7552bc9d2a9cc} 
+static constexpr double {\bfseries GM\+\_\+\+Sun} =132712440041.\+939400e9
+\begin{DoxyCompactList}\small\item\em Parámetro gravitacional del Sol (GM) \mbox{[}m³/s²\mbox{]}; DE430. \end{DoxyCompactList}\item 
+\Hypertarget{class_s_a_t___const_aa6772de212d79f24e29a697ed81f1472}\label{class_s_a_t___const_aa6772de212d79f24e29a697ed81f1472} 
+static constexpr double {\bfseries GM\+\_\+\+Moon} = \mbox{\hyperlink{class_s_a_t___const_a96bb15261b19eefe8c15bd2df0569989}{GM\+\_\+\+Earth}}/81.\+30056907419062
+\begin{DoxyCompactList}\small\item\em Parámetro gravitacional de la Luna (GM) \mbox{[}m³/s²\mbox{]}; DE430. \end{DoxyCompactList}\item 
+\Hypertarget{class_s_a_t___const_a6f23afd4c315aeae145c2624f6e12508}\label{class_s_a_t___const_a6f23afd4c315aeae145c2624f6e12508} 
+static constexpr double {\bfseries GM\+\_\+\+Mercury} = 22031.\+780000e9
+\begin{DoxyCompactList}\small\item\em Parámetro gravitacional de Mercurio (GM) \mbox{[}m³/s²\mbox{]}; DE430. \end{DoxyCompactList}\item 
+\Hypertarget{class_s_a_t___const_a0bdc118e33d080b82faa2be673ecef17}\label{class_s_a_t___const_a0bdc118e33d080b82faa2be673ecef17} 
+static constexpr double {\bfseries GM\+\_\+\+Venus} = 324858.\+592000e9
+\begin{DoxyCompactList}\small\item\em Parámetro gravitacional de Venus (GM) \mbox{[}m³/s²\mbox{]}; DE430. \end{DoxyCompactList}\item 
+\Hypertarget{class_s_a_t___const_a30ab2135616a496e3b9bb5182078d9cc}\label{class_s_a_t___const_a30ab2135616a496e3b9bb5182078d9cc} 
+static constexpr double {\bfseries GM\+\_\+\+Mars} =42828.\+375214e9
+\begin{DoxyCompactList}\small\item\em Parámetro gravitacional de Marte (GM) \mbox{[}m³/s²\mbox{]}; DE430. \end{DoxyCompactList}\item 
+\Hypertarget{class_s_a_t___const_a6c7cbbde2c1dd359e456f6b53a168ac2}\label{class_s_a_t___const_a6c7cbbde2c1dd359e456f6b53a168ac2} 
+static constexpr double {\bfseries GM\+\_\+\+Jupiter} = 126712764.\+800000e9
+\begin{DoxyCompactList}\small\item\em Parámetro gravitacional de Júpiter (GM) \mbox{[}m³/s²\mbox{]}; DE430. \end{DoxyCompactList}\item 
+\Hypertarget{class_s_a_t___const_ade97a5fa6f846debc78881f90cd91dcf}\label{class_s_a_t___const_ade97a5fa6f846debc78881f90cd91dcf} 
+static constexpr double {\bfseries GM\+\_\+\+Saturn} = 37940585.\+200000e9
+\begin{DoxyCompactList}\small\item\em Parámetro gravitacional de Saturno (GM) \mbox{[}m³/s²\mbox{]}; DE430. \end{DoxyCompactList}\item 
+\Hypertarget{class_s_a_t___const_a7f4cf62e44ce55710dc714700d37e709}\label{class_s_a_t___const_a7f4cf62e44ce55710dc714700d37e709} 
+static constexpr double {\bfseries GM\+\_\+\+Uranus} =5794548.\+600000e9
+\begin{DoxyCompactList}\small\item\em Parámetro gravitacional de Urano (GM) \mbox{[}m³/s²\mbox{]}; DE430. \end{DoxyCompactList}\item 
+\Hypertarget{class_s_a_t___const_a973b9367d65a7311e34674cf67b1838a}\label{class_s_a_t___const_a973b9367d65a7311e34674cf67b1838a} 
+static constexpr double {\bfseries GM\+\_\+\+Neptune} =6836527.\+100580e9
+\begin{DoxyCompactList}\small\item\em Parámetro gravitacional de Neptuno (GM) \mbox{[}m³/s²\mbox{]}; DE430. \end{DoxyCompactList}\item 
+\Hypertarget{class_s_a_t___const_a172ce29e9cf4598502f31cd4ede1180e}\label{class_s_a_t___const_a172ce29e9cf4598502f31cd4ede1180e} 
+static constexpr double {\bfseries GM\+\_\+\+Pluto} = 977.\+0000000000009e9
+\begin{DoxyCompactList}\small\item\em Parámetro gravitacional de Plutón (GM) \mbox{[}m³/s²\mbox{]}; DE430. \end{DoxyCompactList}\item 
+\Hypertarget{class_s_a_t___const_a26bb9cd23410c2d767242616cf715a1c}\label{class_s_a_t___const_a26bb9cd23410c2d767242616cf715a1c} 
+static constexpr double {\bfseries P\+\_\+\+Sol} =1367/\mbox{\hyperlink{class_s_a_t___const_a7d170caff901e99ed15ed03c094f8a62}{c\+\_\+light}}
+\begin{DoxyCompactList}\small\item\em Presión de radiación solar a 1 UA \mbox{[}N/m²\mbox{]}; IERS 96. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Clase que contiene constantes astronómicas y físicas utilizadas en cálculos satelitales. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Usuario/\+Documents/\+Git\+Hub/\+Proyecto\+TT1/include/\mbox{\hyperlink{_s_a_t___const_8hpp}{SAT\+\_\+\+Const.\+hpp}}\end{DoxyCompactItemize}

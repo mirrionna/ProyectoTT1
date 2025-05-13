@@ -1,0 +1,53 @@
+\doxysection{C\+:/\+Users/\+Usuario/\+Documents/\+Git\+Hub/\+Proyecto\+TT1/include/\+JPL\+\_\+\+Eph\+\_\+\+DE430.hpp File Reference}
+\hypertarget{_j_p_l___eph___d_e430_8hpp}{}\label{_j_p_l___eph___d_e430_8hpp}\index{C:/Users/Usuario/Documents/GitHub/ProyectoTT1/include/JPL\_Eph\_DE430.hpp@{C:/Users/Usuario/Documents/GitHub/ProyectoTT1/include/JPL\_Eph\_DE430.hpp}}
+
+
+Este archivo de cabecera contiene una implementación de la función JPL\+\_\+\+Eph\+\_\+\+DE430.  
+
+
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$tuple$>$}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}matrix.\+h"{}}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}global.\+hpp"{}}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}\+Cheb3\+D.\+hpp"{}}\newline
+Include dependency graph for JPL\+\_\+\+Eph\+\_\+\+DE430.\+hpp\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+tuple$<$ \mbox{\hyperlink{class_matrix}{Matrix}} \&, \mbox{\hyperlink{class_matrix}{Matrix}} \&, \mbox{\hyperlink{class_matrix}{Matrix}} \&, \mbox{\hyperlink{class_matrix}{Matrix}} \&, \mbox{\hyperlink{class_matrix}{Matrix}} \&, \mbox{\hyperlink{class_matrix}{Matrix}} \&, \mbox{\hyperlink{class_matrix}{Matrix}} \&, \mbox{\hyperlink{class_matrix}{Matrix}} \&, \mbox{\hyperlink{class_matrix}{Matrix}} \&, \mbox{\hyperlink{class_matrix}{Matrix}} \&, \mbox{\hyperlink{class_matrix}{Matrix}} \& $>$ \mbox{\hyperlink{_j_p_l___eph___d_e430_8hpp_a5e6fedfbbbe0ca32aa62a9016e7d3293}{JPL\+\_\+\+Eph\+\_\+\+DE430}} (double Mjd\+\_\+\+TDB)
+\begin{DoxyCompactList}\small\item\em Calcula la posición ecuatorial del sol, la luna y los nueve planetas mayores usando JPL Ephemerides. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Este archivo de cabecera contiene una implementación de la función JPL\+\_\+\+Eph\+\_\+\+DE430. 
+
+\begin{DoxyAuthor}{Author}
+Miguel Río Navarro 
+\end{DoxyAuthor}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000021}{Bug}}]No known bugs. \end{DoxyRefDesc}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_j_p_l___eph___d_e430_8hpp_a5e6fedfbbbe0ca32aa62a9016e7d3293}\index{JPL\_Eph\_DE430.hpp@{JPL\_Eph\_DE430.hpp}!JPL\_Eph\_DE430@{JPL\_Eph\_DE430}}
+\index{JPL\_Eph\_DE430@{JPL\_Eph\_DE430}!JPL\_Eph\_DE430.hpp@{JPL\_Eph\_DE430.hpp}}
+\doxysubsubsection{\texorpdfstring{JPL\_Eph\_DE430()}{JPL\_Eph\_DE430()}}
+{\footnotesize\ttfamily \label{_j_p_l___eph___d_e430_8hpp_a5e6fedfbbbe0ca32aa62a9016e7d3293} 
+tuple$<$ \mbox{\hyperlink{class_matrix}{Matrix}} \&, \mbox{\hyperlink{class_matrix}{Matrix}} \&, \mbox{\hyperlink{class_matrix}{Matrix}} \&, \mbox{\hyperlink{class_matrix}{Matrix}} \&, \mbox{\hyperlink{class_matrix}{Matrix}} \&, \mbox{\hyperlink{class_matrix}{Matrix}} \&, \mbox{\hyperlink{class_matrix}{Matrix}} \&, \mbox{\hyperlink{class_matrix}{Matrix}} \&, \mbox{\hyperlink{class_matrix}{Matrix}} \&, \mbox{\hyperlink{class_matrix}{Matrix}} \&, \mbox{\hyperlink{class_matrix}{Matrix}} \& $>$ JPL\+\_\+\+Eph\+\_\+\+DE430 (\begin{DoxyParamCaption}\item[{double}]{Mjd\+\_\+\+TDB}{}\end{DoxyParamCaption})}
+
+
+
+Calcula la posición ecuatorial del sol, la luna y los nueve planetas mayores usando JPL Ephemerides. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em Mjd\+\_\+\+TDB} & Fecha juliana modificada. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Tupla con las matrices con posición ecuatorial del sol, la luna y los nueve planetas mayores. 
+\end{DoxyReturn}

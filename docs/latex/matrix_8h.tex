@@ -1,0 +1,411 @@
+\doxysection{C\+:/\+Users/\+Usuario/\+Documents/\+Git\+Hub/\+Proyecto\+TT1/include/matrix.h File Reference}
+\hypertarget{matrix_8h}{}\label{matrix_8h}\index{C:/Users/Usuario/Documents/GitHub/ProyectoTT1/include/matrix.h@{C:/Users/Usuario/Documents/GitHub/ProyectoTT1/include/matrix.h}}
+
+
+Este archivo de cabecera contiene una implementación de una clase que representa una matriz.  
+
+
+{\ttfamily \#include $<$cstdio$>$}\newline
+{\ttfamily \#include $<$cstdlib$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+Include dependency graph for matrix.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_matrix}{Matrix}}
+\begin{DoxyCompactList}\small\item\em Clase que contiene una representación de una matriz. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \mbox{\hyperlink{matrix_8h_a6ce0bc529fe2ee6fb2d0eb8acbdc1e92}{operator$<$$<$}} (ostream \&o, \mbox{\hyperlink{class_matrix}{Matrix}} \&m)
+\begin{DoxyCompactList}\small\item\em Sobreescritura del operador \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} para una matriz. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_matrix}{Matrix}} \& \mbox{\hyperlink{matrix_8h_a56d60ea1f08402246a7cfd477d69a618}{zeros}} (const int n\+\_\+row, const int n\+\_\+column)
+\begin{DoxyCompactList}\small\item\em Constructor de una matriz rellena de ceros. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_matrix}{Matrix}} \& \mbox{\hyperlink{matrix_8h_ab2f05195ce5c6c4b6e00df63a50c329d}{zeros}} (const int n)
+\begin{DoxyCompactList}\small\item\em Constructor de un vector relleno de ceros. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_matrix}{Matrix}} \& \mbox{\hyperlink{matrix_8h_a431572bb3773e2cd1fa44ca2be2bd727}{eye}} (const int n\+\_\+row)
+\begin{DoxyCompactList}\small\item\em Constructor de una matriz identidad. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_matrix}{Matrix}} \& \mbox{\hyperlink{matrix_8h_acbd9778b697f9ad3da64ef53b850e2c9}{transpose}} (\mbox{\hyperlink{class_matrix}{Matrix}} \&m)
+\begin{DoxyCompactList}\small\item\em Transpuesta de una matriz. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_matrix}{Matrix}} \& \mbox{\hyperlink{matrix_8h_ad8d8519e7f94df41a4c5b535b4899222}{inv}} (\mbox{\hyperlink{class_matrix}{Matrix}} \&m)
+\begin{DoxyCompactList}\small\item\em Matriz inversa de una matriz, calculando cofactores. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_matrix}{Matrix}} \& \mbox{\hyperlink{matrix_8h_ade02755a02ed0f8875fffc560e6ce9f5}{submatriz}} (\mbox{\hyperlink{class_matrix}{Matrix}} \&m, int i, int j)
+\begin{DoxyCompactList}\small\item\em Método auxiliar para obtener una submatriz. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{matrix_8h_aee30b730e3e61d3133a512fbc1c70636}{determinante}} (\mbox{\hyperlink{class_matrix}{Matrix}} \&m)
+\begin{DoxyCompactList}\small\item\em Determinante de una matriz, obtenido recursivamente. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{matrix_8h_a4171206f7b54c775745f80c5fb77b2c0}{norm}} (\mbox{\hyperlink{class_matrix}{Matrix}} \&v)
+\begin{DoxyCompactList}\small\item\em Norma de una vector. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{matrix_8h_acced4f3e05e6d027a9ef842747224b1d}{dot}} (\mbox{\hyperlink{class_matrix}{Matrix}} \&u, \mbox{\hyperlink{class_matrix}{Matrix}} \&v)
+\begin{DoxyCompactList}\small\item\em Producto escalar de dos vectores. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_matrix}{Matrix}} \& \mbox{\hyperlink{matrix_8h_a72ef4c1f0442b77bd994ade4f32e0381}{cross}} (\mbox{\hyperlink{class_matrix}{Matrix}} \&u, \mbox{\hyperlink{class_matrix}{Matrix}} \&v)
+\begin{DoxyCompactList}\small\item\em Producto vectorial de dos vectores. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_matrix}{Matrix}} \& \mbox{\hyperlink{matrix_8h_a98ca352c5f9a01d584b59e483aa7d1e8}{extract\+\_\+vector}} (\mbox{\hyperlink{class_matrix}{Matrix}} \&m, int i, int j)
+\begin{DoxyCompactList}\small\item\em Extrae un subvector de un vector. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_matrix}{Matrix}} \& \mbox{\hyperlink{matrix_8h_a2052b02a5c620e1528bbe5af877a5858}{union\+\_\+vector}} (\mbox{\hyperlink{class_matrix}{Matrix}} \&m, \mbox{\hyperlink{class_matrix}{Matrix}} \&n)
+\begin{DoxyCompactList}\small\item\em Une dos vectores. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_matrix}{Matrix}} \& \mbox{\hyperlink{matrix_8h_a1f995b3b378c740b30545f80e2349355}{extract\+\_\+row}} (\mbox{\hyperlink{class_matrix}{Matrix}} \&m, int n)
+\begin{DoxyCompactList}\small\item\em Extrae una fila de una matriz. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_matrix}{Matrix}} \& \mbox{\hyperlink{matrix_8h_a7138ec432f927e1fa23cbe5f70051f4f}{extract\+\_\+column}} (\mbox{\hyperlink{class_matrix}{Matrix}} \&m, int n)
+\begin{DoxyCompactList}\small\item\em Extrae una columna de una matriz. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_matrix}{Matrix}} \& \mbox{\hyperlink{matrix_8h_a485268c23caa39aa3785f599f6902b7b}{assign\+\_\+row}} (int n, \mbox{\hyperlink{class_matrix}{Matrix}} \&m, \mbox{\hyperlink{class_matrix}{Matrix}} \&r)
+\begin{DoxyCompactList}\small\item\em Asigna el valor de una fila de una matriz. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_matrix}{Matrix}} \& \mbox{\hyperlink{matrix_8h_ad152f1e1bdd7dd20b1c813b76bfed471}{assign\+\_\+column}} (int n, \mbox{\hyperlink{class_matrix}{Matrix}} \&m, \mbox{\hyperlink{class_matrix}{Matrix}} \&c)
+\begin{DoxyCompactList}\small\item\em Asigna el valor de una columna de una matriz. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Este archivo de cabecera contiene una implementación de una clase que representa una matriz. 
+
+\begin{DoxyAuthor}{Author}
+Miguel Río Navarro 
+\end{DoxyAuthor}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000024}{Bug}}]No known bugs. \end{DoxyRefDesc}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{matrix_8h_ad152f1e1bdd7dd20b1c813b76bfed471}\index{matrix.h@{matrix.h}!assign\_column@{assign\_column}}
+\index{assign\_column@{assign\_column}!matrix.h@{matrix.h}}
+\doxysubsubsection{\texorpdfstring{assign\_column()}{assign\_column()}}
+{\footnotesize\ttfamily \label{matrix_8h_ad152f1e1bdd7dd20b1c813b76bfed471} 
+\mbox{\hyperlink{class_matrix}{Matrix}} \& assign\+\_\+column (\begin{DoxyParamCaption}\item[{int}]{n}{, }\item[{\mbox{\hyperlink{class_matrix}{Matrix}} \&}]{m}{, }\item[{\mbox{\hyperlink{class_matrix}{Matrix}} \&}]{c}{}\end{DoxyParamCaption})}
+
+
+
+Asigna el valor de una columna de una matriz. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em n} & Entero que representa la columna que se quiere asignar. ~\newline
+ \\
+\hline
+\mbox{\texttt{ in}}  & {\em m} & Matriz a la que se quiere asignar la columna \\
+\hline
+\mbox{\texttt{ in}}  & {\em c} & Vector con la columna que se quiere asignar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Matriz copia de m y cambiando la columna n-\/ésima por c. 
+\end{DoxyReturn}
+\Hypertarget{matrix_8h_a485268c23caa39aa3785f599f6902b7b}\index{matrix.h@{matrix.h}!assign\_row@{assign\_row}}
+\index{assign\_row@{assign\_row}!matrix.h@{matrix.h}}
+\doxysubsubsection{\texorpdfstring{assign\_row()}{assign\_row()}}
+{\footnotesize\ttfamily \label{matrix_8h_a485268c23caa39aa3785f599f6902b7b} 
+\mbox{\hyperlink{class_matrix}{Matrix}} \& assign\+\_\+row (\begin{DoxyParamCaption}\item[{int}]{n}{, }\item[{\mbox{\hyperlink{class_matrix}{Matrix}} \&}]{m}{, }\item[{\mbox{\hyperlink{class_matrix}{Matrix}} \&}]{r}{}\end{DoxyParamCaption})}
+
+
+
+Asigna el valor de una fila de una matriz. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em n} & Entero que representa la fila que se quiere asignar. ~\newline
+ \\
+\hline
+\mbox{\texttt{ in}}  & {\em m} & Matriz a la que se quiere asignar la fila \\
+\hline
+\mbox{\texttt{ in}}  & {\em r} & Vector con la fila que se quiere asignar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Matriz copia de m y cambiando la fila n-\/ésima por r. 
+\end{DoxyReturn}
+\Hypertarget{matrix_8h_a72ef4c1f0442b77bd994ade4f32e0381}\index{matrix.h@{matrix.h}!cross@{cross}}
+\index{cross@{cross}!matrix.h@{matrix.h}}
+\doxysubsubsection{\texorpdfstring{cross()}{cross()}}
+{\footnotesize\ttfamily \label{matrix_8h_a72ef4c1f0442b77bd994ade4f32e0381} 
+\mbox{\hyperlink{class_matrix}{Matrix}} \& cross (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_matrix}{Matrix}} \&}]{u}{, }\item[{\mbox{\hyperlink{class_matrix}{Matrix}} \&}]{v}{}\end{DoxyParamCaption})}
+
+
+
+Producto vectorial de dos vectores. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em u} & Primer vector que se quiere multiplicar vectorialmente. \\
+\hline
+\mbox{\texttt{ in}}  & {\em v} & Segundo vector que se quiere multiplicar vectorialmente. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector resultado de realizar la operación u x v. 
+\end{DoxyReturn}
+\Hypertarget{matrix_8h_aee30b730e3e61d3133a512fbc1c70636}\index{matrix.h@{matrix.h}!determinante@{determinante}}
+\index{determinante@{determinante}!matrix.h@{matrix.h}}
+\doxysubsubsection{\texorpdfstring{determinante()}{determinante()}}
+{\footnotesize\ttfamily \label{matrix_8h_aee30b730e3e61d3133a512fbc1c70636} 
+double determinante (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_matrix}{Matrix}} \&}]{m}{}\end{DoxyParamCaption})}
+
+
+
+Determinante de una matriz, obtenido recursivamente. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em m} & Matriz de la que se quiere obtener el determinante. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Double que es el determinante de la matriz m. 
+\end{DoxyReturn}
+\Hypertarget{matrix_8h_acced4f3e05e6d027a9ef842747224b1d}\index{matrix.h@{matrix.h}!dot@{dot}}
+\index{dot@{dot}!matrix.h@{matrix.h}}
+\doxysubsubsection{\texorpdfstring{dot()}{dot()}}
+{\footnotesize\ttfamily \label{matrix_8h_acced4f3e05e6d027a9ef842747224b1d} 
+double dot (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_matrix}{Matrix}} \&}]{u}{, }\item[{\mbox{\hyperlink{class_matrix}{Matrix}} \&}]{v}{}\end{DoxyParamCaption})}
+
+
+
+Producto escalar de dos vectores. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em u} & Primer vector que se quiere multiplicar escalarmente. \\
+\hline
+\mbox{\texttt{ in}}  & {\em v} & Segundo vector que se quiere multiplicar escalarmente. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Double que es el resultado de u multiplicado escalarmente por v. 
+\end{DoxyReturn}
+\Hypertarget{matrix_8h_a7138ec432f927e1fa23cbe5f70051f4f}\index{matrix.h@{matrix.h}!extract\_column@{extract\_column}}
+\index{extract\_column@{extract\_column}!matrix.h@{matrix.h}}
+\doxysubsubsection{\texorpdfstring{extract\_column()}{extract\_column()}}
+{\footnotesize\ttfamily \label{matrix_8h_a7138ec432f927e1fa23cbe5f70051f4f} 
+\mbox{\hyperlink{class_matrix}{Matrix}} \& extract\+\_\+column (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_matrix}{Matrix}} \&}]{m}{, }\item[{int}]{n}{}\end{DoxyParamCaption})}
+
+
+
+Extrae una columna de una matriz. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em m} & Matriz de la que se quiere extraer la columna. \\
+\hline
+\mbox{\texttt{ in}}  & {\em n} & Entero que representa la columna que se quiere obtener. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Puntero al vector que corresponde a la columna n-\/ésima de la matriz. 
+\end{DoxyReturn}
+\Hypertarget{matrix_8h_a1f995b3b378c740b30545f80e2349355}\index{matrix.h@{matrix.h}!extract\_row@{extract\_row}}
+\index{extract\_row@{extract\_row}!matrix.h@{matrix.h}}
+\doxysubsubsection{\texorpdfstring{extract\_row()}{extract\_row()}}
+{\footnotesize\ttfamily \label{matrix_8h_a1f995b3b378c740b30545f80e2349355} 
+\mbox{\hyperlink{class_matrix}{Matrix}} \& extract\+\_\+row (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_matrix}{Matrix}} \&}]{m}{, }\item[{int}]{n}{}\end{DoxyParamCaption})}
+
+
+
+Extrae una fila de una matriz. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em m} & Matriz de la que se quiere extraer la fila. \\
+\hline
+\mbox{\texttt{ in}}  & {\em n} & Entero que representa la fila que se quiere obtener. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Puntero al vector que corresponde a la fila n-\/ésima de la matriz. 
+\end{DoxyReturn}
+\Hypertarget{matrix_8h_a98ca352c5f9a01d584b59e483aa7d1e8}\index{matrix.h@{matrix.h}!extract\_vector@{extract\_vector}}
+\index{extract\_vector@{extract\_vector}!matrix.h@{matrix.h}}
+\doxysubsubsection{\texorpdfstring{extract\_vector()}{extract\_vector()}}
+{\footnotesize\ttfamily \label{matrix_8h_a98ca352c5f9a01d584b59e483aa7d1e8} 
+\mbox{\hyperlink{class_matrix}{Matrix}} \& extract\+\_\+vector (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_matrix}{Matrix}} \&}]{m}{, }\item[{int}]{i}{, }\item[{int}]{j}{}\end{DoxyParamCaption})}
+
+
+
+Extrae un subvector de un vector. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em m} & Vector del que se quiere obtener el subvector. \\
+\hline
+\mbox{\texttt{ in}}  & {\em i} & Índice entre 1 y el tamaño del vector a partir del cual se quiere el subvector. \\
+\hline
+\mbox{\texttt{ in}}  & {\em j} & Índice entre 1 y el tamaño del vector del final del subvector. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Puntero al subvector entre los índices i y j de m. 
+\end{DoxyReturn}
+\Hypertarget{matrix_8h_a431572bb3773e2cd1fa44ca2be2bd727}\index{matrix.h@{matrix.h}!eye@{eye}}
+\index{eye@{eye}!matrix.h@{matrix.h}}
+\doxysubsubsection{\texorpdfstring{eye()}{eye()}}
+{\footnotesize\ttfamily \label{matrix_8h_a431572bb3773e2cd1fa44ca2be2bd727} 
+\mbox{\hyperlink{class_matrix}{Matrix}} \& eye (\begin{DoxyParamCaption}\item[{const int}]{n\+\_\+row}{}\end{DoxyParamCaption})}
+
+
+
+Constructor de una matriz identidad. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em n\+\_\+row} & Número de filas de la matriz identidad. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Puntero a una matriz identidad de tamaño n\+\_\+row. 
+\end{DoxyReturn}
+\Hypertarget{matrix_8h_ad8d8519e7f94df41a4c5b535b4899222}\index{matrix.h@{matrix.h}!inv@{inv}}
+\index{inv@{inv}!matrix.h@{matrix.h}}
+\doxysubsubsection{\texorpdfstring{inv()}{inv()}}
+{\footnotesize\ttfamily \label{matrix_8h_ad8d8519e7f94df41a4c5b535b4899222} 
+\mbox{\hyperlink{class_matrix}{Matrix}} \& inv (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_matrix}{Matrix}} \&}]{m}{}\end{DoxyParamCaption})}
+
+
+
+Matriz inversa de una matriz, calculando cofactores. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em m} & Matriz de la que se quiere obtener la inversa. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Puntero a una matriz que es la inversa de m. 
+\end{DoxyReturn}
+\Hypertarget{matrix_8h_a4171206f7b54c775745f80c5fb77b2c0}\index{matrix.h@{matrix.h}!norm@{norm}}
+\index{norm@{norm}!matrix.h@{matrix.h}}
+\doxysubsubsection{\texorpdfstring{norm()}{norm()}}
+{\footnotesize\ttfamily \label{matrix_8h_a4171206f7b54c775745f80c5fb77b2c0} 
+double norm (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_matrix}{Matrix}} \&}]{v}{}\end{DoxyParamCaption})}
+
+
+
+Norma de una vector. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em v} & Vector del que se quiere obtener la norma. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Double que es la norma del vector v. 
+\end{DoxyReturn}
+\Hypertarget{matrix_8h_a6ce0bc529fe2ee6fb2d0eb8acbdc1e92}\index{matrix.h@{matrix.h}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!matrix.h@{matrix.h}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily \label{matrix_8h_a6ce0bc529fe2ee6fb2d0eb8acbdc1e92} 
+ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{ostream \&}]{o}{, }\item[{\mbox{\hyperlink{class_matrix}{Matrix}} \&}]{m}{}\end{DoxyParamCaption})}
+
+
+
+Sobreescritura del operador \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} para una matriz. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em o} & Método de muestreo por pantalla \\
+\hline
+\mbox{\texttt{ in}}  & {\em m} & Matriz que se quiere mostrar por pantalla. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Muestra por pantalla la matriz m, elemento a elemento. 
+\end{DoxyReturn}
+\Hypertarget{matrix_8h_ade02755a02ed0f8875fffc560e6ce9f5}\index{matrix.h@{matrix.h}!submatriz@{submatriz}}
+\index{submatriz@{submatriz}!matrix.h@{matrix.h}}
+\doxysubsubsection{\texorpdfstring{submatriz()}{submatriz()}}
+{\footnotesize\ttfamily \label{matrix_8h_ade02755a02ed0f8875fffc560e6ce9f5} 
+\mbox{\hyperlink{class_matrix}{Matrix}} \& submatriz (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_matrix}{Matrix}} \&}]{m}{, }\item[{int}]{i}{, }\item[{int}]{j}{}\end{DoxyParamCaption})}
+
+
+
+Método auxiliar para obtener una submatriz. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em m} & Matriz de la que se quiere obtener una submatriz. \\
+\hline
+\mbox{\texttt{ in}}  & {\em i} & Fila que se quiere eliminar de la matriz. \\
+\hline
+\mbox{\texttt{ in}}  & {\em j} & Columna que se quiere eliminar de la matriz. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Puntero a una matriz idéntica a m, eliminando la i-\/ésima fila y la j-\/ésima columna. 
+\end{DoxyReturn}
+\Hypertarget{matrix_8h_acbd9778b697f9ad3da64ef53b850e2c9}\index{matrix.h@{matrix.h}!transpose@{transpose}}
+\index{transpose@{transpose}!matrix.h@{matrix.h}}
+\doxysubsubsection{\texorpdfstring{transpose()}{transpose()}}
+{\footnotesize\ttfamily \label{matrix_8h_acbd9778b697f9ad3da64ef53b850e2c9} 
+\mbox{\hyperlink{class_matrix}{Matrix}} \& transpose (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_matrix}{Matrix}} \&}]{m}{}\end{DoxyParamCaption})}
+
+
+
+Transpuesta de una matriz. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em m} & Matriz de la que se quiere obtener la transpuesta. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Puntero a la matriz transpuesta de m. 
+\end{DoxyReturn}
+\Hypertarget{matrix_8h_a2052b02a5c620e1528bbe5af877a5858}\index{matrix.h@{matrix.h}!union\_vector@{union\_vector}}
+\index{union\_vector@{union\_vector}!matrix.h@{matrix.h}}
+\doxysubsubsection{\texorpdfstring{union\_vector()}{union\_vector()}}
+{\footnotesize\ttfamily \label{matrix_8h_a2052b02a5c620e1528bbe5af877a5858} 
+\mbox{\hyperlink{class_matrix}{Matrix}} \& union\+\_\+vector (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_matrix}{Matrix}} \&}]{m}{, }\item[{\mbox{\hyperlink{class_matrix}{Matrix}} \&}]{n}{}\end{DoxyParamCaption})}
+
+
+
+Une dos vectores. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em m} & Matriz que se quiere concatenar. \\
+\hline
+\mbox{\texttt{ in}}  & {\em n} & Matriz que se quiere concatenar. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector union de las matrices m y n, en ese orden. 
+\end{DoxyReturn}
+\Hypertarget{matrix_8h_ab2f05195ce5c6c4b6e00df63a50c329d}\index{matrix.h@{matrix.h}!zeros@{zeros}}
+\index{zeros@{zeros}!matrix.h@{matrix.h}}
+\doxysubsubsection{\texorpdfstring{zeros()}{zeros()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{matrix_8h_ab2f05195ce5c6c4b6e00df63a50c329d} 
+\mbox{\hyperlink{class_matrix}{Matrix}} \& zeros (\begin{DoxyParamCaption}\item[{const int}]{n}{}\end{DoxyParamCaption})}
+
+
+
+Constructor de un vector relleno de ceros. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em n} & Número de elementos del vector. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Puntero a un vector de n elementos y en todos sus elementos valor cero. 
+\end{DoxyReturn}
+\Hypertarget{matrix_8h_a56d60ea1f08402246a7cfd477d69a618}\index{matrix.h@{matrix.h}!zeros@{zeros}}
+\index{zeros@{zeros}!matrix.h@{matrix.h}}
+\doxysubsubsection{\texorpdfstring{zeros()}{zeros()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{matrix_8h_a56d60ea1f08402246a7cfd477d69a618} 
+\mbox{\hyperlink{class_matrix}{Matrix}} \& zeros (\begin{DoxyParamCaption}\item[{const int}]{n\+\_\+row}{, }\item[{const int}]{n\+\_\+column}{}\end{DoxyParamCaption})}
+
+
+
+Constructor de una matriz rellena de ceros. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em n\+\_\+row} & Número de filas de la matriz. \\
+\hline
+\mbox{\texttt{ in}}  & {\em n\+\_\+column} & Número de columnas de la matriz. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Puntero a una matriz con n\+\_\+row filas, n\+\_\+column columnas y en todos sus elementos valor cero. 
+\end{DoxyReturn}

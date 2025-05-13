@@ -1,0 +1,63 @@
+\doxysection{C\+:/\+Users/\+Usuario/\+Documents/\+Git\+Hub/\+Proyecto\+TT1/include/\+Var\+Eqn.hpp File Reference}
+\hypertarget{_var_eqn_8hpp}{}\label{_var_eqn_8hpp}\index{C:/Users/Usuario/Documents/GitHub/ProyectoTT1/include/VarEqn.hpp@{C:/Users/Usuario/Documents/GitHub/ProyectoTT1/include/VarEqn.hpp}}
+
+
+Este archivo de cabecera contiene una implementación de la función Var\+Eqn.  
+
+
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}matrix.\+h"{}}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}\+SAT\+\_\+const.\+hpp"{}}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}global.\+hpp"{}}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}\+IERS.\+hpp"{}}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}timediff.\+hpp"{}}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}\+Prec\+Matrix.\+hpp"{}}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}\+Nut\+Matrix.\+hpp"{}}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}\+Pole\+Matrix.\+hpp"{}}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}\+GHAMatrix.\+hpp"{}}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}\+Accel\+Harmonic.\+hpp"{}}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}\+G\+\_\+\+Accel\+Harmonic.\+hpp"{}}\newline
+Include dependency graph for Var\+Eqn.\+hpp\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_matrix}{Matrix}} \& \mbox{\hyperlink{_var_eqn_8hpp_a6e153d0ae05034cb5b346189ebb847d3}{Var\+Eqn}} (double x, \mbox{\hyperlink{class_matrix}{Matrix}} \&y\+Phi)
+\begin{DoxyCompactList}\small\item\em Calcula las ecuaciones variacionales. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Este archivo de cabecera contiene una implementación de la función Var\+Eqn. 
+
+\begin{DoxyAuthor}{Author}
+Miguel Río Navarro 
+\end{DoxyAuthor}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000042}{Bug}}]No known bugs. \end{DoxyRefDesc}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_var_eqn_8hpp_a6e153d0ae05034cb5b346189ebb847d3}\index{VarEqn.hpp@{VarEqn.hpp}!VarEqn@{VarEqn}}
+\index{VarEqn@{VarEqn}!VarEqn.hpp@{VarEqn.hpp}}
+\doxysubsubsection{\texorpdfstring{VarEqn()}{VarEqn()}}
+{\footnotesize\ttfamily \label{_var_eqn_8hpp_a6e153d0ae05034cb5b346189ebb847d3} 
+\mbox{\hyperlink{class_matrix}{Matrix}} \& Var\+Eqn (\begin{DoxyParamCaption}\item[{double}]{x}{, }\item[{\mbox{\hyperlink{class_matrix}{Matrix}} \&}]{y\+Phi}{}\end{DoxyParamCaption})}
+
+
+
+Calcula las ecuaciones variacionales. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em x} & Tiempo desde epoch en segundos. ~\newline
+ \\
+\hline
+\mbox{\texttt{ in}}  & {\em y\+Phi} & Vector de dimensión 42 con el vector estado (y) y el estado de la matriz de transición (Phi) en el orden de almacenamiento. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Derivada de y\+Phi. 
+\end{DoxyReturn}

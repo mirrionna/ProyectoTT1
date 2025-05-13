@@ -1,0 +1,59 @@
+\doxysection{C\+:/\+Users/\+Usuario/\+Documents/\+Git\+Hub/\+Proyecto\+TT1/src/hgibbs.cpp File Reference}
+\hypertarget{hgibbs_8cpp}{}\label{hgibbs_8cpp}\index{C:/Users/Usuario/Documents/GitHub/ProyectoTT1/src/hgibbs.cpp@{C:/Users/Usuario/Documents/GitHub/ProyectoTT1/src/hgibbs.cpp}}
+
+
+Implementación de la aproximación de herrick-\/gibs para la determinación orbital, y encuentra el vector de velocidad media para 3 vectores de posición.  
+
+
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}hgibbs.\+hpp"{}}\newline
+Include dependency graph for hgibbs.\+cpp\+:
+% FIG 0
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+tuple$<$ \mbox{\hyperlink{class_matrix}{Matrix}} \&, double, double, double, string $>$ \mbox{\hyperlink{hgibbs_8cpp_abfce174ff6885367e3aca655642c2dd7}{hgibbs}} (\mbox{\hyperlink{class_matrix}{Matrix}} \&r1, \mbox{\hyperlink{class_matrix}{Matrix}} \&r2, \mbox{\hyperlink{class_matrix}{Matrix}} \&r3, double Mjd1, double Mjd2, double Mjd3)
+\begin{DoxyCompactList}\small\item\em Implementa la aproximación de herrick-\/gibs para la determinación orbital, y encuentra el vector de velocidad media para 3 vectores de posición. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementación de la aproximación de herrick-\/gibs para la determinación orbital, y encuentra el vector de velocidad media para 3 vectores de posición. 
+
+\begin{DoxyAuthor}{Author}
+Miguel Río Navarro 
+\end{DoxyAuthor}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000061}{Bug}}]No known bugs. \end{DoxyRefDesc}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{hgibbs_8cpp_abfce174ff6885367e3aca655642c2dd7}\index{hgibbs.cpp@{hgibbs.cpp}!hgibbs@{hgibbs}}
+\index{hgibbs@{hgibbs}!hgibbs.cpp@{hgibbs.cpp}}
+\doxysubsubsection{\texorpdfstring{hgibbs()}{hgibbs()}}
+{\footnotesize\ttfamily \label{hgibbs_8cpp_abfce174ff6885367e3aca655642c2dd7} 
+tuple$<$ \mbox{\hyperlink{class_matrix}{Matrix}} \&, double, double, double, string $>$ hgibbs (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_matrix}{Matrix}} \&}]{r1}{, }\item[{\mbox{\hyperlink{class_matrix}{Matrix}} \&}]{r2}{, }\item[{\mbox{\hyperlink{class_matrix}{Matrix}} \&}]{r3}{, }\item[{double}]{Mjd1}{, }\item[{double}]{Mjd2}{, }\item[{double}]{Mjd3}{}\end{DoxyParamCaption})}
+
+
+
+Implementa la aproximación de herrick-\/gibs para la determinación orbital, y encuentra el vector de velocidad media para 3 vectores de posición. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em r1} & Vector de posición 1. ~\newline
+ \\
+\hline
+\mbox{\texttt{ in}}  & {\em r2} & Vector de posición 2. ~\newline
+ \\
+\hline
+\mbox{\texttt{ in}}  & {\em r3} & Vector de posición 3. ~\newline
+ \\
+\hline
+\mbox{\texttt{ in}}  & {\em Mjd1} & Fecha juliana del primer avistamiento. \\
+\hline
+\mbox{\texttt{ in}}  & {\em Mjd2} & Fecha juliana del segundo avistamiento. \\
+\hline
+\mbox{\texttt{ in}}  & {\em Mjd3} & Fecha juliana del tercer avistamiento. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Tupla con el vector de velocidad ijk en m/s, los ángulos entre vectores en radianes y una flag indicando el éxito. 
+\end{DoxyReturn}

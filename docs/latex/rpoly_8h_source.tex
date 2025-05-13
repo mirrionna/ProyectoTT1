@@ -1,0 +1,47 @@
+\doxysection{rpoly.\+h}
+\hypertarget{rpoly_8h_source}{}\label{rpoly_8h_source}\index{C:/Users/Usuario/Documents/GitHub/ProyectoTT1/include/rpoly.h@{C:/Users/Usuario/Documents/GitHub/ProyectoTT1/include/rpoly.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ BEGIN\_C\_DECLS}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ BEGIN\_C\_DECLS}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ Opaque\ state\ handle}}
+\DoxyCodeLine{00005\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_r_poly___state}{RPoly\_State}};}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ Allocate\ state\ for\ finding\ roots\ of\ a\ real\ polynomial.}}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ Degrees\ up\ to\ max\_degree\ are\ supported\ by\ returned\ state.}}
+\DoxyCodeLine{00009\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_r_poly___state}{RPoly\_State}}\ *real\_poly\_alloc(\textcolor{keywordtype}{int}\ max\_degree);}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ Release\ state}}
+\DoxyCodeLine{00012\ \textcolor{keywordtype}{void}\ real\_poly\_release(\textcolor{keyword}{struct}\ \mbox{\hyperlink{struct_r_poly___state}{RPoly\_State}}\ *s);}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ Find\ roots\ of\ a\ polynomial\ with\ real\ coefficients.}}
+\DoxyCodeLine{00016\ \textcolor{comment}{//\ p[]\ holds\ coefficients\ of\ the\ polynomial:}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ \ \ p(x)\ =\ p[0]*x\string^degree\ +\ ...\ +\ p[degree]}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ Caller\ must\ have\ already\ allocated\ 'state'.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ Returns\ number\ of\ roots\ stored\ in\ zeror[],\ zeroi[].}}
+\DoxyCodeLine{00021\ \textcolor{keywordtype}{int}\ real\_poly\_roots\_compute(\textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ p[],\ \textcolor{keywordtype}{int}\ degree,}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct}\ \mbox{\hyperlink{struct_r_poly___state}{RPoly\_State}}\ *state,}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ zeror[],\ \textcolor{keywordtype}{double}\ zeroi[]);}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ Convenience\ function.}}
+\DoxyCodeLine{00026\ \textcolor{comment}{//\ Find\ roots\ of\ a\ polynomial\ with\ real\ coefficients.}}
+\DoxyCodeLine{00027\ \textcolor{comment}{//\ p[]\ holds\ coefficients\ of\ the\ polynomial:}}
+\DoxyCodeLine{00028\ \textcolor{comment}{//\ \ \ p(x)\ =\ p[0]*x\string^degree\ +\ ...\ +\ p[degree]}}
+\DoxyCodeLine{00029\ \textcolor{comment}{//}}
+\DoxyCodeLine{00030\ \textcolor{comment}{//\ Returns\ number\ of\ roots\ stored\ in\ zeror[],\ zeroi[]}}
+\DoxyCodeLine{00031\ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{int}\ real\_poly\_roots(\textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ p[],\ \textcolor{keywordtype}{int}\ degree,}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ zeror[],\ \textcolor{keywordtype}{double}\ zeroi[])}
+\DoxyCodeLine{00033\ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_r_poly___state}{RPoly\_State}}\ *state\ =\ real\_poly\_alloc(degree);}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{int}\ nr\ =\ real\_poly\_roots\_compute(p,\ degree,\ state,\ zeror,\ zeroi);}
+\DoxyCodeLine{00036\ \ \ \ \ real\_poly\_release(state);}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordflow}{return}\ nr;}
+\DoxyCodeLine{00039\ \}}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

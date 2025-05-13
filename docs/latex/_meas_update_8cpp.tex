@@ -1,0 +1,65 @@
+\doxysection{C\+:/\+Users/\+Usuario/\+Documents/\+Git\+Hub/\+Proyecto\+TT1/src/\+Meas\+Update.cpp File Reference}
+\hypertarget{_meas_update_8cpp}{}\label{_meas_update_8cpp}\index{C:/Users/Usuario/Documents/GitHub/ProyectoTT1/src/MeasUpdate.cpp@{C:/Users/Usuario/Documents/GitHub/ProyectoTT1/src/MeasUpdate.cpp}}
+
+
+Cálculo de tres matrices.  
+
+
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}\+Meas\+Update.\+hpp"{}}\newline
+Include dependency graph for Meas\+Update.\+cpp\+:
+% FIG 0
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+tuple$<$ \mbox{\hyperlink{class_matrix}{Matrix}} \&, \mbox{\hyperlink{class_matrix}{Matrix}} \&, \mbox{\hyperlink{class_matrix}{Matrix}} \& $>$ \mbox{\hyperlink{_meas_update_8cpp_ae12754392beb1fd53d392978b396266f}{Meas\+Update}} (\mbox{\hyperlink{class_matrix}{Matrix}} \&x, double z, double g, double s, \mbox{\hyperlink{class_matrix}{Matrix}} \&G, \mbox{\hyperlink{class_matrix}{Matrix}} \&P, int n)
+\begin{DoxyCompactList}\small\item\em Calcula aceleración debido al campo gravitatorio del centro de masas. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Cálculo de tres matrices. 
+
+\begin{DoxyAuthor}{Author}
+Miguel Río Navarro 
+\end{DoxyAuthor}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000068}{Bug}}]No known bugs. \end{DoxyRefDesc}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_meas_update_8cpp_ae12754392beb1fd53d392978b396266f}\index{MeasUpdate.cpp@{MeasUpdate.cpp}!MeasUpdate@{MeasUpdate}}
+\index{MeasUpdate@{MeasUpdate}!MeasUpdate.cpp@{MeasUpdate.cpp}}
+\doxysubsubsection{\texorpdfstring{MeasUpdate()}{MeasUpdate()}}
+{\footnotesize\ttfamily \label{_meas_update_8cpp_ae12754392beb1fd53d392978b396266f} 
+tuple$<$ \mbox{\hyperlink{class_matrix}{Matrix}} \&, \mbox{\hyperlink{class_matrix}{Matrix}} \&, \mbox{\hyperlink{class_matrix}{Matrix}} \& $>$ Meas\+Update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_matrix}{Matrix}} \&}]{x}{, }\item[{double}]{z}{, }\item[{double}]{g}{, }\item[{double}]{s}{, }\item[{\mbox{\hyperlink{class_matrix}{Matrix}} \&}]{G}{, }\item[{\mbox{\hyperlink{class_matrix}{Matrix}} \&}]{P}{, }\item[{int}]{n}{}\end{DoxyParamCaption})}
+
+
+
+Calcula aceleración debido al campo gravitatorio del centro de masas. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em x} & Matriz. ~\newline
+ \\
+\hline
+\mbox{\texttt{ in}}  & {\em z} & Double. ~\newline
+ \\
+\hline
+\mbox{\texttt{ in}}  & {\em g} & Double. ~\newline
+ \\
+\hline
+\mbox{\texttt{ in}}  & {\em s} & Double. ~\newline
+ \\
+\hline
+\mbox{\texttt{ in}}  & {\em G} & Matriz. ~\newline
+ \\
+\hline
+\mbox{\texttt{ in}}  & {\em P} & Matriz. ~\newline
+ \\
+\hline
+\mbox{\texttt{ in}}  & {\em n} & Entero. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Tupla con tres matrices. 
+\end{DoxyReturn}

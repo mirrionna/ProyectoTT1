@@ -1,0 +1,65 @@
+\doxysection{C\+:/\+Users/\+Usuario/\+Documents/\+Git\+Hub/\+Proyecto\+TT1/include/\+Accel.hpp File Reference}
+\hypertarget{_accel_8hpp}{}\label{_accel_8hpp}\index{C:/Users/Usuario/Documents/GitHub/ProyectoTT1/include/Accel.hpp@{C:/Users/Usuario/Documents/GitHub/ProyectoTT1/include/Accel.hpp}}
+
+
+Este archivo de cabecera contiene una implementación de la función Accel.  
+
+
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}matrix.\+h"{}}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}global.\+hpp"{}}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}\+SAT\+\_\+\+Const.\+hpp"{}}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}\+IERS.\+hpp"{}}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}timediff.\+hpp"{}}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}\+Mjday\+\_\+\+TDB.\+hpp"{}}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}\+JPL\+\_\+\+Eph\+\_\+\+DE430.\+hpp"{}}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}\+Accel\+Harmonic.\+hpp"{}}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}\+Accel\+Point\+Mass.\+hpp"{}}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}\+Prec\+Matrix.\+hpp"{}}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}\+Nut\+Matrix.\+hpp"{}}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}\+Pole\+Matrix.\+hpp"{}}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}\+GHAMatrix.\+hpp"{}}\newline
+Include dependency graph for Accel.\+hpp\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_matrix}{Matrix}} \& \mbox{\hyperlink{_accel_8hpp_a28040ec3672b4e1805218ad1cd43bfa0}{Accel}} (double x, \mbox{\hyperlink{class_matrix}{Matrix}} \&Y)
+\begin{DoxyCompactList}\small\item\em Calcula la aceleración de un satélite orbitando la Tierra debido al campo gravitacional armónico de la Tierra, las perturbaciones gravitacionales del Sol y la Luna, la presión de la radiación solar y la resistencia atmosférica. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Este archivo de cabecera contiene una implementación de la función Accel. 
+
+\begin{DoxyAuthor}{Author}
+Miguel Río Navarro 
+\end{DoxyAuthor}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000001}{Bug}}]No known bugs. \end{DoxyRefDesc}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_accel_8hpp_a28040ec3672b4e1805218ad1cd43bfa0}\index{Accel.hpp@{Accel.hpp}!Accel@{Accel}}
+\index{Accel@{Accel}!Accel.hpp@{Accel.hpp}}
+\doxysubsubsection{\texorpdfstring{Accel()}{Accel()}}
+{\footnotesize\ttfamily \label{_accel_8hpp_a28040ec3672b4e1805218ad1cd43bfa0} 
+\mbox{\hyperlink{class_matrix}{Matrix}} \& Accel (\begin{DoxyParamCaption}\item[{double}]{x}{, }\item[{\mbox{\hyperlink{class_matrix}{Matrix}} \&}]{Y}{}\end{DoxyParamCaption})}
+
+
+
+Calcula la aceleración de un satélite orbitando la Tierra debido al campo gravitacional armónico de la Tierra, las perturbaciones gravitacionales del Sol y la Luna, la presión de la radiación solar y la resistencia atmosférica. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em x} & Tiempo terrestre. ~\newline
+ \\
+\hline
+\mbox{\texttt{ in}}  & {\em Y} & Vector de estado del satélite en el sistema ICRF/\+EME2000. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Matriz con la aceleración pertubacional. 
+\end{DoxyReturn}

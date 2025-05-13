@@ -1,0 +1,52 @@
+\doxysection{C\+:/\+Users/\+Usuario/\+Documents/\+Git\+Hub/\+Proyecto\+TT1/include/\+Geodetic.hpp File Reference}
+\hypertarget{_geodetic_8hpp}{}\label{_geodetic_8hpp}\index{C:/Users/Usuario/Documents/GitHub/ProyectoTT1/include/Geodetic.hpp@{C:/Users/Usuario/Documents/GitHub/ProyectoTT1/include/Geodetic.hpp}}
+
+
+Este archivo de cabecera contiene una implementación de la función Geodetic.  
+
+
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$tuple$>$}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}matrix.\+h"{}}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}\+SAT\+\_\+\+Const.\+hpp"{}}\newline
+Include dependency graph for Geodetic.\+hpp\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+tuple$<$ double, double, double $>$ \mbox{\hyperlink{_geodetic_8hpp_aec255f50cde59091b28367216d934f98}{Geodetic}} (\mbox{\hyperlink{class_matrix}{Matrix}} \&r)
+\begin{DoxyCompactList}\small\item\em Calcula las coordenadas geodésicas a partir de un vector de posición. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Este archivo de cabecera contiene una implementación de la función Geodetic. 
+
+\begin{DoxyAuthor}{Author}
+Miguel Río Navarro 
+\end{DoxyAuthor}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000014}{Bug}}]No known bugs. \end{DoxyRefDesc}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_geodetic_8hpp_aec255f50cde59091b28367216d934f98}\index{Geodetic.hpp@{Geodetic.hpp}!Geodetic@{Geodetic}}
+\index{Geodetic@{Geodetic}!Geodetic.hpp@{Geodetic.hpp}}
+\doxysubsubsection{\texorpdfstring{Geodetic()}{Geodetic()}}
+{\footnotesize\ttfamily \label{_geodetic_8hpp_aec255f50cde59091b28367216d934f98} 
+tuple$<$ double, double, double $>$ Geodetic (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_matrix}{Matrix}} \&}]{r}{}\end{DoxyParamCaption})}
+
+
+
+Calcula las coordenadas geodésicas a partir de un vector de posición. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em r} & Vector de posición en metros. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Tupla con la longitud en radianes, latitud en radines y la altitud en metros. 
+\end{DoxyReturn}

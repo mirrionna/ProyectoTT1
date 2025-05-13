@@ -1,0 +1,82 @@
+\doxysection{C\+:/\+Users/\+Usuario/\+Documents/\+Git\+Hub/\+Proyecto\+TT1/include/\+IERS.hpp File Reference}
+\hypertarget{_i_e_r_s_8hpp}{}\label{_i_e_r_s_8hpp}\index{C:/Users/Usuario/Documents/GitHub/ProyectoTT1/include/IERS.hpp@{C:/Users/Usuario/Documents/GitHub/ProyectoTT1/include/IERS.hpp}}
+
+
+Este archivo de cabecera contiene una implementación de la función IERS.  
+
+
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$tuple$>$}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}matrix.\+h"{}}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}\+SAT\+\_\+\+Const.\+hpp"{}}\newline
+Include dependency graph for IERS.\+hpp\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+tuple$<$ double, double, double, double, double, double, double, double, double $>$ \mbox{\hyperlink{_i_e_r_s_8hpp_a95030f50da11c7d73c99c0dc1090a603}{IERS}} (\mbox{\hyperlink{class_matrix}{Matrix}} \&eop, double Mjd\+\_\+\+UTC, char interp)
+\begin{DoxyCompactList}\small\item\em Calcula los tiempos IERS y los datos de movimiento polar. \end{DoxyCompactList}\item 
+tuple$<$ double, double, double, double, double, double, double, double, double $>$ \mbox{\hyperlink{_i_e_r_s_8hpp_a022694bf72a76b72ef63955ec48792a6}{IERS}} (\mbox{\hyperlink{class_matrix}{Matrix}} \&eop, double Mjd\+\_\+\+UTC)
+\begin{DoxyCompactList}\small\item\em Calcula los tiempos IERS y los datos de movimiento polar. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Este archivo de cabecera contiene una implementación de la función IERS. 
+
+\begin{DoxyAuthor}{Author}
+Miguel Río Navarro 
+\end{DoxyAuthor}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000020}{Bug}}]No known bugs. \end{DoxyRefDesc}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_i_e_r_s_8hpp_a022694bf72a76b72ef63955ec48792a6}\index{IERS.hpp@{IERS.hpp}!IERS@{IERS}}
+\index{IERS@{IERS}!IERS.hpp@{IERS.hpp}}
+\doxysubsubsection{\texorpdfstring{IERS()}{IERS()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{_i_e_r_s_8hpp_a022694bf72a76b72ef63955ec48792a6} 
+tuple$<$ double, double, double, double, double, double, double, double, double $>$ IERS (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_matrix}{Matrix}} \&}]{eop}{, }\item[{double}]{Mjd\+\_\+\+UTC}{}\end{DoxyParamCaption})}
+
+
+
+Calcula los tiempos IERS y los datos de movimiento polar. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em eop} & Matriz eop. ~\newline
+ \\
+\hline
+\mbox{\texttt{ in}}  & {\em Mjd\+\_\+\+UTC} & Tiempo juliano en UTC. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Tupla con los tiempos IERS y los datos de movimiento polar. 
+\end{DoxyReturn}
+\Hypertarget{_i_e_r_s_8hpp_a95030f50da11c7d73c99c0dc1090a603}\index{IERS.hpp@{IERS.hpp}!IERS@{IERS}}
+\index{IERS@{IERS}!IERS.hpp@{IERS.hpp}}
+\doxysubsubsection{\texorpdfstring{IERS()}{IERS()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{_i_e_r_s_8hpp_a95030f50da11c7d73c99c0dc1090a603} 
+tuple$<$ double, double, double, double, double, double, double, double, double $>$ IERS (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_matrix}{Matrix}} \&}]{eop}{, }\item[{double}]{Mjd\+\_\+\+UTC}{, }\item[{char}]{interp}{}\end{DoxyParamCaption})}
+
+
+
+Calcula los tiempos IERS y los datos de movimiento polar. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em eop} & Matriz eop. ~\newline
+ \\
+\hline
+\mbox{\texttt{ in}}  & {\em Mjd\+\_\+\+UTC} & Tiempo juliano en UTC. ~\newline
+ \\
+\hline
+\mbox{\texttt{ in}}  & {\em interp} & Tipo de interpolación, \textquotesingle{}n\textquotesingle{} o \textquotesingle{}l\textquotesingle{}. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Tupla con los tiempos IERS y los datos de movimiento polar. 
+\end{DoxyReturn}

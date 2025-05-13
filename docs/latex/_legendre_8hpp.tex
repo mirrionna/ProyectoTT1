@@ -1,0 +1,55 @@
+\doxysection{C\+:/\+Users/\+Usuario/\+Documents/\+Git\+Hub/\+Proyecto\+TT1/include/\+Legendre.hpp File Reference}
+\hypertarget{_legendre_8hpp}{}\label{_legendre_8hpp}\index{C:/Users/Usuario/Documents/GitHub/ProyectoTT1/include/Legendre.hpp@{C:/Users/Usuario/Documents/GitHub/ProyectoTT1/include/Legendre.hpp}}
+
+
+Este archivo de cabecera contiene una implementación de la función Legendre.  
+
+
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$tuple$>$}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}matrix.\+h"{}}\newline
+Include dependency graph for Legendre.\+hpp\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+tuple$<$ \mbox{\hyperlink{class_matrix}{Matrix}} \&, \mbox{\hyperlink{class_matrix}{Matrix}} \& $>$ \mbox{\hyperlink{_legendre_8hpp_a55ce532de3c95506384990ae714dd99d}{Legendre}} (int n, int m, double fi)
+\begin{DoxyCompactList}\small\item\em Calcula la aceleración perturbacional debido a un punto de masas. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Este archivo de cabecera contiene una implementación de la función Legendre. 
+
+\begin{DoxyAuthor}{Author}
+Miguel Río Navarro 
+\end{DoxyAuthor}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000022}{Bug}}]No known bugs. \end{DoxyRefDesc}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_legendre_8hpp_a55ce532de3c95506384990ae714dd99d}\index{Legendre.hpp@{Legendre.hpp}!Legendre@{Legendre}}
+\index{Legendre@{Legendre}!Legendre.hpp@{Legendre.hpp}}
+\doxysubsubsection{\texorpdfstring{Legendre()}{Legendre()}}
+{\footnotesize\ttfamily \label{_legendre_8hpp_a55ce532de3c95506384990ae714dd99d} 
+tuple$<$ \mbox{\hyperlink{class_matrix}{Matrix}} \&, \mbox{\hyperlink{class_matrix}{Matrix}} \& $>$ Legendre (\begin{DoxyParamCaption}\item[{int}]{n}{, }\item[{int}]{m}{, }\item[{double}]{fi}{}\end{DoxyParamCaption})}
+
+
+
+Calcula la aceleración perturbacional debido a un punto de masas. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em n} & Grado del polinomio. \\
+\hline
+\mbox{\texttt{ in}}  & {\em m} & Orden del polinomio. \\
+\hline
+\mbox{\texttt{ in}}  & {\em fi} & Ángulo en radianes. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Matriz con la aceleración pertubacional. 
+\end{DoxyReturn}
