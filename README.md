@@ -1,0 +1,1 @@
+Proyecto de la asignatura Taller Transversal I del quinto curso del Doble Grado de Matemáticas e Ingeniería Informática de la Universidad de la Rioja.
