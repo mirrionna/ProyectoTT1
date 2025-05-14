@@ -16,10 +16,10 @@
 double sign_ (double a, double b){
 	double result=0;
 	if (b>=0.0){
-		result = abs(a);
+		result = fabs(a);
 	}
 	else{
-		result = - abs(a);
+		result = - fabs(a);
 	}
 	return result;
 }

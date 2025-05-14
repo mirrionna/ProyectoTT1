@@ -69,12 +69,36 @@ double& Matrix::operator () (const int row, const int column) {
 }
 
 double& Matrix::operator () (const int n) {
-	if (n <= 0 || n > this->n_column) {
+	if (n <= 0) {
 		cout << "Vector get: error in element\n";
+		cout<<*this;
+		cout<<"N=> "<<n;
         exit(EXIT_FAILURE);
 	}
-	
-	return this->data[0][n - 1];
+	if(this->n_row==1){
+		if(n>this->n_column){
+			cout << "Vector get: error in element\n";
+			cout<<*this;
+			cout<<"N=> "<<n;
+			exit(EXIT_FAILURE);
+		}
+		return this->data[0][n - 1];
+	}
+	else if(this->n_column==1){
+		if(n>this->n_row){
+			cout << "Vector column get: error in element\n";
+			cout<<*this;
+			cout<<"N=> "<<n;
+			exit(EXIT_FAILURE);
+		}
+		return this->data[n-1][0];
+	}
+	else{
+		cout << "Vector get: error in element\n";
+		cout<<*this;
+		cout<<"N=> "<<n;
+		exit(EXIT_FAILURE);
+	}
 }
 
 Matrix& Matrix::operator + (Matrix &m) {
