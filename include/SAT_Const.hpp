@@ -14,7 +14,6 @@
 #ifndef _SAT_Const_
 #define _SAT_Const_
 #include <cmath>
-#include <numbers>
 
 //----------------------------------------------------------------------
 /** @class SAT_Const
@@ -28,25 +27,25 @@ public:
 	// static constexpr double pi2
 	//--------------
 	/** @brief Constante matemática 2π. */
-	static constexpr double pi2 = std::numbers::pi*2;                // 2pi
+	static constexpr double pi2 = 3.141592653589793*2;                // 2pi
 
 	//--------------
 	// static constexpr double Rad
 	//--------------
 	/** @brief Radianes por grado. Factor de conversión de grados a radianes. */
-	static constexpr double Rad = std::numbers::pi/180;              // Radians per degree
+	static constexpr double Rad = 3.141592653589793/180;              // Radians per degree
 
 	//--------------
 	// static constexpr double Deg
 	//--------------
 	/** @brief Grados por radian. Factor de conversión de radianes a grados. */
-	static constexpr double Deg = 180/std::numbers::pi;              // Degrees per radian
+	static constexpr double Deg = 180.0/3.141592653589793;              // Degrees per radian
 
 	//--------------
 	// static constexpr double Arcs
 	//--------------
 	/** @brief Segundos de arco por radian. */
-	static constexpr double Arcs = 3600*180/std::numbers::pi;         // Arcseconds per radian
+	static constexpr double Arcs = 3600.0*180.0/3.141592653589793;         // Arcseconds per radian
 
 	//--------------
 	// static constexpr double MJD_J2000
@@ -82,7 +81,7 @@ public:
 	// static constexpr double f_Earth
 	//--------------
 	/** @brief Aplanamiento de la Tierra; WGS-84. */
-	static constexpr double f_Earth = 1/298.257223563;  // Flattening; WGS-84
+	static constexpr double f_Earth = 1.0/298.257223563;  // Flattening; WGS-84
 
 	//--------------
 	// static constexpr double R_Sun
@@ -100,7 +99,7 @@ public:
 	// static constexpr double omega_Earth
 	//--------------
 	/** @brief Velocidad angular de rotación de la Tierra [rad/s]; WGS-84. */
-	static constexpr double omega_Earth = 15.04106717866910/3600*Rad;   // [rad/s]; WGS-84
+	static constexpr double omega_Earth = 15.04106717866910/3600.0*Rad;   // [rad/s]; WGS-84
 
 	//--------------
 	// static constexpr double GM_Earth
@@ -172,7 +171,13 @@ public:
 	// static constexpr double P_Sol
 	//--------------
 	/** @brief Presión de radiación solar a 1 UA [N/m²]; IERS 96. */
-	static constexpr double P_Sol =1367/c_light; // [N/m^2] (~1367 W/m^2); IERS 96
+	static constexpr double P_Sol =1367.0/c_light; // [N/m^2] (~1367 W/m^2); IERS 96
+	
+	//--------------
+	// static constexpr double eps
+	//--------------
+	/** @brief Valor de eps de Matlab */
+	static constexpr double eps =2.22044604925031e-16;
 
 };
 #endif

@@ -15,7 +15,7 @@
 
 double sign_ (double a, double b){
 	double result=0;
-	if (b>=0.0){
+	if (b>0.0){
 		result = fabs(a);
 	}
 	else{

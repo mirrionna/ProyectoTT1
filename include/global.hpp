@@ -15,7 +15,10 @@
 #define _global_
 
 #include <cmath>
+#include <cstring>
 #include "..\include\matrix.h"
+#include "..\include\SAT_Const.hpp"
+#include "..\include\Mjday.hpp"
 
 typedef struct{
 	double Mjd_UTC,Mjd_TT;
@@ -27,13 +30,14 @@ extern Matrix *eopdata;
 extern Matrix *Cnm;
 extern Matrix *Snm;
 extern Matrix *PC;
+extern Matrix *obs;
 
 //----------------------------------------------------------------------
 //  void eop19620101(int c);
 //----------------------------------------------------------------------
 /**@brief Carga el fichero de datos eop19620101.txt en la matriz eopdata.
 *
-*	@param [in] c Número de datos a cargar
+*	@param [in] c Número de datos a cargar.
 */
 //----------------------------------------------------------------------
 void eop19620101(int c);
@@ -59,4 +63,10 @@ void DE430Coeff();
 */
 //----------------------------------------------------------------------
 void cargarAuxParam();
+/**@brief Carga el fichero de datos GEOS3.txt en la matriz obs.
+*
+*	@param [in] nobs Número de filas a cargar.
+*/
+//----------------------------------------------------------------------
+void GEOS3(int nobs);
 #endif

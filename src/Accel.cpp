@@ -26,10 +26,9 @@ Matrix& Accel (double x, Matrix& Y){
 
 	double MJD_TDB = Mjday_TDB(Mjd_TT);
 	auto [r_Mercury,r_Venus,r_Earth,r_Mars,r_Jupiter,r_Saturn,r_Uranus, r_Neptune,r_Pluto,r_Moon,r_Sun] = JPL_Eph_DE430(MJD_TDB);
-	
+
 	// Acceleration due to harmonic gravity field
 	Matrix& a = AccelHarmonic(transpose(extract_vector(transpose(Y),1,3)), E, AuxParam.n, AuxParam.m);
-
 	// Luni-solar perturbations
 	if (AuxParam.sun){
 		a = a + AccelPointMass(transpose(extract_vector(transpose(Y),1,3)),r_Sun,SAT_Const::GM_Sun);
@@ -47,7 +46,7 @@ Matrix& Accel (double x, Matrix& Y){
 		a = a + AccelPointMass(transpose(extract_vector(transpose(Y),1,3)),r_Mars,SAT_Const::GM_Mars);
 		a = a + AccelPointMass(transpose(extract_vector(transpose(Y),1,3)),r_Jupiter,SAT_Const::GM_Jupiter);
 		a = a + AccelPointMass(transpose(extract_vector(transpose(Y),1,3)),r_Saturn,SAT_Const::GM_Saturn);
-		a = a + AccelPointMass(transpose(extract_vector(transpose(Y),1,3)),r_Uranus,SAT_Const::GM_Uranus);    
+		a = a + AccelPointMass(transpose(extract_vector(transpose(Y),1,3)),r_Uranus,SAT_Const::GM_Uranus);
 		a = a + AccelPointMass(transpose(extract_vector(transpose(Y),1,3)),r_Neptune,SAT_Const::GM_Neptune);
 		a = a + AccelPointMass(transpose(extract_vector(transpose(Y),1,3)),r_Pluto,SAT_Const::GM_Pluto);
 	}

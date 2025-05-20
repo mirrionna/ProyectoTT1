@@ -62,6 +62,7 @@ void GGM03S(){
 }
 
 Matrix *PC;
+
 void DE430Coeff(){
 	
 	PC = new Matrix(zeros(2285, 1020));
@@ -81,6 +82,7 @@ void DE430Coeff(){
 }
 
 Param AuxParam;
+
 void cargarAuxParam(){
 	AuxParam.Mjd_UTC=4.974611635416653e+04;
 	AuxParam.n=20;
@@ -89,4 +91,56 @@ void cargarAuxParam(){
 	AuxParam.moon=1;
 	AuxParam.planets=1;
 	AuxParam.Mjd_TT=4.974611706231468e+04;
+}
+
+Matrix *obs;
+
+void GEOS3(int nobs){
+	obs = new Matrix(zeros(nobs,4));
+	//read observations
+	FILE *fid = fopen("../data/GEOS3.txt","r");
+
+	if(fid== NULL) {
+		printf("Fail open GEOS3.txt file\n");
+		exit(EXIT_FAILURE);
+	}
+	int y,mo,d,h,m,s;
+	double az,el,dist;
+	char line[55],ly[5],lmo[3],ld[3],lh[3],lm[3],ls[7],laz[9],lel[9],ldist[10];
+	for(int i=1;i<=nobs;i++){
+		fgets(line,sizeof(line)+2,fid);
+		strncpy(ly,&(line[0]),4);
+		ly[4]='\0';
+		y=atoi(ly);
+		strncpy(lmo,&(line[5]),2);
+		lmo[2]='\0';
+		mo=atoi(lmo);
+		strncpy(ld,&(line[8]),2);
+		ld[2]='\0';
+		d=atoi(ld);
+		strncpy(lh,&(line[12]),2);
+		lh[2]='\0';
+		h=atoi(lh);
+		strncpy(lm,&(line[15]),2);
+		lm[2]='\0';
+		m=atoi(lm);
+		strncpy(ls,&(line[18]),6);
+		ls[6]='\0';
+		s=atoi(ls);
+		strncpy(laz,&(line[25]),8);
+		laz[8]='\0';
+		az=atof(laz);
+		strncpy(lel,&(line[35]),8);
+		lel[8]='\0';
+		el=atof(lel);
+		strncpy(ldist,&(line[44]),9);
+		ldist[9]='\0';
+		dist=atof(ldist);
+		
+		(*obs)(i,1)=Mjday(y,mo,d,h,m,s);
+		(*obs)(i,2)=SAT_Const::Rad*az;
+		(*obs)(i,3)=SAT_Const::Rad*el;
+		(*obs)(i,4)=1e3*dist;
+	}
+	fclose(fid);
 }

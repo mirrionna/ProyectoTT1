@@ -17,6 +17,7 @@
 #include <cmath>
 #include "..\include\matrix.h"
 #include "..\include\sign_.hpp"
+#include "..\include\SAT_Const.hpp"
 //----------------------------------------------------------------------
 //  Matrix& DEInteg (Matrix & func(double t, Matrix& y), double t, double tout, double relerr, double abserr, int n_eqn, Matrix& y)
 //----------------------------------------------------------------------
@@ -32,5 +33,5 @@
 *	@return Matriz. 
 */
 //----------------------------------------------------------------------
-Matrix& DEInteg (Matrix & func(double t, Matrix& y), double t, double tout, double relerr, double abserr, int n_eqn, Matrix& y);	
+Matrix& DEInteg(Matrix& f(double t, Matrix& y), double t, double tout, double relerr, double abserr, int n_eqn, Matrix &y);	
 #endif

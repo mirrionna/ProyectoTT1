@@ -104,6 +104,8 @@ double& Matrix::operator () (const int n) {
 Matrix& Matrix::operator + (Matrix &m) {
 	if (this->n_row != m.n_row || this->n_column != m.n_column) {
 		cout << "Matrix sum: error in n_row/n_column\n";
+		cout<<*this;
+		cout<<m;
         exit(EXIT_FAILURE);
 	}
 	
@@ -121,6 +123,8 @@ Matrix& Matrix::operator + (Matrix &m) {
 Matrix& Matrix::operator - (Matrix &m) {
 	if (this->n_row != m.n_row || this->n_column != m.n_column) {
 		cout << "Matrix sub: error in n_row/n_column\n";
+		cout<<*this;
+		cout<<m;
         exit(EXIT_FAILURE);
 	}
 	
@@ -138,6 +142,8 @@ Matrix& Matrix::operator - (Matrix &m) {
 Matrix& Matrix::operator * (Matrix &m){
 	if (this->n_column != m.n_row) {
 		cout << "Matrix prod: error in n_row/n_column\n";
+		cout<<*this;
+		cout<<m;
         exit(EXIT_FAILURE);
 	}
 	Matrix *m_aux = new Matrix(this->n_row, m.n_column);
@@ -157,6 +163,8 @@ Matrix& Matrix::operator * (Matrix &m){
 Matrix& Matrix::operator / (Matrix &m){
 	if (this->n_row != m.n_row) {
 		cout << "Matrix div: error in n_row/n_column\n";
+		cout<<*this;
+		cout<<m;
         exit(EXIT_FAILURE);
 	}
 	return (*this)*inv(m);
@@ -379,8 +387,15 @@ Matrix& submatriz(Matrix &m, int i, int j){
 
 double norm(Matrix &v){
 	double norma=0;
-	for(int i=1;i<=v.n_column;i++){
-		norma+=pow(v(i),2);
+	if(v.n_row==1){
+		for(int i=1;i<=v.n_column;i++){
+			norma+=pow(v(i),2);
+		}
+	}
+	else{
+		for(int i=1;i<=v.n_row;i++){
+			norma+=pow(v(i,1),2);
+		}
 	}
 	return sqrt(norma);
 }
