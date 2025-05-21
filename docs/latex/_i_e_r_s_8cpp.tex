@@ -1,5 +1,5 @@
-\doxysection{C\+:/\+Users/\+Usuario/\+Documents/\+Git\+Hub/\+Proyecto\+TT1/src/\+IERS.cpp File Reference}
-\hypertarget{_i_e_r_s_8cpp}{}\label{_i_e_r_s_8cpp}\index{C:/Users/Usuario/Documents/GitHub/ProyectoTT1/src/IERS.cpp@{C:/Users/Usuario/Documents/GitHub/ProyectoTT1/src/IERS.cpp}}
+\doxysection{E\+:/\+Documentos/\+Git\+Hub/\+Proyecto\+TT1/src/\+IERS.cpp File Reference}
+\hypertarget{_i_e_r_s_8cpp}{}\label{_i_e_r_s_8cpp}\index{E:/Documentos/GitHub/ProyectoTT1/src/IERS.cpp@{E:/Documentos/GitHub/ProyectoTT1/src/IERS.cpp}}
 
 
 Cálculo de los tiempos IERS y los datos de movimiento polar.  
@@ -11,9 +11,8 @@ Include dependency graph for IERS.\+cpp\+:
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{_i_e_r_s_8cpp_aa84b14a54dfcd016c56eb400832fe396}\label{_i_e_r_s_8cpp_aa84b14a54dfcd016c56eb400832fe396} 
-int {\bfseries find} (\mbox{\hyperlink{class_matrix}{Matrix}} a, double b)
-\item 
+int \mbox{\hyperlink{_i_e_r_s_8cpp_aa84b14a54dfcd016c56eb400832fe396}{find}} (\mbox{\hyperlink{class_matrix}{Matrix}} a, double b)
+\begin{DoxyCompactList}\small\item\em Función auxiliar para adaptar la funcion find de Matlab. \end{DoxyCompactList}\item 
 tuple$<$ double, double, double, double, double, double, double, double, double $>$ \mbox{\hyperlink{_i_e_r_s_8cpp_a95030f50da11c7d73c99c0dc1090a603}{IERS}} (\mbox{\hyperlink{class_matrix}{Matrix}} \&eop, double Mjd\+\_\+\+UTC, char interp)
 \begin{DoxyCompactList}\small\item\em Calcula los tiempos IERS y los datos de movimiento polar. \end{DoxyCompactList}\item 
 tuple$<$ double, double, double, double, double, double, double, double, double $>$ \mbox{\hyperlink{_i_e_r_s_8cpp_a022694bf72a76b72ef63955ec48792a6}{IERS}} (\mbox{\hyperlink{class_matrix}{Matrix}} \&eop, double Mjd\+\_\+\+UTC)
@@ -27,10 +26,30 @@ Cálculo de los tiempos IERS y los datos de movimiento polar.
 Miguel Río Navarro 
 \end{DoxyAuthor}
 \begin{DoxyRefDesc}{Bug}
-\item[\mbox{\hyperlink{bug__bug000062}{Bug}}]No known bugs. \end{DoxyRefDesc}
+\item[\mbox{\hyperlink{bug__bug000064}{Bug}}]No known bugs. \end{DoxyRefDesc}
 
 
 \doxysubsection{Function Documentation}
+\Hypertarget{_i_e_r_s_8cpp_aa84b14a54dfcd016c56eb400832fe396}\index{IERS.cpp@{IERS.cpp}!find@{find}}
+\index{find@{find}!IERS.cpp@{IERS.cpp}}
+\doxysubsubsection{\texorpdfstring{find()}{find()}}
+{\footnotesize\ttfamily \label{_i_e_r_s_8cpp_aa84b14a54dfcd016c56eb400832fe396} 
+int find (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_matrix}{Matrix}}}]{a}{, }\item[{double}]{b}{}\end{DoxyParamCaption})}
+
+
+
+Función auxiliar para adaptar la funcion find de Matlab. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a} & Matriz en la que se quiere buscar. \\
+\hline
+\mbox{\texttt{ in}}  & {\em b} & Double que se quiere encontrar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Devuelve el indice de la matriz en el que se encuentra b, -\/1 en otro caso. 
+\end{DoxyReturn}
 \Hypertarget{_i_e_r_s_8cpp_a022694bf72a76b72ef63955ec48792a6}\index{IERS.cpp@{IERS.cpp}!IERS@{IERS}}
 \index{IERS@{IERS}!IERS.cpp@{IERS.cpp}}
 \doxysubsubsection{\texorpdfstring{IERS()}{IERS()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}

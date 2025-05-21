@@ -13,6 +13,16 @@
 //----------------------------------------------------------------------
 #include "..\include\gast.hpp"
 
+//----------------------------------------------------------------------
+//  double modgast(double a,double b)
+//----------------------------------------------------------------------
+/**@brief Función auxiliar para adaptar la funcion fmod a la correspondiente en Matlab.
+*
+*	@param [in] a Dividendo.
+*	@param [in] b Divisor.
+*	@return Devuelve el resto de dividir a/b, entre 0 y b.
+*/
+//----------------------------------------------------------------------
 double modgast(double a,double b){
 	double r=fmod(a,b);
 	if(r<0){

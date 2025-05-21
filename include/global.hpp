@@ -25,11 +25,17 @@ typedef struct{
 	int n,m,sun,moon,planets;
 } Param;
 
+/** @brief Struct de tipo Param para contener ciertos valores globales a todo el proyecto. */
 extern Param AuxParam;
+/** @brief Matriz global para contener el contenido del archivo eop19620101. */
 extern Matrix *eopdata;
+/** @brief Matriz global para contener el contenido del archivo GGM03S. */
 extern Matrix *Cnm;
+/** @brief Matriz global para contener el contenido del archivo GGM03S. */
 extern Matrix *Snm;
+/** @brief Matriz global para contener el contenido del archivo DE430Coeff. */
 extern Matrix *PC;
+/** @brief Matriz global para contener el contenido del archivo GEOS3. */
 extern Matrix *obs;
 
 //----------------------------------------------------------------------

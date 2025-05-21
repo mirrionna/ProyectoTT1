@@ -1,0 +1,63 @@
+\doxysection{E\+:/\+Documentos/\+Git\+Hub/\+Proyecto\+TT1/include/\+DEInteg.hpp File Reference}
+\hypertarget{_d_e_integ_8hpp}{}\label{_d_e_integ_8hpp}\index{E:/Documentos/GitHub/ProyectoTT1/include/DEInteg.hpp@{E:/Documentos/GitHub/ProyectoTT1/include/DEInteg.hpp}}
+
+
+Este archivo de cabecera contiene una implementación de la función DEInteg.  
+
+
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}matrix.\+h"{}}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}sign\+\_\+.\+hpp"{}}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}\+SAT\+\_\+\+Const.\+hpp"{}}\newline
+Include dependency graph for DEInteg.\+hpp\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_matrix}{Matrix}} \& \mbox{\hyperlink{_d_e_integ_8hpp_ac49ac61d04312e0fbfb19e2d6d0178fa}{DEInteg}} (\mbox{\hyperlink{class_matrix}{Matrix}} \&func(double t, \mbox{\hyperlink{class_matrix}{Matrix}} \&y), double t, double tout, double relerr, double abserr, int n\+\_\+eqn, \mbox{\hyperlink{class_matrix}{Matrix}} \&y)
+\begin{DoxyCompactList}\small\item\em Método de integración numérica para EDOs. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Este archivo de cabecera contiene una implementación de la función DEInteg. 
+
+\begin{DoxyAuthor}{Author}
+Miguel Río Navarro 
+\end{DoxyAuthor}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000008}{Bug}}]No known bugs. \end{DoxyRefDesc}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_d_e_integ_8hpp_ac49ac61d04312e0fbfb19e2d6d0178fa}\index{DEInteg.hpp@{DEInteg.hpp}!DEInteg@{DEInteg}}
+\index{DEInteg@{DEInteg}!DEInteg.hpp@{DEInteg.hpp}}
+\doxysubsubsection{\texorpdfstring{DEInteg()}{DEInteg()}}
+{\footnotesize\ttfamily \label{_d_e_integ_8hpp_ac49ac61d04312e0fbfb19e2d6d0178fa} 
+\mbox{\hyperlink{class_matrix}{Matrix}} \& DEInteg (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_matrix}{Matrix}} \&}]{func}{double t, Matrix \&y, }\item[{double}]{t}{, }\item[{double}]{tout}{, }\item[{double}]{relerr}{, }\item[{double}]{abserr}{, }\item[{int}]{n\+\_\+eqn}{, }\item[{\mbox{\hyperlink{class_matrix}{Matrix}} \&}]{y}{}\end{DoxyParamCaption})}
+
+
+
+Método de integración numérica para EDOs. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em func} & Función sobre la que se va a integrar \\
+\hline
+\mbox{\texttt{ in}}  & {\em t} & Double. \\
+\hline
+\mbox{\texttt{ in}}  & {\em tout} & Double. \\
+\hline
+\mbox{\texttt{ in}}  & {\em relerr} & Double. \\
+\hline
+\mbox{\texttt{ in}}  & {\em abserr} & Double. \\
+\hline
+\mbox{\texttt{ in}}  & {\em n\+\_\+eqn} & Número de ecuaciones. \\
+\hline
+\mbox{\texttt{ in}}  & {\em y} & Matriz. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Matriz. 
+\end{DoxyReturn}

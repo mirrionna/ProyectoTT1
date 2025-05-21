@@ -1,9 +1,7 @@
 var searchData=
 [
-  ['polematrix_2ecpp_0',['PoleMatrix.cpp',['../_pole_matrix_8cpp.html',1,'']]],
-  ['polematrix_2ehpp_1',['PoleMatrix.hpp',['../_pole_matrix_8hpp.html',1,'']]],
-  ['position_2ecpp_2',['Position.cpp',['../_position_8cpp.html',1,'']]],
-  ['position_2ehpp_3',['Position.hpp',['../_position_8hpp.html',1,'']]],
-  ['precmatrix_2ecpp_4',['PrecMatrix.cpp',['../_prec_matrix_8cpp.html',1,'']]],
-  ['precmatrix_2ehpp_5',['PrecMatrix.hpp',['../_prec_matrix_8hpp.html',1,'']]]
+  ['nutangles_2ecpp_0',['NutAngles.cpp',['../_nut_angles_8cpp.html',1,'']]],
+  ['nutangles_2ehpp_1',['NutAngles.hpp',['../_nut_angles_8hpp.html',1,'']]],
+  ['nutmatrix_2ecpp_2',['NutMatrix.cpp',['../_nut_matrix_8cpp.html',1,'']]],
+  ['nutmatrix_2ehpp_3',['NutMatrix.hpp',['../_nut_matrix_8hpp.html',1,'']]]
 ];

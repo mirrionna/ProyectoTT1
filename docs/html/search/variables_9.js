@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['r_5fearth_0',['R_Earth',['../class_s_a_t___const.html#ab7d1d522df38a668b524b76d7c0b8250',1,'SAT_Const']]],
-  ['r_5fmoon_1',['R_Moon',['../class_s_a_t___const.html#aa89edc7bd2817657f4edf1b91181d34f',1,'SAT_Const']]],
-  ['r_5fsun_2',['R_Sun',['../class_s_a_t___const.html#a29738c7dc581a976f3cee7282c6b4546',1,'SAT_Const']]],
-  ['rad_3',['Rad',['../class_s_a_t___const.html#a3c6284e159dbe30142273ae4f348def4',1,'SAT_Const']]]
+  ['p_5fsol_0',['P_Sol',['../class_s_a_t___const.html#a26bb9cd23410c2d767242616cf715a1c',1,'SAT_Const']]],
+  ['pc_1',['PC',['../global_8hpp.html#a371b10496ced1dadb75aec4b8b75fbe9',1,'PC:&#160;global.cpp'],['../global_8cpp.html#a371b10496ced1dadb75aec4b8b75fbe9',1,'PC:&#160;global.cpp']]],
+  ['pi2_2',['pi2',['../class_s_a_t___const.html#ae88391288a338825da360fc81c8ae37b',1,'SAT_Const']]]
 ];

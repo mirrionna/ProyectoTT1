@@ -19,7 +19,8 @@ var searchData=
   ['assign_5fcolumn_16',['assign_column',['../matrix_8h.html#ad152f1e1bdd7dd20b1c813b76bfed471',1,'assign_column(int n, Matrix &amp;m, Matrix &amp;c):&#160;matrix.cpp'],['../matrix_8cpp.html#ad152f1e1bdd7dd20b1c813b76bfed471',1,'assign_column(int n, Matrix &amp;m, Matrix &amp;c):&#160;matrix.cpp']]],
   ['assign_5frow_17',['assign_row',['../matrix_8h.html#a485268c23caa39aa3785f599f6902b7b',1,'assign_row(int n, Matrix &amp;m, Matrix &amp;r):&#160;matrix.cpp'],['../matrix_8cpp.html#a485268c23caa39aa3785f599f6902b7b',1,'assign_row(int n, Matrix &amp;m, Matrix &amp;r):&#160;matrix.cpp']]],
   ['au_18',['AU',['../class_s_a_t___const.html#aee6a4be01083958f4b9ad812d5f415e9',1,'SAT_Const']]],
-  ['azelpa_19',['AzElPa',['../_az_el_pa_8hpp.html#ae89a6c135135b96ec7057c45dced4159',1,'AzElPa(Matrix &amp;s):&#160;AzElPa.cpp'],['../_az_el_pa_8cpp.html#ae89a6c135135b96ec7057c45dced4159',1,'AzElPa(Matrix &amp;s):&#160;AzElPa.cpp']]],
-  ['azelpa_2ecpp_20',['AzElPa.cpp',['../_az_el_pa_8cpp.html',1,'']]],
-  ['azelpa_2ehpp_21',['AzElPa.hpp',['../_az_el_pa_8hpp.html',1,'']]]
+  ['auxparam_19',['AuxParam',['../global_8hpp.html#a5706b12963234f7382e60cb7324441f9',1,'AuxParam:&#160;global.cpp'],['../global_8cpp.html#a5706b12963234f7382e60cb7324441f9',1,'AuxParam:&#160;global.cpp']]],
+  ['azelpa_20',['AzElPa',['../_az_el_pa_8hpp.html#ae89a6c135135b96ec7057c45dced4159',1,'AzElPa(Matrix &amp;s):&#160;AzElPa.cpp'],['../_az_el_pa_8cpp.html#ae89a6c135135b96ec7057c45dced4159',1,'AzElPa(Matrix &amp;s):&#160;AzElPa.cpp']]],
+  ['azelpa_2ecpp_21',['AzElPa.cpp',['../_az_el_pa_8cpp.html',1,'']]],
+  ['azelpa_2ehpp_22',['AzElPa.hpp',['../_az_el_pa_8hpp.html',1,'']]]
 ];

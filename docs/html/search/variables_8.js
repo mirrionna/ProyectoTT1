@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['p_5fsol_0',['P_Sol',['../class_s_a_t___const.html#a26bb9cd23410c2d767242616cf715a1c',1,'SAT_Const']]],
-  ['pi2_1',['pi2',['../class_s_a_t___const.html#ae88391288a338825da360fc81c8ae37b',1,'SAT_Const']]]
+  ['obs_0',['obs',['../global_8hpp.html#ae3c3071f42825b739a97cf1726ca0dd1',1,'obs:&#160;global.cpp'],['../global_8cpp.html#ae3c3071f42825b739a97cf1726ca0dd1',1,'obs:&#160;global.cpp']]],
+  ['omega_5fearth_1',['omega_Earth',['../class_s_a_t___const.html#a0a2e03e37c2f4f9cdd84d7d64bd3b105',1,'SAT_Const']]]
 ];

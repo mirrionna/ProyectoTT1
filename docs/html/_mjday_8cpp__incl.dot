@@ -1,10 +1,10 @@
-digraph "C:/Users/Usuario/Documents/GitHub/ProyectoTT1/src/Mjday.cpp"
+digraph "E:/Documentos/GitHub/ProyectoTT1/src/Mjday.cpp"
 {
  // LATEX_PDF_SIZE
   bgcolor="transparent";
   edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
   node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
-  Node1 [id="Node000001",label="C:/Users/Usuario/Documents\l/GitHub/ProyectoTT1/src\l/Mjday.cpp",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Cálculo de la fecha juliana modificada."];
+  Node1 [id="Node000001",label="E:/Documentos/GitHub\l/ProyectoTT1/src/Mjday.cpp",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Cálculo de la fecha juliana modificada."];
   Node1 -> Node2 [id="edge1_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
   Node2 [id="Node000002",label="..\\include\\Mjday.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_mjday_8hpp.html",tooltip="Este archivo de cabecera contiene una implementación de la función Mjday."];
   Node2 -> Node3 [id="edge2_Node000002_Node000003",color="steelblue1",style="solid",tooltip=" "];

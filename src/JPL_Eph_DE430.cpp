@@ -13,6 +13,15 @@
 //----------------------------------------------------------------------
 #include "..\include\JPL_Eph_DE430.hpp"
 
+//----------------------------------------------------------------------
+//  int find(Matrix a,double b)
+//----------------------------------------------------------------------
+/**@brief Función auxiliar para adaptar la funcion find de Matlab en nuestro caso de uso.
+*
+*	@param [in] b Double que se quiere encontrar.
+*	@return Devuelve el indice de la fila matriz tal que b es mayor que el valor de la primera columna y menor que el valor de la segunda columna.
+*/
+//----------------------------------------------------------------------
 int findbetween(double b){
 	for (int i = 1; i <= 2285; i++) {
         if (PC->operator()(i, 1) <= b && b <= PC->operator()(i, 2)) {

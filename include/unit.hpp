@@ -21,7 +21,7 @@
 //----------------------------------------------------------------------
 /**@brief Calcula vector unitario de un vector dado.
 *
-*	@param [in] vec1 Vector que se quiere normalizar.   
+*	@param [in] vec Vector que se quiere normalizar.   
 *	@return vec normalizado como vector unitario, o vector con ceros si el vector original era lleno de ceros. 
 */
 //----------------------------------------------------------------------

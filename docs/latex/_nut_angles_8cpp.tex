@@ -1,5 +1,5 @@
-\doxysection{C\+:/\+Users/\+Usuario/\+Documents/\+Git\+Hub/\+Proyecto\+TT1/src/\+Nut\+Angles.cpp File Reference}
-\hypertarget{_nut_angles_8cpp}{}\label{_nut_angles_8cpp}\index{C:/Users/Usuario/Documents/GitHub/ProyectoTT1/src/NutAngles.cpp@{C:/Users/Usuario/Documents/GitHub/ProyectoTT1/src/NutAngles.cpp}}
+\doxysection{E\+:/\+Documentos/\+Git\+Hub/\+Proyecto\+TT1/src/\+Nut\+Angles.cpp File Reference}
+\hypertarget{_nut_angles_8cpp}{}\label{_nut_angles_8cpp}\index{E:/Documentos/GitHub/ProyectoTT1/src/NutAngles.cpp@{E:/Documentos/GitHub/ProyectoTT1/src/NutAngles.cpp}}
 
 
 Cálculo de la nutación en longitud y oblicuidad.  
@@ -11,9 +11,8 @@ Include dependency graph for Nut\+Angles.\+cpp\+:
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{_nut_angles_8cpp_ac9ff8505cf0bef3895a338a805f7db98}\label{_nut_angles_8cpp_ac9ff8505cf0bef3895a338a805f7db98} 
-double {\bfseries modnutangles} (double a, double b)
-\item 
+double \mbox{\hyperlink{_nut_angles_8cpp_ac9ff8505cf0bef3895a338a805f7db98}{modnutangles}} (double a, double b)
+\begin{DoxyCompactList}\small\item\em Función auxiliar para adaptar la funcion fmod a la correspondiente en Matlab. \end{DoxyCompactList}\item 
 tuple$<$ double, double $>$ \mbox{\hyperlink{_nut_angles_8cpp_a8028f5f2ac1a0a2126d8edf6a5ed80c6}{Nut\+Angles}} (double Mjd\+\_\+\+TT)
 \begin{DoxyCompactList}\small\item\em Calcula la nutación en longitud y oblicuidad. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -25,10 +24,30 @@ Cálculo de la nutación en longitud y oblicuidad.
 Miguel Río Navarro 
 \end{DoxyAuthor}
 \begin{DoxyRefDesc}{Bug}
-\item[\mbox{\hyperlink{bug__bug000071}{Bug}}]No known bugs. \end{DoxyRefDesc}
+\item[\mbox{\hyperlink{bug__bug000073}{Bug}}]No known bugs. \end{DoxyRefDesc}
 
 
 \doxysubsection{Function Documentation}
+\Hypertarget{_nut_angles_8cpp_ac9ff8505cf0bef3895a338a805f7db98}\index{NutAngles.cpp@{NutAngles.cpp}!modnutangles@{modnutangles}}
+\index{modnutangles@{modnutangles}!NutAngles.cpp@{NutAngles.cpp}}
+\doxysubsubsection{\texorpdfstring{modnutangles()}{modnutangles()}}
+{\footnotesize\ttfamily \label{_nut_angles_8cpp_ac9ff8505cf0bef3895a338a805f7db98} 
+double modnutangles (\begin{DoxyParamCaption}\item[{double}]{a}{, }\item[{double}]{b}{}\end{DoxyParamCaption})}
+
+
+
+Función auxiliar para adaptar la funcion fmod a la correspondiente en Matlab. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a} & Dividendo. \\
+\hline
+\mbox{\texttt{ in}}  & {\em b} & Divisor. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Devuelve el resto de dividir a/b, entre 0 y b. 
+\end{DoxyReturn}
 \Hypertarget{_nut_angles_8cpp_a8028f5f2ac1a0a2126d8edf6a5ed80c6}\index{NutAngles.cpp@{NutAngles.cpp}!NutAngles@{NutAngles}}
 \index{NutAngles@{NutAngles}!NutAngles.cpp@{NutAngles.cpp}}
 \doxysubsubsection{\texorpdfstring{NutAngles()}{NutAngles()}}

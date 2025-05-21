@@ -13,16 +13,16 @@ Clase que contiene constantes astronómicas y físicas utilizadas en cálculos s
 \begin{DoxyCompactItemize}
 \item 
 \Hypertarget{class_s_a_t___const_ae88391288a338825da360fc81c8ae37b}\label{class_s_a_t___const_ae88391288a338825da360fc81c8ae37b} 
-static constexpr double {\bfseries pi2} = std\+::numbers\+::pi\texorpdfstring{$\ast$}{*}2
+static constexpr double {\bfseries pi2} = 3.\+141592653589793\texorpdfstring{$\ast$}{*}2
 \begin{DoxyCompactList}\small\item\em Constante matemática 2π. \end{DoxyCompactList}\item 
 \Hypertarget{class_s_a_t___const_a3c6284e159dbe30142273ae4f348def4}\label{class_s_a_t___const_a3c6284e159dbe30142273ae4f348def4} 
-static constexpr double {\bfseries Rad} = std\+::numbers\+::pi/180
+static constexpr double {\bfseries Rad} = 3.\+141592653589793/180
 \begin{DoxyCompactList}\small\item\em Radianes por grado. Factor de conversión de grados a radianes. \end{DoxyCompactList}\item 
 \Hypertarget{class_s_a_t___const_ad43c09b12455be18123901b3a72b7a46}\label{class_s_a_t___const_ad43c09b12455be18123901b3a72b7a46} 
-static constexpr double {\bfseries Deg} = 180/std\+::numbers\+::pi
+static constexpr double {\bfseries Deg} = 180.\+0/3.\+141592653589793
 \begin{DoxyCompactList}\small\item\em Grados por radian. Factor de conversión de radianes a grados. \end{DoxyCompactList}\item 
 \Hypertarget{class_s_a_t___const_ab1ed979d87bc2346714a311ea2df57b8}\label{class_s_a_t___const_ab1ed979d87bc2346714a311ea2df57b8} 
-static constexpr double {\bfseries Arcs} = 3600\texorpdfstring{$\ast$}{*}180/std\+::numbers\+::pi
+static constexpr double {\bfseries Arcs} = 3600.\+0\texorpdfstring{$\ast$}{*}180.\+0/3.\+141592653589793
 \begin{DoxyCompactList}\small\item\em Segundos de arco por radian. \end{DoxyCompactList}\item 
 \Hypertarget{class_s_a_t___const_a18fd4e9c1730f97159f7a55399a17037}\label{class_s_a_t___const_a18fd4e9c1730f97159f7a55399a17037} 
 static constexpr double {\bfseries MJD\+\_\+\+J2000} = 51544.\+5
@@ -40,7 +40,7 @@ static constexpr double {\bfseries AU} = 149597870700.\+000000
 static constexpr double {\bfseries R\+\_\+\+Earth} = 6378.\+1363e3
 \begin{DoxyCompactList}\small\item\em Radio ecuatorial medio de la Tierra \mbox{[}m\mbox{]}; DE430. \end{DoxyCompactList}\item 
 \Hypertarget{class_s_a_t___const_a603a121ac7495d6c51cbaee4514ac544}\label{class_s_a_t___const_a603a121ac7495d6c51cbaee4514ac544} 
-static constexpr double {\bfseries f\+\_\+\+Earth} = 1/298.\+257223563
+static constexpr double {\bfseries f\+\_\+\+Earth} = 1.\+0/298.\+257223563
 \begin{DoxyCompactList}\small\item\em Aplanamiento de la Tierra; WGS-\/84. \end{DoxyCompactList}\item 
 \Hypertarget{class_s_a_t___const_a29738c7dc581a976f3cee7282c6b4546}\label{class_s_a_t___const_a29738c7dc581a976f3cee7282c6b4546} 
 static constexpr double {\bfseries R\+\_\+\+Sun} = 696000e3
@@ -49,7 +49,7 @@ static constexpr double {\bfseries R\+\_\+\+Sun} = 696000e3
 static constexpr double {\bfseries R\+\_\+\+Moon} = 1738e3
 \begin{DoxyCompactList}\small\item\em Radio de la Luna \mbox{[}m\mbox{]}; DE430. \end{DoxyCompactList}\item 
 \Hypertarget{class_s_a_t___const_a0a2e03e37c2f4f9cdd84d7d64bd3b105}\label{class_s_a_t___const_a0a2e03e37c2f4f9cdd84d7d64bd3b105} 
-static constexpr double {\bfseries omega\+\_\+\+Earth} = 15.\+04106717866910/3600\texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_s_a_t___const_a3c6284e159dbe30142273ae4f348def4}{Rad}}
+static constexpr double {\bfseries omega\+\_\+\+Earth} = 15.\+04106717866910/3600.\+0\texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_s_a_t___const_a3c6284e159dbe30142273ae4f348def4}{Rad}}
 \begin{DoxyCompactList}\small\item\em Velocidad angular de rotación de la Tierra \mbox{[}rad/s\mbox{]}; WGS-\/84. \end{DoxyCompactList}\item 
 \Hypertarget{class_s_a_t___const_a96bb15261b19eefe8c15bd2df0569989}\label{class_s_a_t___const_a96bb15261b19eefe8c15bd2df0569989} 
 static constexpr double {\bfseries GM\+\_\+\+Earth} = 398600.\+435436e9
@@ -85,8 +85,11 @@ static constexpr double {\bfseries GM\+\_\+\+Neptune} =6836527.\+100580e9
 static constexpr double {\bfseries GM\+\_\+\+Pluto} = 977.\+0000000000009e9
 \begin{DoxyCompactList}\small\item\em Parámetro gravitacional de Plutón (GM) \mbox{[}m³/s²\mbox{]}; DE430. \end{DoxyCompactList}\item 
 \Hypertarget{class_s_a_t___const_a26bb9cd23410c2d767242616cf715a1c}\label{class_s_a_t___const_a26bb9cd23410c2d767242616cf715a1c} 
-static constexpr double {\bfseries P\+\_\+\+Sol} =1367/\mbox{\hyperlink{class_s_a_t___const_a7d170caff901e99ed15ed03c094f8a62}{c\+\_\+light}}
-\begin{DoxyCompactList}\small\item\em Presión de radiación solar a 1 UA \mbox{[}N/m²\mbox{]}; IERS 96. \end{DoxyCompactList}\end{DoxyCompactItemize}
+static constexpr double {\bfseries P\+\_\+\+Sol} =1367.\+0/\mbox{\hyperlink{class_s_a_t___const_a7d170caff901e99ed15ed03c094f8a62}{c\+\_\+light}}
+\begin{DoxyCompactList}\small\item\em Presión de radiación solar a 1 UA \mbox{[}N/m²\mbox{]}; IERS 96. \end{DoxyCompactList}\item 
+\Hypertarget{class_s_a_t___const_a50d349e4c456ee1c1e83327b95fd0b68}\label{class_s_a_t___const_a50d349e4c456ee1c1e83327b95fd0b68} 
+static constexpr double {\bfseries eps} =2.\+22044604925031e-\/16
+\begin{DoxyCompactList}\small\item\em Valor de eps de Matlab. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -94,4 +97,4 @@ Clase que contiene constantes astronómicas y físicas utilizadas en cálculos s
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+Users/\+Usuario/\+Documents/\+Git\+Hub/\+Proyecto\+TT1/include/\mbox{\hyperlink{_s_a_t___const_8hpp}{SAT\+\_\+\+Const.\+hpp}}\end{DoxyCompactItemize}
+E\+:/\+Documentos/\+Git\+Hub/\+Proyecto\+TT1/include/\mbox{\hyperlink{_s_a_t___const_8hpp}{SAT\+\_\+\+Const.\+hpp}}\end{DoxyCompactItemize}

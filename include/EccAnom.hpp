@@ -24,7 +24,7 @@ using namespace std;
 /**@brief Calcula la anomalía excéntrica de una órbita elíptica.
 *
 *	@param [in] M Anomalía media en radianes.  
-*	@param [in] E Excentricidad de la órbita, en el intervalo [0,1].  
+*	@param [in] e Excentricidad de la órbita, en el intervalo [0,1].  
 *	@return Double con la anomalía excéntrica de una órbita elíptica. 
 */
 //----------------------------------------------------------------------

@@ -1,5 +1,5 @@
-\doxysection{C\+:/\+Users/\+Usuario/\+Documents/\+Git\+Hub/\+Proyecto\+TT1/src/gast.cpp File Reference}
-\hypertarget{gast_8cpp}{}\label{gast_8cpp}\index{C:/Users/Usuario/Documents/GitHub/ProyectoTT1/src/gast.cpp@{C:/Users/Usuario/Documents/GitHub/ProyectoTT1/src/gast.cpp}}
+\doxysection{E\+:/\+Documentos/\+Git\+Hub/\+Proyecto\+TT1/src/gast.cpp File Reference}
+\hypertarget{gast_8cpp}{}\label{gast_8cpp}\index{E:/Documentos/GitHub/ProyectoTT1/src/gast.cpp@{E:/Documentos/GitHub/ProyectoTT1/src/gast.cpp}}
 
 
 Cálculo del tiempo sidéreo aparente Greenwich.  
@@ -11,9 +11,8 @@ Include dependency graph for gast.\+cpp\+:
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{gast_8cpp_a84b12ecdeb64a3d9ca7316d5a5ebbee5}\label{gast_8cpp_a84b12ecdeb64a3d9ca7316d5a5ebbee5} 
-double {\bfseries modgast} (double a, double b)
-\item 
+double \mbox{\hyperlink{gast_8cpp_a84b12ecdeb64a3d9ca7316d5a5ebbee5}{modgast}} (double a, double b)
+\begin{DoxyCompactList}\small\item\em Función auxiliar para adaptar la funcion fmod a la correspondiente en Matlab. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{gast_8cpp_a4eb2d09c87615520077aec1005b8e0ad}{gast}} (double Mjd\+\_\+\+UT1)
 \begin{DoxyCompactList}\small\item\em Calcula el tiempo sidéreo aparente Greenwich. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -25,7 +24,7 @@ Cálculo del tiempo sidéreo aparente Greenwich.
 Miguel Río Navarro 
 \end{DoxyAuthor}
 \begin{DoxyRefDesc}{Bug}
-\item[\mbox{\hyperlink{bug__bug000055}{Bug}}]No known bugs. \end{DoxyRefDesc}
+\item[\mbox{\hyperlink{bug__bug000057}{Bug}}]No known bugs. \end{DoxyRefDesc}
 
 
 \doxysubsection{Function Documentation}
@@ -46,4 +45,24 @@ Calcula el tiempo sidéreo aparente Greenwich.
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 Double con el tiempo sidéreo aparente Greenwich. 
+\end{DoxyReturn}
+\Hypertarget{gast_8cpp_a84b12ecdeb64a3d9ca7316d5a5ebbee5}\index{gast.cpp@{gast.cpp}!modgast@{modgast}}
+\index{modgast@{modgast}!gast.cpp@{gast.cpp}}
+\doxysubsubsection{\texorpdfstring{modgast()}{modgast()}}
+{\footnotesize\ttfamily \label{gast_8cpp_a84b12ecdeb64a3d9ca7316d5a5ebbee5} 
+double modgast (\begin{DoxyParamCaption}\item[{double}]{a}{, }\item[{double}]{b}{}\end{DoxyParamCaption})}
+
+
+
+Función auxiliar para adaptar la funcion fmod a la correspondiente en Matlab. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a} & Dividendo. \\
+\hline
+\mbox{\texttt{ in}}  & {\em b} & Divisor. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Devuelve el resto de dividir a/b, entre 0 y b. 
 \end{DoxyReturn}

@@ -12,6 +12,17 @@
 */ 
 //----------------------------------------------------------------------
 #include "..\include\IERS.hpp"
+
+//----------------------------------------------------------------------
+//  int find(Matrix a,double b)
+//----------------------------------------------------------------------
+/**@brief Función auxiliar para adaptar la funcion find de Matlab.
+*
+*	@param [in] a Matriz en la que se quiere buscar.
+*	@param [in] b Double que se quiere encontrar.
+*	@return Devuelve el indice de la matriz en el que se encuentra b, -1 en otro caso.
+*/
+//----------------------------------------------------------------------
 int find(Matrix a, double b){
 	for(int i=1;i<=a.n_column;i++){
 		if(abs(a(i)-b)<1e-10) return i;

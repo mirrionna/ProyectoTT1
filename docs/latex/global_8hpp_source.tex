@@ -1,5 +1,5 @@
 \doxysection{global.\+hpp}
-\hypertarget{global_8hpp_source}{}\label{global_8hpp_source}\index{C:/Users/Usuario/Documents/GitHub/ProyectoTT1/include/global.hpp@{C:/Users/Usuario/Documents/GitHub/ProyectoTT1/include/global.hpp}}
+\hypertarget{global_8hpp_source}{}\label{global_8hpp_source}\index{E:/Documentos/GitHub/ProyectoTT1/include/global.hpp@{E:/Documentos/GitHub/ProyectoTT1/include/global.hpp}}
 \mbox{\hyperlink{global_8hpp}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ \textcolor{comment}{//\ \$Header\$}}
@@ -13,37 +13,43 @@
 \DoxyCodeLine{00015\ \textcolor{preprocessor}{\#define\ \_global\_}}
 \DoxyCodeLine{00016\ }
 \DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <cmath>}}
-\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{matrix_8h}{..\(\backslash\)include\(\backslash\)matrix.h}}"{}}}
-\DoxyCodeLine{00019\ }
-\DoxyCodeLine{00020\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}\{}
-\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{double}\ Mjd\_UTC,Mjd\_TT;}
-\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{int}\ n,m,sun,moon,planets;}
-\DoxyCodeLine{00023\ \}\ \mbox{\hyperlink{struct_param}{Param}};}
-\DoxyCodeLine{00024\ }
-\DoxyCodeLine{00025\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{struct_param}{Param}}\ AuxParam;}
-\DoxyCodeLine{00026\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{class_matrix}{Matrix}}\ *eopdata;}
-\DoxyCodeLine{00027\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{class_matrix}{Matrix}}\ *Cnm;}
-\DoxyCodeLine{00028\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{class_matrix}{Matrix}}\ *Snm;}
-\DoxyCodeLine{00029\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{class_matrix}{Matrix}}\ *PC;}
-\DoxyCodeLine{00030\ }
-\DoxyCodeLine{00031\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{00032\ \textcolor{comment}{//\ \ void\ eop19620101(int\ c);}}
-\DoxyCodeLine{00033\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{00038\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{00039\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{global_8hpp_af1504e3e975e6f502042c7fa8b7abe60}{eop19620101}}(\textcolor{keywordtype}{int}\ c);}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <cstring>}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{matrix_8h}{..\(\backslash\)include\(\backslash\)matrix.h}}"{}}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_s_a_t___const_8hpp}{..\(\backslash\)include\(\backslash\)SAT\_Const.hpp}}"{}}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_mjday_8hpp}{..\(\backslash\)include\(\backslash\)Mjday.hpp}}"{}}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}\{}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{double}\ Mjd\_UTC,Mjd\_TT;}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{int}\ n,m,sun,moon,planets;}
+\DoxyCodeLine{00026\ \}\ \mbox{\hyperlink{struct_param}{Param}};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{struct_param}{Param}}\ \mbox{\hyperlink{global_8hpp_a5706b12963234f7382e60cb7324441f9}{AuxParam}};}
+\DoxyCodeLine{00031\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{class_matrix}{Matrix}}\ *\mbox{\hyperlink{global_8hpp_aa60b3ff38ee9ea897411c4722330fdca}{eopdata}};}
+\DoxyCodeLine{00033\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{class_matrix}{Matrix}}\ *\mbox{\hyperlink{global_8hpp_a508037fc0a04f32d198dce1935d07761}{Cnm}};}
+\DoxyCodeLine{00035\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{class_matrix}{Matrix}}\ *\mbox{\hyperlink{global_8hpp_ac501380f5bfa5ca0a312caf1eb7871b2}{Snm}};}
+\DoxyCodeLine{00037\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{class_matrix}{Matrix}}\ *\mbox{\hyperlink{global_8hpp_a371b10496ced1dadb75aec4b8b75fbe9}{PC}};}
+\DoxyCodeLine{00039\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{class_matrix}{Matrix}}\ *\mbox{\hyperlink{global_8hpp_ae3c3071f42825b739a97cf1726ca0dd1}{obs}};}
 \DoxyCodeLine{00040\ }
 \DoxyCodeLine{00041\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{00042\ \textcolor{comment}{//\ \ void\ GGM03S();}}
+\DoxyCodeLine{00042\ \textcolor{comment}{//\ \ void\ eop19620101(int\ c);}}
 \DoxyCodeLine{00043\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{00047\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{00048\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{global_8hpp_a6b92ea032a8e792ede2023c6d46bd53c}{GGM03S}}();}
-\DoxyCodeLine{00049\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{00050\ \textcolor{comment}{//\ \ void\ GGM03S();}}
+\DoxyCodeLine{00048\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00049\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{global_8hpp_af1504e3e975e6f502042c7fa8b7abe60}{eop19620101}}(\textcolor{keywordtype}{int}\ c);}
+\DoxyCodeLine{00050\ }
 \DoxyCodeLine{00051\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{00055\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{00056\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{global_8hpp_ae38d918efc2790a2d633e60440a3bbab}{DE430Coeff}}();}
-\DoxyCodeLine{00060\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{00061\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{global_8hpp_aa9b809c65cccb0cdae2352e9edee2dab}{cargarAuxParam}}();}
-\DoxyCodeLine{00062\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00052\ \textcolor{comment}{//\ \ void\ GGM03S();}}
+\DoxyCodeLine{00053\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00057\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00058\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{global_8hpp_a6b92ea032a8e792ede2023c6d46bd53c}{GGM03S}}();}
+\DoxyCodeLine{00059\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00060\ \textcolor{comment}{//\ \ void\ GGM03S();}}
+\DoxyCodeLine{00061\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00065\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00066\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{global_8hpp_ae38d918efc2790a2d633e60440a3bbab}{DE430Coeff}}();}
+\DoxyCodeLine{00070\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00071\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{global_8hpp_aa9b809c65cccb0cdae2352e9edee2dab}{cargarAuxParam}}();}
+\DoxyCodeLine{00076\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00077\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{global_8hpp_ae898bc6077eb6bdcd9ad3919b83001f0}{GEOS3}}(\textcolor{keywordtype}{int}\ nobs);}
+\DoxyCodeLine{00078\ \textcolor{preprocessor}{\#endif}}
 
 \end{DoxyCode}

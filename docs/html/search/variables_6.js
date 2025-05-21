@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['n_5fcolumn_0',['n_column',['../class_matrix.html#a72848e6895f6a6b638410be60b25ed7a',1,'Matrix']]],
-  ['n_5frow_1',['n_row',['../class_matrix.html#a25155ffcead67af4aaab4d78256af86f',1,'Matrix']]]
+  ['mjd_5fj2000_0',['MJD_J2000',['../class_s_a_t___const.html#a18fd4e9c1730f97159f7a55399a17037',1,'SAT_Const']]]
 ];

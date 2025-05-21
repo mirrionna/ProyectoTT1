@@ -7,6 +7,7 @@ var dir_d44c64559bbebec7f509842c48db8b23 =
     [ "anglesg.hpp", "anglesg_8hpp.html", "anglesg_8hpp" ],
     [ "AzElPa.hpp", "_az_el_pa_8hpp.html", "_az_el_pa_8hpp" ],
     [ "Cheb3D.hpp", "_cheb3_d_8hpp.html", "_cheb3_d_8hpp" ],
+    [ "DEInteg.hpp", "_d_e_integ_8hpp.html", "_d_e_integ_8hpp" ],
     [ "EccAnom.hpp", "_ecc_anom_8hpp.html", "_ecc_anom_8hpp" ],
     [ "elements.hpp", "elements_8hpp.html", "elements_8hpp" ],
     [ "EqnEquinox.hpp", "_eqn_equinox_8hpp.html", "_eqn_equinox_8hpp" ],

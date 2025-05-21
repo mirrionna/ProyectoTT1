@@ -7,6 +7,7 @@ var dir_68267d1309a1af8e8297ef4c3efbcdba =
     [ "anglesg.cpp", "anglesg_8cpp.html", "anglesg_8cpp" ],
     [ "AzElPa.cpp", "_az_el_pa_8cpp.html", "_az_el_pa_8cpp" ],
     [ "Cheb3D.cpp", "_cheb3_d_8cpp.html", "_cheb3_d_8cpp" ],
+    [ "DEInteg.cpp", "_d_e_integ_8cpp.html", "_d_e_integ_8cpp" ],
     [ "EccAnom.cpp", "_ecc_anom_8cpp.html", "_ecc_anom_8cpp" ],
     [ "elements.cpp", "elements_8cpp.html", "elements_8cpp" ],
     [ "EqnEquinox.cpp", "_eqn_equinox_8cpp.html", "_eqn_equinox_8cpp" ],

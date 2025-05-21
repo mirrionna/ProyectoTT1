@@ -1,5 +1,5 @@
-\doxysection{C\+:/\+Users/\+Usuario/\+Documents/\+Git\+Hub/\+Proyecto\+TT1/src/global.cpp File Reference}
-\hypertarget{global_8cpp}{}\label{global_8cpp}\index{C:/Users/Usuario/Documents/GitHub/ProyectoTT1/src/global.cpp@{C:/Users/Usuario/Documents/GitHub/ProyectoTT1/src/global.cpp}}
+\doxysection{E\+:/\+Documentos/\+Git\+Hub/\+Proyecto\+TT1/src/global.cpp File Reference}
+\hypertarget{global_8cpp}{}\label{global_8cpp}\index{E:/Documentos/GitHub/ProyectoTT1/src/global.cpp@{E:/Documentos/GitHub/ProyectoTT1/src/global.cpp}}
 
 
 Carga de varios ficheros de texto.  
@@ -21,25 +21,30 @@ void {\bfseries DE430\+Coeff} ()
 \begin{DoxyCompactList}\small\item\em Carga el fichero de datos DE430\+Coeff.\+txt en la matriz PC. \end{DoxyCompactList}\item 
 \Hypertarget{global_8cpp_aa9b809c65cccb0cdae2352e9edee2dab}\label{global_8cpp_aa9b809c65cccb0cdae2352e9edee2dab} 
 void {\bfseries cargar\+Aux\+Param} ()
-\begin{DoxyCompactList}\small\item\em Carga los datos del struct Aux\+Param de tipo \doxylink{struct_param}{Param}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Carga los datos del struct Aux\+Param de tipo \doxylink{struct_param}{Param}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{global_8cpp_ae898bc6077eb6bdcd9ad3919b83001f0}{GEOS3}} (int nobs)
+\begin{DoxyCompactList}\small\item\em Carga el fichero de datos GEOS3.\+txt en la matriz obs. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
 \Hypertarget{global_8cpp_aa60b3ff38ee9ea897411c4722330fdca}\label{global_8cpp_aa60b3ff38ee9ea897411c4722330fdca} 
 \mbox{\hyperlink{class_matrix}{Matrix}} \texorpdfstring{$\ast$}{*} {\bfseries eopdata}
-\item 
+\begin{DoxyCompactList}\small\item\em Matriz global para contener el contenido del archivo eop19620101. \end{DoxyCompactList}\item 
 \Hypertarget{global_8cpp_a508037fc0a04f32d198dce1935d07761}\label{global_8cpp_a508037fc0a04f32d198dce1935d07761} 
 \mbox{\hyperlink{class_matrix}{Matrix}} \texorpdfstring{$\ast$}{*} {\bfseries Cnm}
-\item 
+\begin{DoxyCompactList}\small\item\em Matriz global para contener el contenido del archivo GGM03S. \end{DoxyCompactList}\item 
 \Hypertarget{global_8cpp_ac501380f5bfa5ca0a312caf1eb7871b2}\label{global_8cpp_ac501380f5bfa5ca0a312caf1eb7871b2} 
 \mbox{\hyperlink{class_matrix}{Matrix}} \texorpdfstring{$\ast$}{*} {\bfseries Snm}
-\item 
+\begin{DoxyCompactList}\small\item\em Matriz global para contener el contenido del archivo GGM03S. \end{DoxyCompactList}\item 
 \Hypertarget{global_8cpp_a371b10496ced1dadb75aec4b8b75fbe9}\label{global_8cpp_a371b10496ced1dadb75aec4b8b75fbe9} 
 \mbox{\hyperlink{class_matrix}{Matrix}} \texorpdfstring{$\ast$}{*} {\bfseries PC}
-\item 
+\begin{DoxyCompactList}\small\item\em Matriz global para contener el contenido del archivo DE430\+Coeff. \end{DoxyCompactList}\item 
 \Hypertarget{global_8cpp_a5706b12963234f7382e60cb7324441f9}\label{global_8cpp_a5706b12963234f7382e60cb7324441f9} 
 \mbox{\hyperlink{struct_param}{Param}} {\bfseries Aux\+Param}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Struct de tipo \doxylink{struct_param}{Param} para contener ciertos valores globales a todo el proyecto. \end{DoxyCompactList}\item 
+\Hypertarget{global_8cpp_ae3c3071f42825b739a97cf1726ca0dd1}\label{global_8cpp_ae3c3071f42825b739a97cf1726ca0dd1} 
+\mbox{\hyperlink{class_matrix}{Matrix}} \texorpdfstring{$\ast$}{*} {\bfseries obs}
+\begin{DoxyCompactList}\small\item\em Matriz global para contener el contenido del archivo GEOS3. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -49,7 +54,7 @@ Carga de varios ficheros de texto.
 Miguel Río Navarro 
 \end{DoxyAuthor}
 \begin{DoxyRefDesc}{Bug}
-\item[\mbox{\hyperlink{bug__bug000059}{Bug}}]No known bugs. \end{DoxyRefDesc}
+\item[\mbox{\hyperlink{bug__bug000061}{Bug}}]No known bugs. \end{DoxyRefDesc}
 
 
 \doxysubsection{Function Documentation}
@@ -65,6 +70,21 @@ Carga el fichero de datos eop19620101.\+txt en la matriz eopdata.
 
 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em c} & Número de datos a cargar \\
+\mbox{\texttt{ in}}  & {\em c} & Número de datos a cargar. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{global_8cpp_ae898bc6077eb6bdcd9ad3919b83001f0}\index{global.cpp@{global.cpp}!GEOS3@{GEOS3}}
+\index{GEOS3@{GEOS3}!global.cpp@{global.cpp}}
+\doxysubsubsection{\texorpdfstring{GEOS3()}{GEOS3()}}
+{\footnotesize\ttfamily \label{global_8cpp_ae898bc6077eb6bdcd9ad3919b83001f0} 
+void GEOS3 (\begin{DoxyParamCaption}\item[{int}]{nobs}{}\end{DoxyParamCaption})}
+
+
+
+Carga el fichero de datos GEOS3.\+txt en la matriz obs. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em nobs} & Número de filas a cargar. \\
 \hline
 \end{DoxyParams}

@@ -1,10 +1,10 @@
-digraph "C:/Users/Usuario/Documents/GitHub/ProyectoTT1/src/gibbs.cpp"
+digraph "E:/Documentos/GitHub/ProyectoTT1/src/gibbs.cpp"
 {
  // LATEX_PDF_SIZE
   bgcolor="transparent";
   edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
   node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
-  Node1 [id="Node000001",label="C:/Users/Usuario/Documents\l/GitHub/ProyectoTT1/src\l/gibbs.cpp",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Cálculo del vector de velocidad ijk, los ángulos entre vectores y una flag que indica el éxito a part..."];
+  Node1 [id="Node000001",label="E:/Documentos/GitHub\l/ProyectoTT1/src/gibbs.cpp",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Cálculo del vector de velocidad ijk, los ángulos entre vectores y una flag que indica el éxito a part..."];
   Node1 -> Node2 [id="edge1_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
   Node2 [id="Node000002",label="..\\include\\gibbs.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$gibbs_8hpp.html",tooltip="Este archivo de cabecera contiene una implementación de la función gibbs."];
   Node2 -> Node3 [id="edge2_Node000002_Node000003",color="steelblue1",style="solid",tooltip=" "];
@@ -25,14 +25,12 @@ digraph "C:/Users/Usuario/Documents/GitHub/ProyectoTT1/src/gibbs.cpp"
   Node2 -> Node10 [id="edge10_Node000002_Node000010",color="steelblue1",style="solid",tooltip=" "];
   Node10 [id="Node000010",label="..\\include\\SAT_Const.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_s_a_t___const_8hpp.html",tooltip="Este archivo de cabecera contiene una implementación de una clase que contiene diferentes constantes."];
   Node10 -> Node3 [id="edge11_Node000010_Node000003",color="steelblue1",style="solid",tooltip=" "];
-  Node10 -> Node11 [id="edge12_Node000010_Node000011",color="steelblue1",style="solid",tooltip=" "];
-  Node11 [id="Node000011",label="numbers",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
-  Node2 -> Node12 [id="edge13_Node000002_Node000012",color="steelblue1",style="solid",tooltip=" "];
-  Node12 [id="Node000012",label="..\\include\\angl.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$angl_8hpp.html",tooltip="Este archivo de cabecera contiene una implementación de la función angl."];
-  Node12 -> Node3 [id="edge14_Node000012_Node000003",color="steelblue1",style="solid",tooltip=" "];
-  Node12 -> Node6 [id="edge15_Node000012_Node000006",color="steelblue1",style="solid",tooltip=" "];
-  Node2 -> Node13 [id="edge16_Node000002_Node000013",color="steelblue1",style="solid",tooltip=" "];
-  Node13 [id="Node000013",label="..\\include\\unit.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$unit_8hpp.html",tooltip="Este archivo de cabecera contiene una implementación de la función unit."];
-  Node13 -> Node3 [id="edge17_Node000013_Node000003",color="steelblue1",style="solid",tooltip=" "];
-  Node13 -> Node6 [id="edge18_Node000013_Node000006",color="steelblue1",style="solid",tooltip=" "];
+  Node2 -> Node11 [id="edge12_Node000002_Node000011",color="steelblue1",style="solid",tooltip=" "];
+  Node11 [id="Node000011",label="..\\include\\angl.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$angl_8hpp.html",tooltip="Este archivo de cabecera contiene una implementación de la función angl."];
+  Node11 -> Node3 [id="edge13_Node000011_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node11 -> Node6 [id="edge14_Node000011_Node000006",color="steelblue1",style="solid",tooltip=" "];
+  Node2 -> Node12 [id="edge15_Node000002_Node000012",color="steelblue1",style="solid",tooltip=" "];
+  Node12 [id="Node000012",label="..\\include\\unit.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$unit_8hpp.html",tooltip="Este archivo de cabecera contiene una implementación de la función unit."];
+  Node12 -> Node3 [id="edge16_Node000012_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node12 -> Node6 [id="edge17_Node000012_Node000006",color="steelblue1",style="solid",tooltip=" "];
 }

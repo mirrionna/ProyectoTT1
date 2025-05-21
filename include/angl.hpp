@@ -22,7 +22,7 @@
 /**@brief Calcula el ángulo entre dos vectores, entre -pi y pi.
 *
 *	@param [in] vec1 Primer vector.  
-*	@param [in] vec1 Segundo vector.  
+*	@param [in] vec2 Segundo vector.  
 *	@return Ángulo en el intervalo [-π,π] entre el vec1 y vec2. 
 */
 //----------------------------------------------------------------------

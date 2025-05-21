@@ -40,7 +40,9 @@ var NAVTREE =
       [ "File List", "files.html", "files_dup" ],
       [ "File Members", "globals.html", [
         [ "All", "globals.html", null ],
-        [ "Functions", "globals_func.html", null ]
+        [ "Functions", "globals_func.html", null ],
+        [ "Variables", "globals_vars.html", null ],
+        [ "Enumerations", "globals_enum.html", null ]
       ] ]
     ] ]
   ] ]
@@ -49,7 +51,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_accel_8cpp.html",
-"matrix_8cpp.html#ade02755a02ed0f8875fffc560e6ce9f5"
+"global_8hpp.html#ae38d918efc2790a2d633e60440a3bbab"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

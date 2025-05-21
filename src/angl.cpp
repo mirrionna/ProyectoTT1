@@ -13,6 +13,15 @@
 //----------------------------------------------------------------------
 #include "..\include\angl.hpp"
 
+//----------------------------------------------------------------------
+//  int sign(double a)
+//----------------------------------------------------------------------
+/**@brief Función auxiliar que devuelve el signo de un double.
+*
+*	@param [in] a Double del que se quiere calcular el signo.   
+*	@return Devuelve 1 en caso de que a sea positivo, -1 si a es negativo.
+*/
+//----------------------------------------------------------------------
 int sign(double a){
 	return (0.0<a) - (a<0.0);
 }

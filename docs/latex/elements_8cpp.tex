@@ -1,5 +1,5 @@
-\doxysection{C\+:/\+Users/\+Usuario/\+Documents/\+Git\+Hub/\+Proyecto\+TT1/src/elements.cpp File Reference}
-\hypertarget{elements_8cpp}{}\label{elements_8cpp}\index{C:/Users/Usuario/Documents/GitHub/ProyectoTT1/src/elements.cpp@{C:/Users/Usuario/Documents/GitHub/ProyectoTT1/src/elements.cpp}}
+\doxysection{E\+:/\+Documentos/\+Git\+Hub/\+Proyecto\+TT1/src/elements.cpp File Reference}
+\hypertarget{elements_8cpp}{}\label{elements_8cpp}\index{E:/Documentos/GitHub/ProyectoTT1/src/elements.cpp@{E:/Documentos/GitHub/ProyectoTT1/src/elements.cpp}}
 
 
 Cálculo del semilatus rectum, el semieje mayor, la excentricidad, la inclinación, la longitud del nodo ascendente, el argumento del periastro y la anomalía media a partir del vector estado.  
@@ -11,9 +11,8 @@ Include dependency graph for elements.\+cpp\+:
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{elements_8cpp_a886f4550cc781ec76a3a0915e93818bb}\label{elements_8cpp_a886f4550cc781ec76a3a0915e93818bb} 
-double {\bfseries modelements} (double a, double b)
-\item 
+double \mbox{\hyperlink{elements_8cpp_a886f4550cc781ec76a3a0915e93818bb}{modelements}} (double a, double b)
+\begin{DoxyCompactList}\small\item\em Función auxiliar para adaptar la funcion fmod a la correspondiente en Matlab. \end{DoxyCompactList}\item 
 tuple$<$ double, double, double, double, double, double, double $>$ \mbox{\hyperlink{elements_8cpp_a5dd6d5680c9b5aafae7e21082e0ab75a}{elements}} (\mbox{\hyperlink{class_matrix}{Matrix}} \&y)
 \begin{DoxyCompactList}\small\item\em Calcula el semilatus rectum, el semieje mayor, la excentricidad, la inclinación, la longitud del nodo ascendente, el argumento del periastro y la anomalía media a partir del vector estado. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -25,7 +24,7 @@ Cálculo del semilatus rectum, el semieje mayor, la excentricidad, la inclinaci�
 Miguel Río Navarro 
 \end{DoxyAuthor}
 \begin{DoxyRefDesc}{Bug}
-\item[\mbox{\hyperlink{bug__bug000051}{Bug}}]No known bugs. \end{DoxyRefDesc}
+\item[\mbox{\hyperlink{bug__bug000053}{Bug}}]No known bugs. \end{DoxyRefDesc}
 
 
 \doxysubsection{Function Documentation}
@@ -47,4 +46,24 @@ Calcula el semilatus rectum, el semieje mayor, la excentricidad, la inclinación
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 Tupla con el semilatus rectum en metros, el semieje mayor, la execentricidad, la inclinación en radianes, la longitud del nodo ascendente en radianes, el argumento del periastro en radianes y la anomalía media en radianes. 
+\end{DoxyReturn}
+\Hypertarget{elements_8cpp_a886f4550cc781ec76a3a0915e93818bb}\index{elements.cpp@{elements.cpp}!modelements@{modelements}}
+\index{modelements@{modelements}!elements.cpp@{elements.cpp}}
+\doxysubsubsection{\texorpdfstring{modelements()}{modelements()}}
+{\footnotesize\ttfamily \label{elements_8cpp_a886f4550cc781ec76a3a0915e93818bb} 
+double modelements (\begin{DoxyParamCaption}\item[{double}]{a}{, }\item[{double}]{b}{}\end{DoxyParamCaption})}
+
+
+
+Función auxiliar para adaptar la funcion fmod a la correspondiente en Matlab. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a} & Dividendo. \\
+\hline
+\mbox{\texttt{ in}}  & {\em b} & Divisor. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Devuelve el resto de dividir a/b, entre 0 y b. 
 \end{DoxyReturn}

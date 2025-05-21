@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Proyecto TTI: C:/Users/Usuario/Documents/GitHub/ProyectoTT1/src/JPL_Eph_DE430.cpp File Reference</title>
+<title>Proyecto TTI: E:/Documentos/GitHub/ProyectoTT1/src/JPL_Eph_DE430.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,7 +32,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Proyecto TTI
+   <div id="projectname">Proyecto TTI<span id="projectnumber">&#160;1.0</span>
    </div>
    <div id="projectbrief">Implementación del código para resolver el proyecto de TTI en C++</div>
   </td>
@@ -115,13 +115,13 @@ $(function(){initNavTree('_j_p_l___eph___d_e430_8cpp.html',''); initResizable(tr
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for JPL_Eph_DE430.cpp:</div>
 <div class="dyncontent">
-<div class="center"><img src="_j_p_l___eph___d_e430_8cpp__incl.png" border="0" usemap="#a_c_1_2_users_2_usuario_2_documents_2_git_hub_2_proyecto_t_t1_2src_2_j_p_l___eph___d_e430_8cpp" alt=""/></div>
+<div class="center"><img src="_j_p_l___eph___d_e430_8cpp__incl.png" border="0" usemap="#a_e_1_2_documentos_2_git_hub_2_proyecto_t_t1_2src_2_j_p_l___eph___d_e430_8cpp" alt=""/></div>
 </div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a3bd75673f2eddebb8189e214fe76a08f" id="r_a3bd75673f2eddebb8189e214fe76a08f"><td class="memItemLeft" align="right" valign="top"><a id="a3bd75673f2eddebb8189e214fe76a08f" name="a3bd75673f2eddebb8189e214fe76a08f"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>findbetween</b> (double b)</td></tr>
+<tr class="memitem:a3bd75673f2eddebb8189e214fe76a08f" id="r_a3bd75673f2eddebb8189e214fe76a08f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3bd75673f2eddebb8189e214fe76a08f">findbetween</a> (double b)</td></tr>
+<tr class="memdesc:a3bd75673f2eddebb8189e214fe76a08f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Función auxiliar para adaptar la funcion find de Matlab en nuestro caso de uso.  <br /></td></tr>
 <tr class="separator:a3bd75673f2eddebb8189e214fe76a08f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e6fedfbbbe0ca32aa62a9016e7d3293" id="r_a5e6fedfbbbe0ca32aa62a9016e7d3293"><td class="memItemLeft" align="right" valign="top">tuple&lt; <a class="el" href="class_matrix.html">Matrix</a> &amp;, <a class="el" href="class_matrix.html">Matrix</a> &amp;, <a class="el" href="class_matrix.html">Matrix</a> &amp;, <a class="el" href="class_matrix.html">Matrix</a> &amp;, <a class="el" href="class_matrix.html">Matrix</a> &amp;, <a class="el" href="class_matrix.html">Matrix</a> &amp;, <a class="el" href="class_matrix.html">Matrix</a> &amp;, <a class="el" href="class_matrix.html">Matrix</a> &amp;, <a class="el" href="class_matrix.html">Matrix</a> &amp;, <a class="el" href="class_matrix.html">Matrix</a> &amp;, <a class="el" href="class_matrix.html">Matrix</a> &amp; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5e6fedfbbbe0ca32aa62a9016e7d3293">JPL_Eph_DE430</a> (double Mjd_TDB)</td></tr>
 <tr class="memdesc:a5e6fedfbbbe0ca32aa62a9016e7d3293"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calcula la posición ecuatorial del sol, la luna y los nueve planetas mayores usando JPL Ephemerides.  <br /></td></tr>
@@ -130,8 +130,34 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>findbetween</b> (doubl
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Cálculo de la posición ecuatorial del sol, la luna y los nueve planetas mayores usando JPL Ephemerides. </p>
 <dl class="section author"><dt>Author</dt><dd>Miguel Río Navarro </dd></dl>
-<dl class="bug"><dt><b><a class="el" href="bug.html#_bug000063">Bug</a></b></dt><dd>No known bugs. </dd></dl>
+<dl class="bug"><dt><b><a class="el" href="bug.html#_bug000065">Bug</a></b></dt><dd>No known bugs. </dd></dl>
 </div><h2 class="groupheader">Function Documentation</h2>
+<a id="a3bd75673f2eddebb8189e214fe76a08f" name="a3bd75673f2eddebb8189e214fe76a08f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3bd75673f2eddebb8189e214fe76a08f">&#9670;&#160;</a></span>findbetween()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int findbetween </td>
+          <td>(</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>b</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Función auxiliar para adaptar la funcion find de Matlab en nuestro caso de uso. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">b</td><td>Double que se quiere encontrar. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Devuelve el indice de la fila matriz tal que b es mayor que el valor de la primera columna y menor que el valor de la segunda columna. </dd></dl>
+
+</div>
+</div>
 <a id="a5e6fedfbbbe0ca32aa62a9016e7d3293" name="a5e6fedfbbbe0ca32aa62a9016e7d3293"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5e6fedfbbbe0ca32aa62a9016e7d3293">&#9670;&#160;</a></span>JPL_Eph_DE430()</h2>
 

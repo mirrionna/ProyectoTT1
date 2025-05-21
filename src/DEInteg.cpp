@@ -13,6 +13,7 @@
 //----------------------------------------------------------------------
 #include "..\include\DEInteg.hpp"
 
+/**@brief Clase de enumeración auxiliar para la funcion DEInteg*/
 enum class DE_STATE {
     DE_INIT = 1,       // Restart integration
     DE_DONE = 2,       // Successful step
