@@ -401,6 +401,7 @@ double norm(Matrix &v){
 }
 
 double dot(Matrix &u,Matrix &v){
+	if(u.n_column==1&&v.n_column==1) return dot(transpose(u),transpose(v));
 	if(u.n_column!=v.n_column){
 		cout<<"Vector dot: error in num elements\n";
 		cout<<u;

@@ -71,9 +71,7 @@ int main() {
 	auto [r2,v2] = anglesg((*obs)(1,2),(*obs)(9,2),(*obs)(18,2),(*obs)(1,3),(*obs)(9,3),(*obs)(18,3),Mjd1,Mjd2,Mjd3,Rs1,Rs2,Rs3);
 	// [r2,v2] = anglesdr(obs(1,2),obs(9,2),obs(18,2),obs(1,3),obs(9,3),obs(18,3),...
 	//                    Mjd1,Mjd2,Mjd3,Rs,Rs,Rs);
-
 	Matrix& Y0_apr = transpose(union_vector(transpose(r2),transpose(v2)));
-
 	double Mjd0 = Mjday(1995,1,29,02,38,0);
 	double Mjd_UTC = (*obs)(9,1);
 
@@ -86,7 +84,6 @@ int main() {
 	
 	double t_aux=0;
 	Matrix& Y = transpose(DEInteg(Accel,t_aux,-((*obs)(9,1)-Mjd0)*86400.0,1e-13,1e-6,6,Y0_apr));
-
 	Matrix& P = zeros(6,6);
 	Matrix& P_old = zeros(6,6);
 	  
@@ -98,7 +95,6 @@ int main() {
 	}
 
 	Matrix& LT = LTC(lon,lat);
-
 	Matrix& yPhi = zeros(42,1);
 	Matrix& Phi  = zeros(6,6);
 
@@ -111,7 +107,6 @@ int main() {
 		// Previous step
 		t_old = t;
 		Y_old = Y;
-		
 		// Time increment and propagation
 		Mjd_UTC = (*obs)(i,1);                       // Modified Julian Date
 		t       = (Mjd_UTC-Mjd0)*86400.0;         // Time since epoch [s]
@@ -136,15 +131,15 @@ int main() {
 		}
 		
 		t_aux=0;
-		yPhi = DEInteg (VarEqn,t_aux,t-t_old,1e-13,1e-6,42,yPhi);
+		yPhi = transpose(DEInteg (VarEqn,t_aux,t-t_old,1e-13,1e-6,42,yPhi));
 		// Extract state transition matrices
 		for(int j=1;j<=6;j++){
-			Phi = assign_column(j,Phi,extract_vector(yPhi,6*j+1,6*j+6));
+			Matrix& column=extract_vector(yPhi,6*j+1,6*j+6);
+			Phi(1,j)=column(1);Phi(2,j)=column(2);Phi(3,j)=column(3);Phi(4,j)=column(4);Phi(5,j)=column(5);Phi(6,j)=column(6);
 		}
 		
 		t_aux=0;
-		
-		Y = DEInteg (Accel,t_aux,t-t_old,1e-13,1e-6,6,Y_old);
+		Y = transpose(DEInteg (Accel,t_aux,t-t_old,1e-13,1e-6,6,Y_old));
 		// Topocentric coordinates
 		theta = gmst(Mjd_UT1);                    // Earth rotation
 		U = R_z(theta);
@@ -160,13 +155,14 @@ int main() {
 		tie(K, Y_old, P_old) = MeasUpdate ( Y, (*obs)(i,2), Azim, sigma_az, dAdY, P, P.n_row);
 		Y=Y_old;
 		P=P_old;
-
+	
 		// Elevation and partials
 		r = extract_vector(Y,1,3);
 		s = LT*transpose(transpose(U*transpose(r))-transpose(Rs));         // Topocentric position [m]
 		tie(Azim, Elev, dAds, dEds) = AzElPa(s);     // Azimuth, Elevation
 		dEdY = union_vector(dEds*LT*U,zeros(1,3));
 		// Measurement update
+		if(Y.n_row==1) Y = transpose(Y);
 		tie(K, Y_old, P_old) = MeasUpdate ( Y, (*obs)(i,3), Elev, sigma_el, dEdY, P, P.n_row );
 		Y=Y_old;
 		P=P_old;
@@ -178,6 +174,7 @@ int main() {
 		dDdY = union_vector(dDds*LT*U,zeros(1,3));
 		
 		// Measurement update
+		if(Y.n_row==1) Y = transpose(Y);
 		tie(K, Y_old, P_old) = MeasUpdate ( Y, (*obs)(i,4), Dist, sigma_range, dDdY, P, P.n_row);
 
 		Y=Y_old;
@@ -192,7 +189,6 @@ int main() {
 
 	t_aux=0;
 	Matrix& Y0 = DEInteg (Accel,t_aux,-((*obs)(46,1)-(*obs)(1,1))*86400.0,1e-13,1e-6,6,Y);
-	//Y0(1)=5753212.04419213; Y0(2)=2673401.89427079; Y0(3)=3440289.36652239; Y0(4)=4326.35119496467; Y0(5)=-1926.72407270954; Y0(6)=-5726.09595759171;
 	Matrix& Y_true = zeros(6);
 	Y_true(1)=5753.173e3; Y_true(2)=2673.361e3; Y_true(3)=3440.304e3; Y_true(4)=4.324207e3; Y_true(5)=-1.924299e3; Y_true(6)=-5.728216e3;
 

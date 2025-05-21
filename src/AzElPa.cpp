@@ -14,7 +14,7 @@
 #include "..\include\AzElPa.hpp"
 
 tuple<double,double,Matrix&,Matrix&> AzElPa (Matrix &s){
-	double pi2 = 2.0*std::numbers::pi;
+	double pi2 = SAT_Const::pi2;
 
 	double rho = sqrt(s(1)*s(1)+s(2)*s(2));
 
