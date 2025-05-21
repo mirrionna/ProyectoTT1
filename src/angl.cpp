@@ -33,7 +33,7 @@ double angl (Matrix &vec1, Matrix &vec2){
 	double magv1 = norm(vec1);
 	double magv2 = norm(vec2);
 
-	if (magv1*magv2 > small^2){
+	if (magv1*magv2 > pow(small,2)){
 		double temp= dot(vec1,vec2) / (magv1*magv2);
 		if (abs( temp ) > 1.0){
 			temp= sign(temp) * 1.0;
