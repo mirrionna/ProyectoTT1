@@ -18,6 +18,8 @@
 #include <numbers>
 #include <tuple>
 #include "..\include\matrix.h"
+#include "..\include\SAT_Const.hpp"
+
 //----------------------------------------------------------------------
 //  tuple<double,double,Matrix&,Matrix&> AzElPa (Matrix &s);
 //----------------------------------------------------------------------
