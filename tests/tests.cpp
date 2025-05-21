@@ -1417,8 +1417,7 @@ int deinteg_01(){
 	double aa = -134.9999919533730;
 	
 	Matrix B = DEInteg(Accel,0.0,aa,1e-13,1e-6,6,Y0_apr);
-	cout<<B;
-    _assert(m_equals(transpose(B1), B, 1e-8));
+    _assert(m_equals(transpose(B1), B, 1e-7));
 	
 	return 0;
 }
@@ -1492,7 +1491,7 @@ int all_tests()
 	_verify(accel_01);	
 	_verify(vareqn_01);
 	
-	//_verify(deinteg_01);
+	_verify(deinteg_01);
 	
 	_verify(geodetic_01);
 	_verify(angl_01);

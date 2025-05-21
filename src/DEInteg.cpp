@@ -103,10 +103,7 @@ Matrix& DEInteg (Matrix & func(double t, Matrix& y), double t, double tout, doub
 	}
 	double ifail,round,sum,nsp1,realns,p5eps,erkp1,ns,r,rho_double,hi,ki,temp1,term,psijm1,gamma,eta,hold,hnew,tau,xold,absh,erkm2,erkm1,erk,temp2,temp3,temp4,temp5,temp6,err,k,kold,kp1,kp2,km1,km2,i,im1,reali,nsm2,limit1,nsp2,limit2,ip1,knew;
 	bool nornd=false,success=false,phase1=false;
-	int cont=1;
 	while (true){   // Start step loop
-		cout << "Iteracion " << cont << ", x: " << x<< endl;
-		cont++;
 	  // If already past output point, interpolate solution and return
 	  if (fabs(x-t) >= absdel){
 		  yout  = zeros(n_eqn,1);
@@ -181,9 +178,7 @@ Matrix& DEInteg (Matrix & func(double t, Matrix& y), double t, double tout, doub
 	//   end
 	  
 	  // Limit step size, set weight vector and take a step
-	  cout<<"Signo "<<min(fabs(h), fabs(tend-x))<<" "<<h;
 	  h  = sign_(min(fabs(h), fabs(tend-x)), h);
-	  cout<<" Nuevo h: "<<h<<endl;
 	  for(int l=1;l<=n_eqn;l++){
 		  wt(l) = releps*fabs(yy(l)) + abseps;
 	  }
@@ -280,7 +275,7 @@ Matrix& DEInteg (Matrix & func(double t, Matrix& y), double t, double tout, doub
 	  
 	  // ns is the number of steps taken with size h, including the 
 	  // current one. When k<ns, no coefficients change.           
-	  ns=0;
+
 	  if (h !=hold){
 		  ns=0;
 	  }
@@ -347,7 +342,7 @@ Matrix& DEInteg (Matrix & func(double t, Matrix& y), double t, double tout, doub
 			  for(int i=nsp2;i<=kp1;i++){
 				  limit2 = kp2 - i;
 				  temp6  = alpha(i);
-				  for(int iq=1;i<=limit2;i++){
+				  for(int iq=1;iq<=limit2;iq++){
 					  w(iq+1) = w(iq+1) - temp6*w(iq+2);
 				  }
 				  g(i+1) = w(2);
@@ -409,9 +404,7 @@ Matrix& DEInteg (Matrix & func(double t, Matrix& y), double t, double tout, doub
 		  }
 	  }
 	  xold = x;
-	  cout << "x update, prev: " << x;
 	  x = x + h;
-	  cout << ", new: " << x << "(h: "<<h<<")"<<endl;
 	  absh = fabs(h);
 	  yp = func(x,p);
 	  // Estimate errors at orders k, k-1, k-2 
@@ -420,9 +413,7 @@ Matrix& DEInteg (Matrix & func(double t, Matrix& y), double t, double tout, doub
 	  erk = 0.0;
 	  for(int l=1;l<=n_eqn;l++){
 		  temp3 = 1.0/wt(l);
-		  cout<<"yp(l) "<<yp(l)<<", phi(l,1+1) "<<phi(l,1+1)<<endl;
 		  temp4 = yp(l) - phi(l,1+1);
-		  cout<<"temp3 "<<temp3<<", temp4 "<<temp4<<endl;
 		  if (km2> 0){
 			  erkm2 = erkm2 + ((phi(l,km1+1)+temp4)*temp3)*((phi(l,km1+1)+temp4)*temp3);
 		  }
@@ -436,16 +427,11 @@ Matrix& DEInteg (Matrix & func(double t, Matrix& y), double t, double tout, doub
 		  erkm2 = absh*sig(km1+1)*gstr(km2+1)*sqrt(erkm2);
 	  }
 	  if (km2>=0){
-		  cout<<"erkm1 antes de cambiar "<<erkm1;
 		  erkm1 = absh*sig(k+1)*gstr(km1+1)*sqrt(erkm1);
-		  cout<<" despues "<<erkm1<<endl;
 	  }
-	  cout<<"absh "<<absh<<",(erk) "<<(erk)<<endl;
 	  temp5 = absh*sqrt(erk);
 	  err = temp5*(g(k+1)-g(kp1+1));
-	  cout<<"temp 5 "<<temp5<<",sig(kp1+1) "<<sig(kp1+1)<<",gstr(k+1) "<<gstr(k+1)<<endl;
 	  erk = temp5*sig(kp1+1)*gstr(k+1);
-	  cout<<"erk al final de bloque 1 "<<erk<<endl;
 	  knew = k;
 	  
 	  // Test if order should be lowered 
@@ -583,14 +569,12 @@ Matrix& DEInteg (Matrix & func(double t, Matrix& y), double t, double tout, doub
 	if (phase1){
 		k = kp1;
 		erk = erkp1;
-		cout<<"Erk 1"<<endl;
 	}
 	else{
 		if (knew==km1){
 			// lower order 
 			k = km1;
 			erk = erkm1;
-			cout<<"Erk 2"<<endl;
 		}
 		else{
 			if (kp1<=ns){
@@ -604,14 +588,12 @@ Matrix& DEInteg (Matrix & func(double t, Matrix& y), double t, double tout, doub
 					if ( erkm1<=min(erk,erkp1)){
 						// lower order
 						k=km1; erk=erkm1;
-						cout<<"Erk 3"<<endl;
 					}
 					else{
 						if ( (erkp1<erk) && (k!=12) ){
 							// raise order 
 							k=kp1;
 							erk=erkp1;
-							cout<<"Erk 4"<<endl;
 						}
 					}
 				}
@@ -622,17 +604,14 @@ Matrix& DEInteg (Matrix & func(double t, Matrix& y), double t, double tout, doub
 					// Thus order is to be raised                  
 					k = kp1;
 					erk = erkp1;
-					cout<<"Erk 5"<<endl;
 				}
 			} // end if kp1<=ns
 		} // end if knew!=km1
 	} // end if !phase1
 
 	// With new order determine appropriate step size for next step
-	cout<<"Phase 1 "<<phase1<<", p5eps "<<p5eps<<", erk*two(k+2) "<<erk*two(k+2)<<", erk "<<erk<<endl;
 	if ( phase1 || (p5eps>=erk*two(k+2)) ){
 		hnew = 2.0*h;
-		cout<<"Hnew 1"<<endl;
 	}
 	else{
 		if (p5eps<erk){
@@ -640,11 +619,9 @@ Matrix& DEInteg (Matrix & func(double t, Matrix& y), double t, double tout, doub
 			r = p5eps/pow(erk,(1.0/temp2));
 			hnew = absh*fmax(0.5, min(0.9,r));
 			hnew = sign_(fmax(hnew, fouru*fabs(x)), h);
-			cout<<"Hnew 2"<<endl;
 		}
 		else{
 			hnew = h;
-			cout<<"Hnew 3"<<endl;
 		}
 	}
 	h = hnew;

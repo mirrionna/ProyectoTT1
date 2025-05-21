@@ -432,6 +432,7 @@ Matrix& cross(Matrix &u,Matrix &v){
 }
 
 Matrix& extract_vector (Matrix &m,int i, int j){
+	if(m.n_column==1) m=transpose(m);
 	if(i<=0 || j<i || i>m.n_column){
 		cout<<"Vector extract: error in indexes\n";
 		cout<<m;

@@ -106,7 +106,6 @@ int main() {
 	double t = 0;
 	double t_old,theta,Dist;
 	double x_pole,y_pole,UT1_UTC,LOD,dpsi,deps,dx_pole,dy_pole,TAI_UTC,UT1_TAI,UTC_GPS,UT1_GPS,TT_UTC,GPS_UTC,Mjd_TT,Mjd_UT1,Azim,Elev;
-
 	Matrix& Y_old=zeros(6);Matrix& iers=zeros(9);Matrix& tf=zeros(5);Matrix& U=zeros(3,3);Matrix& r=zeros(3);Matrix& s=zeros(3);Matrix& aep=zeros(2);Matrix& dAds=zeros(3);Matrix& dEds=zeros(3);Matrix& dAdY=zeros(6);Matrix& dEdY=zeros(6);Matrix& dDds=zeros(3);Matrix& dDdY=zeros(6);Matrix& K=zeros(6);
 	for(int i=1;i<=nobs;i++){    
 		// Previous step
@@ -146,7 +145,6 @@ int main() {
 		t_aux=0;
 		
 		Y = DEInteg (Accel,t_aux,t-t_old,1e-13,1e-6,6,Y_old);
-
 		// Topocentric coordinates
 		theta = gmst(Mjd_UT1);                    // Earth rotation
 		U = R_z(theta);
@@ -186,7 +184,6 @@ int main() {
 		P=P_old;
 		
 	}
-
 	tie(x_pole,y_pole,UT1_UTC,LOD,dpsi,deps,dx_pole,dy_pole,TAI_UTC) = IERS(*eopdata,(*obs)(46,1),'l');
 	tie(UT1_TAI,UTC_GPS,UT1_GPS,TT_UTC,GPS_UTC) = timediff(UT1_UTC,TAI_UTC);
 	Mjd_TT = Mjd_UTC + TT_UTC/86400;
@@ -194,9 +191,8 @@ int main() {
 	AuxParam.Mjd_TT = Mjd_TT;
 
 	t_aux=0;
-	
 	Matrix& Y0 = DEInteg (Accel,t_aux,-((*obs)(46,1)-(*obs)(1,1))*86400.0,1e-13,1e-6,6,Y);
-	Y0(1)=5753212.04419213; Y0(2)=2673401.89427079; Y0(3)=3440289.36652239; Y0(4)=4326.35119496467; Y0(5)=-1926.72407270954; Y0(6)=-5726.09595759171;
+	//Y0(1)=5753212.04419213; Y0(2)=2673401.89427079; Y0(3)=3440289.36652239; Y0(4)=4326.35119496467; Y0(5)=-1926.72407270954; Y0(6)=-5726.09595759171;
 	Matrix& Y_true = zeros(6);
 	Y_true(1)=5753.173e3; Y_true(2)=2673.361e3; Y_true(3)=3440.304e3; Y_true(4)=4.324207e3; Y_true(5)=-1.924299e3; Y_true(6)=-5.728216e3;
 

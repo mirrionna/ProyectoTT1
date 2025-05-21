@@ -33,5 +33,5 @@
 *	@return Matriz. 
 */
 //----------------------------------------------------------------------
-Matrix& DEInteg(Matrix& f(double t, Matrix& y), double t, double tout, double relerr, double abserr, int n_eqn, Matrix &y);	
+Matrix& DEInteg (Matrix & func(double t, Matrix& y), double t, double tout, double relerr, double abserr, int n_eqn, Matrix& y);	
 #endif
