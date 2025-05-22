@@ -1,0 +1,27 @@
+<map id="/github/workspace/include/VarEqn.hpp" name="/github/workspace/include/VarEqn.hpp">
+<area shape="rect" id="Node000001" title="Este archivo de cabecera contiene una implementación de la función VarEqn." alt="" coords="806,5,979,46"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,94,63,120"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="806,31,668,36,489,47,286,66,78,96,78,91,285,61,488,42,668,31,806,26"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="87,94,208,120"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="806,37,550,60,224,96,223,91,549,55,806,31"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="233,94,398,120"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="807,41,414,95,413,89,806,36"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="422,94,556,120"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="807,46,566,93,565,88,805,41"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="580,94,710,120"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="832,49,698,91,696,86,830,44"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="734,94,876,120"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="873,48,831,85,828,81,869,44"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="900,94,1062,120"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="916,44,957,81,954,85,913,48"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="1086,94,1243,120"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="961,44,1109,87,1107,92,960,49"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="1267,94,1428,120"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="980,39,1262,88,1262,93,979,45"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="1452,94,1616,120"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="979,35,1437,91,1436,96,979,40"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="1641,94,1830,120"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="980,32,1626,91,1625,96,979,37"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="1854,94,2060,120"/>
+<area shape="poly" id="edge12_Node000001_Node000013" title=" " alt="" coords="979,30,1348,54,1838,91,1838,96,1348,59,979,35"/>
+</map>
